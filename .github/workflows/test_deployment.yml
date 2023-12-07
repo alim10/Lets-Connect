@@ -1,4 +1,4 @@
-name: Publish
+name: Deploy to play store for internal testing
 
 on:
   push:
