@@ -137,27 +137,6 @@ jobs:
           alias: ${{ secrets.KEY_ALIAS }}
           keyPassword: ${{ secrets.KEYS_PASSWORD }}
 
-#      - name: Debug Service Account JSON
-#        run: echo "${{ secrets.GOOGLE_SERVICE_API_NEW }}"
-#
-#      - name: Debug Release Files
-#        run: ls -R app/build/outputs/bundle/release
-#
-#      - name: upload at play store
-#        uses: swootte/upload-google-play@V1.1.5
-#        with:
-#          serviceAccountJson: ${{ secrets.GOOGLE_SERVICE_API_NEW }}
-#          packageName: com.example.MyApp
-#          releaseFiles: app/build/outputs/bundle/release/*.aab
-#          track: production
-#          inAppUpdatePriority: 2
-#          userFraction: 0.33
-#          whatsNewDirectory: whatsNewDirectory/
-#          mappingFile: app/build/outputs/mapping/release/mapping.txt
-#          status: draft
-#          changesNotSentForReview: true
-
-
       - name: Create authorization with google play store service-account.json
         run: echo '${{ secrets.DEPLOY_AUTH_API_BASE }}' > service_account.json
 
