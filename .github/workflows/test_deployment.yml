@@ -2,7 +2,7 @@ name: Publish
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "testing" ]
 
 jobs:
 
@@ -98,8 +98,8 @@ jobs:
         run: gcloud info
 
   #      - name: Run instrumentation tests in Firebase Test Lab
-  #        run: gcloud firebase test alimapps run --type instrumentation --app app-debug/app-debug.apk --test app-debug-androidTest/app-debug-androidTest.apk --device model=blueline,version=28
-  #        run: gcloud firebase test alimapps run --type instrumentation --app app-debug/app-debug.apk --test app-debug-androidTest/app-debug-androidTest.apk --device model=flame,version=30
+  #        run: gcloud firebase test android run --type instrumentation --app app-debug/app-debug.apk --test app-debug-androidTest/app-debug-androidTest.apk --device model=blueline,version=28
+  #        run: gcloud firebase test android run --type instrumentation --app app-debug/app-debug.apk --test app-debug-androidTest/app-debug-androidTest.apk --device model=flame,version=30
 
   distribute:
     name: Distribute the app bundle for play store
@@ -120,7 +120,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Version bump
-        uses: chkfung/alimapps-version-actions@v1.2.1
+        uses: chkfung/android-version-actions@v1.2.1
         with:
           gradlePath: app/build.gradle.kts
           versionCode: ${{ github.run_number }}
@@ -129,7 +129,7 @@ jobs:
         run: ./gradlew bundleRelease
 
       - name: Sign Release
-        uses: r0adkll/sign-alimapps-release@v1
+        uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: app/build/outputs/bundle/release
           signingKeyBase64: ${{ secrets.ANDROID_KEYSTORE }}
@@ -147,7 +147,7 @@ jobs:
 #        uses: swootte/upload-google-play@V1.1.5
 #        with:
 #          serviceAccountJson: ${{ secrets.GOOGLE_SERVICE_API_NEW }}
-#          packageName: org.example.MyApp
+#          packageName: com.example.MyApp
 #          releaseFiles: app/build/outputs/bundle/release/*.aab
 #          track: production
 #          inAppUpdatePriority: 2
@@ -169,9 +169,9 @@ jobs:
         with:
           serviceAccountJsonPlainText: ${{ secrets.DEPLOY_AUTH_API }}
 #          serviceAccountJson: service_account.json
-          packageName: org.alimapps.letsconnect
+          packageName: com.alim.letsconnect
           releaseFiles: app/build/outputs/bundle/release/app-release.aab
           track: internal
-          status: 'completed'
+          status: 'draft'
           whatsNewDirectory: whatsNewDirectory/
 
