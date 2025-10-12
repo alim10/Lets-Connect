@@ -11,9 +11,9 @@ import javax.inject.Singleton
 @Module
 object MainModule {
 
-    @Provides
-    @Singleton
-    fun provideProvider(): Navigator.Provider {
-        return DefaultNavigator()
-    }
+//    @Provides
+//    @Singleton
+//    fun provideProvider(): Navigator.Provider {
+//        return DefaultNavigator()
+//    }
 }

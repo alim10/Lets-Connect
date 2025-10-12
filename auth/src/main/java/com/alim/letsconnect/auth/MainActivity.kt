@@ -93,25 +93,25 @@ private fun MainContenet() {
         ) {
             val phoneNumber = rememberSaveable { mutableStateOf("") }
 
-            KomposeCountryCodePicker(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                text = phoneNumber.value,
-                onValueChange = { phoneNumber.value = it },
-                placeholder = {
-                    Text(
-                        text = "Phone Number",
-                        style = MaterialTheme.typography.labelMedium.copy(
-                            fontWeight = FontWeight.ExtraLight,
-                        ),
-                    )
-                },
-                shape = MaterialTheme.shapes.medium,
-                colors = TextFieldDefaults.colors(
-                    unfocusedContainerColor = Color.Transparent,
-                    focusedContainerColor = Color.Transparent,
-                ),
-            )
+//            KomposeCountryCodePicker(
+//                modifier = Modifier
+//                    .fillMaxWidth(),
+//                text = phoneNumber.value,
+//                onValueChange = { phoneNumber.value = it },
+//                placeholder = {
+//                    Text(
+//                        text = "Phone Number",
+//                        style = MaterialTheme.typography.labelMedium.copy(
+//                            fontWeight = FontWeight.ExtraLight,
+//                        ),
+//                    )
+//                },
+//                shape = MaterialTheme.shapes.medium,
+//                colors = TextFieldDefaults.colors(
+//                    unfocusedContainerColor = Color.Transparent,
+//                    focusedContainerColor = Color.Transparent,
+//                ),
+//            )
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -125,12 +125,12 @@ private fun MainContenet() {
                  * Get country code
                  */
                 Text(text = "Country Phone No Code: ")
-                Text(
-                    text = CountryCodePicker.getCountryPhoneCodeWithoutPrefix(),
-                    style = MaterialTheme.typography.titleSmall.copy(
-                        fontWeight = FontWeight.Bold,
-                    ),
-                )
+//                Text(
+//                    text = CountryCodePicker.getCountryPhoneCodeWithoutPrefix(),
+//                    style = MaterialTheme.typography.titleSmall.copy(
+//                        fontWeight = FontWeight.Bold,
+//                    ),
+//                )
             }
             Row(
                 modifier = Modifier.fillMaxWidth(),

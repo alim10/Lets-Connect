@@ -3,7 +3,8 @@
 #kotlin = "1.8.10"
 
 agp = "8.1.2"
-kotlin = "1.8.10"
+#kotlin = "1.8.10"
+kotlin = "2.0.0"
 core-ktx = "1.12.0"
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
@@ -45,11 +46,15 @@ constraintCore = "1.0.4"
 constraintlayout = "2.1.4"
 constraintlayoutCompose = "1.0.1"
 core = "1.40.0"
+firebaseMessagingKtx = "25.0.1"
+firebaseMessaging = "25.0.1"
+workRuntimeKtx = "2.10.5"
 #moshiKotlinCodegen = "1.15.0"
 #playServicesMaps = "18.2.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
@@ -109,6 +114,9 @@ engage-core = { group = "com.google.android.engage", name = "engage-core", versi
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 constraintlayoutCore = { group = "androidx.constraintlayout", name = "constraintlayout-core", version.ref = "constraintCore" }
 core = { group = "com.google.ar", name = "core", version.ref = "core" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workRuntimeKtx" }
 
 
 [plugins]
