@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace = "com.alim.letsconnect"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.alim.letsconnect"
         minSdk = 24
-        targetSdk = 34
+//        targetSdk = 35
         versionCode = 4
         versionName = "1.0.4"
 
@@ -93,6 +93,8 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
     implementation(platform(libs.compose.bom))
+    implementation(libs.firebase.messaging)
+    implementation(libs.androidx.work.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -114,6 +116,13 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
 
+    implementation(libs.firebaseBom)
+
+    // Add the dependencies for the In-App Messaging and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation(libs.firebase.inappmessaging.display)
+//    implementation(libs.firebase.messaging.ktx)
+
     implementation(libs.coil)
     implementation(libs.coilCompose)
 
@@ -121,6 +130,6 @@ dependencies {
     kapt(libs.hiltCompiler)
 
     implementation(project(":core"))
-    implementation(project(":auth"))
-    implementation(project(":profile"))
+//    implementation(project(":auth"))
+//    implementation(project(":profile"))
 }
