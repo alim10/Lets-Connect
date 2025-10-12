@@ -3,25 +3,27 @@ name: Android Reviews App
 on:
   push:
     branches: [ test ]
-  push-request:
+  pull_request:
     branches: [ test ]
-
   workflow_dispatch:
 
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout the code
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
 
-    - name: Set up JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'temurin'  # Recommended distribution
 
-    - name: Build the app
-      run: ./gradlew assembleRelease
+      - name: Grant execute permission to gradlew
+        run: chmod +x ./gradlew
 
-
+      - name: Build the app
+        run: ./gradlew assembleRelease
