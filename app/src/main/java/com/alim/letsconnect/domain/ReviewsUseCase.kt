@@ -1,7 +1,7 @@
 package com.alim.letsconnect.domain
 
 import com.alim.letsconnect.core.networks.WrappedResponse
-import com.alim.letsconnect.core.utils.AppLogs
+import com.alim.letsconnect.core.logging.AppLogs
 import com.alim.letsconnect.core.utils.Const
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

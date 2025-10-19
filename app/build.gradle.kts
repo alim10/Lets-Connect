@@ -1,10 +1,12 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.com.android.application)
+    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.kapt)
-    alias(libs.plugins.dagger.hilt)
-    alias(libs.plugins.googlePlayServices)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlinKapt)
+    alias(libs.plugins.daggerHilt)
+    alias(libs.plugins.googleGmsServices)
+    alias(libs.plugins.buildlogic.android.appFlavors)
 }
 
 android {
@@ -12,7 +14,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.alim.letsconnect"
+        applicationId = "com"
         minSdk = 24
 //        targetSdk = 35
         versionCode = 4
@@ -55,6 +57,26 @@ android {
         }
 
     }
+
+    productFlavors {
+        getByName("letsConnectDev") {
+            applicationId = "com.alim.letsconnect"
+            applicationIdSuffix =".dev"
+        }
+        getByName("letsConnectQa") {
+            applicationId = "com.alim.letsconnect"
+            applicationIdSuffix =".qa"
+        }
+        getByName("letsConnectStaging") {
+            applicationId = "com.alim.letsconnect"
+            applicationIdSuffix =".staging"
+        }
+        getByName("letsConnectProd") {
+            applicationId = "com.alim.letsconnect"
+            applicationIdSuffix =".prod"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -79,7 +101,9 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.androidx.compose.bom))
     implementation ("androidx.core:core-splashscreen:1.0.0-beta02")
+
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.constraintlayoutCore)
@@ -87,26 +111,24 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
-    implementation(platform(libs.compose.bom))
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
-    implementation(libs.material3)
-    implementation(platform(libs.compose.bom))
-    implementation(libs.firebase.messaging)
+    implementation(libs.composeMaterial3)
+
+
     implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.navigation.runtime.android)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
-    implementation(platform(libs.firebaseBom))
-//    implementation(libs.firebaseAnalytics)
+
     implementation(libs.viewModel)
-    implementation(libs.viewModelRuntime)
     implementation(libs.composeViewModel)
     implementation(libs.composeViewModelRuntime)
 
@@ -116,18 +138,32 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
 
-    implementation(libs.firebaseBom)
 
+//    implementation(libs.gms.messaging.ktx)
+
+    implementation(libs.coil)
+    implementation(libs.coil.compose)
+
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.ompiler)
+
+    implementation(libs.app.update)
+    implementation(libs.app.update.ktx)
+    implementation(libs.app.review)
+    implementation(libs.app.review.ktx)
+    implementation(libs.android.play.core)
+    implementation(libs.android.play.core)
+    implementation(libs.semver.kt)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.messaging)
+    // Add the dependencies for the Remote Config and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+//    implementation(libs.firebase.config)
+    implementation(libs.firebase.analytics)
     // Add the dependencies for the In-App Messaging and Analytics libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation(libs.firebase.inappmessaging.display)
-//    implementation(libs.firebase.messaging.ktx)
-
-    implementation(libs.coil)
-    implementation(libs.coilCompose)
-
-    implementation(libs.hilt)
-    kapt(libs.hiltCompiler)
 
     implementation(project(":core"))
 //    implementation(project(":auth"))

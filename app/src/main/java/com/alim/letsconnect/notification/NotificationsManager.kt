@@ -14,8 +14,8 @@ import com.alim.letsconnect.notification.manager.data.Headers
 import com.alim.letsconnect.notification.manager.data.Notification
 import com.alim.letsconnect.notification.manager.data.NotificationSuperObject
 import com.alim.letsconnect.notification.manager.data.Timestamp
-import com.alim.letsconnect.common.toModel
-import com.alim.letsconnect.common.toObject
+import com.alim.letsconnect.core.utils.toModel
+import com.alim.letsconnect.core.utils.toObject
 import kotlinx.coroutines.CoroutineScope
 import org.json.JSONObject
 import javax.inject.Inject

@@ -1,14 +1,19 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.com.android.library)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.kapt)
-    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlinKapt)
+    alias(libs.plugins.daggerHilt)
+    id("kotlin-parcelize")
+    alias(libs.plugins.buildlogic.android.appFlavors)
 }
+apply(from = "$rootProject.projectDir/app-flavors.gradle")
+
 
 android {
     namespace = "com.alim.letsconnect.core"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -62,25 +67,32 @@ dependencies {
     implementation(libs.material)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
-    implementation(platform(libs.compose.bom))
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
-    implementation(libs.material3)
+    implementation(libs.composeMaterial3)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
-    implementation(libs.hilt)
-    kapt(libs.hiltCompiler)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.ompiler)
 
     implementation(libs.gsonConverter)
     implementation(libs.retrofit)
     implementation(libs.retrofitConvertorScalor)
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
+    implementation(libs.timber.lib)
+
+    implementation(platform(libs.firebase.bom))
+//    implementation(libs.firebase.config)
+    implementation(libs.firebase.config.ktx)
+    implementation(libs.firebase.analytics)
 }

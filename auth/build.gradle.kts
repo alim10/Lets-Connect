@@ -11,7 +11,7 @@ plugins {
 
 android {
     namespace = "com.alim.letsconnect.auth"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -27,7 +27,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
+                getDefaultProguardFile("proguard-alim-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
@@ -67,7 +67,7 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
     implementation(platform(libs.compose.bom))
-    implementation(libs.material3)
+    implementation(libs.composeMaterial3)
     implementation(libs.androidx.storage)
     implementation(libs.engage.core)
     implementation(libs.constraintlayout)
