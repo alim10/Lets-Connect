@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.alim.letsconnect.profile"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -19,7 +19,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
+                getDefaultProguardFile("proguard-alim-optimize.txt"),
                 "proguard-rules.pro"
             )
         }

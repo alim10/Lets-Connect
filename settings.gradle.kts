@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -23,5 +24,3 @@ dependencyResolutionManagement {
 rootProject.name = "AppReviews"
 include(":app")
 include(":core")
-//include(":auth")
-//include(":profile")
