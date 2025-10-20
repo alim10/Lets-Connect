@@ -1,9 +1,9 @@
 package com.alim.letsconnect.convention
 
 import com.android.build.api.dsl.LibraryExtension
-import com.android.goalak.convention.internal.configureAndroid
-import com.android.goalak.convention.internal.configureCompose
-import com.android.goalak.convention.internal.configureNavigation
+import com.alim.letsconnect.convention.internal.configureAndroid
+import com.alim.letsconnect.convention.internal.configureCompose
+import com.alim.letsconnect.convention.internal.configureNavigation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

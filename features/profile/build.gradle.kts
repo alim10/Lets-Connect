@@ -1,7 +1,10 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.com.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.app.letsConnect.featuresModule)
+    alias(libs.plugins.app.letsConnect.flavors)
+    alias(libs.plugins.kotlin.compose)
+//    alias(libs.plugins.com.android.library)
+//    alias(libs.plugins.kotlin.android)
 }
 
 android {

@@ -26,25 +26,29 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("dataModule") {
-            id = "buildlogic.datamodule"
-            implementationClass = "com.alim.letsconnect.convention.DataModuleConventions"
-        }
-        register("featureModule") {
-            id = "buildlogic.featuremodule"
-            implementationClass = "com.alim.letsconnect.convention.FeatureModuleConventions"
-        }
-        register("uiModule") {
-            id = "buildlogic.uimodule"
-            implementationClass = "com.alim.letsconnect.convention.UiModuleConventions"
-        }
         register("appModule") {
-            id = "buildlogic.appmodule"
+            id = "convention.appModule"
             implementationClass = "com.alim.letsconnect.convention.AppModuleConventions"
         }
+        register("dataModule") {
+            id = "convention.dataModule"
+            implementationClass = "com.alim.letsconnect.convention.DataModuleConventions"
+        }
+//        register("featureModule") {
+//            id = "convention.featureModule"
+//            implementationClass = "com.alim.letsconnect.convention.FeatureModuleConventions"
+//        }
+        register("uiModule") {
+            id = "convention.uiModule"
+            implementationClass = "com.alim.letsconnect.convention.UiModuleConventions"
+        }
         register("appFlavors") {
-            id = "buildlogic.appFlavors"
+            id = "convention.appFlavors"
             implementationClass = "com.alim.letsconnect.convention.AppFlavorsConventions"
+        }
+        register("appRefreshDependencies") {
+            id = "convention.appRefreshDependencies"
+            implementationClass = "com.alim.letsconnect.convention.task.RefreshDependencies"
         }
     }
 }

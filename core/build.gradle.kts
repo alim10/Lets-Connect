@@ -1,14 +1,16 @@
-@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
+//    alias(libs.plugins.app.letsConnect.featuresModule)
+
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlinKapt)
     alias(libs.plugins.daggerHilt)
     id("kotlin-parcelize")
-    alias(libs.plugins.buildlogic.android.appFlavors)
+    alias(libs.plugins.app.letsConnect.flavors)
+
 }
-apply(from = "$rootProject.projectDir/app-flavors.gradle")
+//apply(from = "$rootProject.projectDir/app-flavors.gradle")
 
 
 android {

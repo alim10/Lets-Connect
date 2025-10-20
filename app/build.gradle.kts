@@ -6,7 +6,8 @@ plugins {
     alias(libs.plugins.kotlinKapt)
     alias(libs.plugins.daggerHilt)
     alias(libs.plugins.googleGmsServices)
-    alias(libs.plugins.buildlogic.android.appFlavors)
+    alias(libs.plugins.app.letsConnect.flavors)
+    alias(libs.plugins.app.letsConnect.refreshDependencies)
 }
 
 android {
