@@ -1,11 +1,11 @@
 package com.alim.letsconnect.convention
 
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import com.android.goalak.convention.internal.configureAndroid
-import com.android.goalak.convention.internal.configureCompose
-import com.android.goalak.convention.internal.configureHilt
-import com.android.goalak.convention.internal.configureNavigation
-import com.android.goalak.convention.internal.configureUnitTest
+import com.alim.letsconnect.convention.internal.configureAndroid
+import com.alim.letsconnect.convention.internal.configureCompose
+import com.alim.letsconnect.convention.internal.configureHilt
+import com.alim.letsconnect.convention.internal.configureNavigation
+import com.alim.letsconnect.convention.internal.configureUnitTest
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

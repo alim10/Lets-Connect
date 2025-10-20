@@ -1,4 +1,4 @@
-package com.android.goalak.convention.internal
+package com.alim.letsconnect.convention.internal
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

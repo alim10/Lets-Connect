@@ -11,10 +11,11 @@ internal inline fun <reified T : CommonExtension<*, *, *, *, *, *>> Project.conf
     with(pluginManager) {
         apply("org.jetbrains.kotlin.android")
         apply("org.jetbrains.kotlin.kapt")
+        apply("kotlin-parcelize")
     }
 
     extensions.configure<T> {
-        compileSdk = 34
+        compileSdk = 35
 
         defaultConfig {
             minSdk = 24
@@ -24,9 +25,6 @@ internal inline fun <reified T : CommonExtension<*, *, *, *, *, *>> Project.conf
             sourceCompatibility = JavaVersion.VERSION_17
             targetCompatibility = JavaVersion.VERSION_17
         }
-
-
-
     }
 
     val kaptExtension = extensions.getByType<KaptExtension>()
