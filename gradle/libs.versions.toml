@@ -39,7 +39,7 @@ okhttp_logging_version = "5.0.0-alpha.3"
 
 #  dependecy  Injection versions
 ksp = "1.9.0-1.0.13"
-hilt_version = "2.44.2"
+hilt_version = "2.56.2"
 hilt_compose_version = "1.0.0"
 composeMaterial = "1.2.1"
 storage = "1.4.2"
@@ -65,6 +65,14 @@ turbine = "1.0.0"
 hilt = "2.56.2"
 hilt-navigation-compose = "1.2.0"
 
+kotlinx-immutable-collections = "0.3.6"
+kotlinx-coroutines-test = "1.7.3"
+
+
+androidx-core = "1.16.0"
+androidx-lifecycle = "2.9.0"
+androidx-activity = "1.10.1"
+androidx-browser = "1.8.0"
 
 
 [libraries]
@@ -88,7 +96,7 @@ androidx-compose-navigation = { module = "androidx.navigation:navigation-compose
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 
-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 hiltAndroidTest = { group = "com.google.dagger",  name = "hilt-android-testing", version.ref = "hilt_version"}
@@ -151,6 +159,7 @@ loggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-intercept
 #  Dependency Injection  Hilt and otthers
 dagger-hilt = { group = "com.google.dagger",  name = "hilt-android", version.ref = "hilt_version"}
 dagger-hilt-ompiler = { group = "com.google.dagger",  name = "hilt-compiler", version.ref = "hilt_version"}
+dagger-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt_version" }
 
 androidx-storage = { group = "androidx.test.services", name = "storage", version.ref = "storage" }
 engage-core = { group = "com.google.android.engage", name = "engage-core", version.ref = "engageCore" }
@@ -165,6 +174,14 @@ androidx-navigation-runtime-android = { group = "androidx.navigation", name = "n
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 android-tools-build-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 
+kotlinx-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinx-immutable-collections" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+
+
+#androidx-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+#androidx-activity = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-browser = { module = "androidx.browser:browser", version.ref = "androidx-browser" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
@@ -174,18 +191,19 @@ kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 googleGmsServices = { id = "com.google.gms.google-services", version.ref = "googlePlayServices" }
 firebaseCrashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics" }
 
-#dagger-hilt = { id = "com.google.dagger.hilt.alim" , version.ref = "hilt_version" }
+#dagger-hilt = { id = "org.google.dagger.hilt.alimapps" , version.ref = "hilt_version" }
 daggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt_version" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
 
 
 
-buildlogic-maven-publish = { id = "maven-publish", version = "unspecified" }
-buildlogic-android-appModule = { id = "buildlogic.appmodule", version = "unspecified" }
-buildlogic-android-appData = { id = "buildlogic.datamodule", version= "unspecified" }
-buildlogic-android-appUi = { id = "buildlogic.uimodule", version = "unspecified" }
-buildlogic-android-appFeatures = { id = "buildlogic.featuremodule", version = "unspecified" }
-buildlogic-android-appFlavors = { id = "buildlogic.appFlavors", version = "unspecified" }
+app-letsConnect-maven-publish = { id = "maven-publish", version = "unspecified" }
+app-letsConnect-application = { id = "convention.appModule", version = "unspecified" }
+app-letsConnect-dataModule = { id = "convention.dataModule", version= "unspecified" }
+app-letsConnect-uiModule = { id = "convention.uiModule", version = "unspecified" }
+#app-letsConnect-featuresModule = { id = "convention.featureModule", version = "unspecified" }
+app-letsConnect-flavors = { id = "convention.appFlavors", version = "unspecified" }
+app-letsConnect-refreshDependencies = { id = "convention.appRefreshDependencies", version = "unspecified" }
 
 [bundles]
 #ui = ["androidx-compose-bom","androidx-lifecycle", "androidx-activity", "compose-ui", "compose-graphics", "compose-preview", "compose-material", "coil-compose", "compose-icons", "kotlinx-immutable-collections"]

@@ -11,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "com.alim.letsconnect"
+    namespace = "org.alimapps.letsconnect"
     compileSdk = 35
 
     defaultConfig {
@@ -61,19 +61,19 @@ android {
 
     productFlavors {
         getByName("letsConnectDev") {
-            applicationId = "com.alim.letsconnect"
+            applicationId = "org.alimapps.letsconnect"
             applicationIdSuffix =".dev"
         }
         getByName("letsConnectQa") {
-            applicationId = "com.alim.letsconnect"
+            applicationId = "org.alimapps.letsconnect"
             applicationIdSuffix =".qa"
         }
         getByName("letsConnectStaging") {
-            applicationId = "com.alim.letsconnect"
+            applicationId = "org.alimapps.letsconnect"
             applicationIdSuffix =".staging"
         }
         getByName("letsConnectProd") {
-            applicationId = "com.alim.letsconnect"
+            applicationId = "org.alimapps.letsconnect"
             applicationIdSuffix =".prod"
         }
     }

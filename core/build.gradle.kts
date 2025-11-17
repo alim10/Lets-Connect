@@ -12,9 +12,8 @@ plugins {
 }
 //apply(from = "$rootProject.projectDir/app-flavors.gradle")
 
-
 android {
-    namespace = "com.alim.letsconnect.core"
+    namespace = "org.alimapps.letsconnect.core"
     compileSdk = 35
 
     defaultConfig {

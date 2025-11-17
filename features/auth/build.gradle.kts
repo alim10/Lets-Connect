@@ -14,7 +14,7 @@ plugins {
 
 
 android {
-    namespace = "com.alim.letsconnect.auth"
+    namespace = "org.alimapps.letsconnect.auth"
     compileSdk = 35
 
     defaultConfig {
@@ -31,7 +31,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-alim-optimize.txt"),
+                getDefaultProguardFile("proguard-alimapps-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
@@ -107,6 +107,6 @@ dependencies {
 
     implementation(project(":core"))
 
-    implementation("com.github.JoelKanyi:KomposeCountryCodePicker:1.0.6")
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.23.1")
+    implementation("org.github.JoelKanyi:KomposeCountryCodePicker:1.0.6")
+    implementation("org.google.accompanist:accompanist-systemuicontroller:0.23.1")
 }
