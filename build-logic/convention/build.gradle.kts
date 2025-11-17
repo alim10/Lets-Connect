@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.alim.letsconnect.convention"
+group = "org.alimapps.letsconnect.convention"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -28,27 +28,27 @@ gradlePlugin {
     plugins {
         register("appModule") {
             id = "convention.appModule"
-            implementationClass = "com.alim.letsconnect.convention.AppModuleConventions"
+            implementationClass = "org.alimapps.letsconnect.convention.AppModuleConventions"
         }
         register("dataModule") {
             id = "convention.dataModule"
-            implementationClass = "com.alim.letsconnect.convention.DataModuleConventions"
+            implementationClass = "org.alimapps.letsconnect.convention.DataModuleConventions"
         }
-//        register("featureModule") {
-//            id = "convention.featureModule"
-//            implementationClass = "com.alim.letsconnect.convention.FeatureModuleConventions"
-//        }
+        register("featureModule") {
+            id = "convention.featureModule"
+            implementationClass = "org.alimapps.letsconnect.convention.FeatureModuleConventions"
+        }
         register("uiModule") {
             id = "convention.uiModule"
-            implementationClass = "com.alim.letsconnect.convention.UiModuleConventions"
+            implementationClass = "org.alimapps.letsconnect.convention.UiModuleConventions"
         }
         register("appFlavors") {
             id = "convention.appFlavors"
-            implementationClass = "com.alim.letsconnect.convention.AppFlavorsConventions"
+            implementationClass = "org.alimapps.letsconnect.convention.AppFlavorsConventions"
         }
         register("appRefreshDependencies") {
             id = "convention.appRefreshDependencies"
-            implementationClass = "com.alim.letsconnect.convention.task.RefreshDependencies"
+            implementationClass = "org.alimapps.letsconnect.convention.task.RefreshDependencies"
         }
     }
 }

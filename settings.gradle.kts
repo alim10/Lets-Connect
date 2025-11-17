@@ -3,8 +3,8 @@ pluginManagement {
     repositories {
         google {
             content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("org\\.android.*")
+                includeGroupByRegex("org\\.google.*")
                 includeGroupByRegex("androidx.*")
             }
         }
@@ -24,3 +24,5 @@ dependencyResolutionManagement {
 rootProject.name = "AppReviews"
 include(":app")
 include(":core")
+//include(":features:profile")
+//include(":features:auth")

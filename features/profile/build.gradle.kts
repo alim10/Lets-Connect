@@ -3,12 +3,10 @@ plugins {
     alias(libs.plugins.app.letsConnect.featuresModule)
     alias(libs.plugins.app.letsConnect.flavors)
     alias(libs.plugins.kotlin.compose)
-//    alias(libs.plugins.com.android.library)
-//    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.alim.letsconnect.profile"
+    namespace = "org.alimapps.letsconnect.profile"
     compileSdk = 35
 
     defaultConfig {
@@ -22,7 +20,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-alim-optimize.txt"),
+                getDefaultProguardFile("proguard-alimapps-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
