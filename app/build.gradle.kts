@@ -105,18 +105,17 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation ("androidx.core:core-splashscreen:1.0.0-beta02")
 
-    implementation(libs.appcompat)
+    implementation(libs.androidx.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.constraintlayoutCore)
 //    implementation(libs.constraintCompose)
     implementation(libs.core.ktx)
-    implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
-    implementation(libs.composeMaterial3)
-
+    implementation(libs.androidx.compose.material3)
 
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.androidx.navigation.runtime.android)
@@ -129,9 +128,8 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
 
 
-    implementation(libs.viewModel)
-    implementation(libs.composeViewModel)
-    implementation(libs.composeViewModelRuntime)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     implementation(libs.gsonConverter)
     implementation(libs.retrofit)
@@ -139,8 +137,6 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
 
-
-//    implementation(libs.gms.messaging.ktx)
 
     implementation(libs.coil)
     implementation(libs.coil.compose)
@@ -152,21 +148,21 @@ dependencies {
     implementation(libs.app.update.ktx)
     implementation(libs.app.review)
     implementation(libs.app.review.ktx)
-    implementation(libs.android.play.core)
-    implementation(libs.android.play.core)
+//    implementation(libs.android.play.core)
     implementation(libs.semver.kt)
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.messaging)
     // Add the dependencies for the Remote Config and Analytics libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
-//    implementation(libs.firebase.config)
+    implementation(libs.firebase.config)
     implementation(libs.firebase.analytics)
+    implementation(libs.firebaseCrashlytics)
     // Add the dependencies for the In-App Messaging and Analytics libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation(libs.firebase.inappmessaging.display)
 
-    implementation(project(":core"))
+    implementation(project(":Core:common"))
 //    implementation(project(":auth"))
 //    implementation(project(":profile"))
 }

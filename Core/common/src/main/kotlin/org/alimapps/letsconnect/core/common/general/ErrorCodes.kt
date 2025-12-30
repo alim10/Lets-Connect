@@ -1,0 +1,78 @@
+package org.alimapps.letsconnect.core.common.general
+
+// Change from 'class' to 'object' to make it Singleton
+object ErrorCodes {
+    const val CONNECTIVITY_ERROR = 150
+    const val NETWORK_ERROR = 144
+    const val UNKNOWN_ERROR = -1
+    const val UNAUTHENTICATED_ERROR = 401
+    const val NOT_FOUND = 404
+    const val SCHEMA_VALIDATION_ERROR = 12220
+    const val LOCALIZED_ERROR = 999
+    const val EMPTY_DATA_ERROR = 15000
+    const val SERVER_ERROR_CODE = 500
+    
+    const val INVALID_AUTH_CREDENTIALS = 12208
+    const val ALREADY_REGISTERED = 409
+
+    const val DUPLICATED_PHONE_NUMBER = 12402
+    const val INVALID_PHONE_NUMBER = 12403
+    const val PROFILE_IS_NOT_VERIFIED = 12400
+    
+    const val PHONE_NUMBER_SAME_AS_CURRENT = 12401
+    
+    const val INCORRECT_PERSON_DETAILS = 12201
+    const val USER_NOT_FOUND = 12300
+    
+    const val INVALID_NATIONAL_ID_OR_DATE_OF_BIRTH = 12303
+    
+    const val VITAL_SIGNS_INVALID_VALUE_ERROR = 2003
+    const val VITAL_SIGNS_ENTRIES_EXCEEDED = 2001
+    
+    object MAWID_ERRORS {
+        const val MAWIDS_NOT_FOUND = 808132
+    }
+    
+    
+    // Telehealth errors
+    const val TELEHEALTH_ALLERGIES_ERROR = 6018
+    const val TELEHEALTH_DISEASES_ERROR = 6016
+    const val TELEHEALTH_INSUFFICIENT_USER_BALANCE = 6020
+    const val TELEHEALTH_PATIENT_ID_EMPTY = 1535
+    const val TELEHEALTH_PATIENT_CREATION_ERROR = 6019
+    const val TELEHEALTH_PATIENT_NAME_AR_NULL_OR_EMPTY = 6017
+    const val TELEHEALTH_PATIENT_NAME_EN_NULL_OR_EMPTY = 5016
+    const val TELEHEALTH_PATIENT_NAME_AR_ERROR = 6011
+    const val TELEHEALTH_PATIENT_NAME_EN_ERROR = 6012
+    const val TELEHEALTH_PATIENT_DOB_NULL_OR_EMPTY = 5015
+    const val TELEHEALTH_PATIENT_DOB_INVALID = 5006
+    const val TELEHEALTH_PATIENT_DOB_FUTURE_ERROR = 6013
+    const val TELEHEALTH_PATIENT_PHONE_NULL_OR_EMPTY = 5018
+    const val TELEHEALTH_PATIENT_PHONE_NUMBER_INVALID = 5004
+    const val TELEHEALTH_PATIENT_GENDER_NULL_OR_EMPTY = 5017
+    const val TELEHEALTH_PATIENT_GENDER_FORMAT_ERROR = 5003
+    const val TELEHEALTH_CANT_CANCEL_TEMP_APPOINTMENT = 3002
+    const val TELEHEALTH_USER_LANGUAGE_ERROR = 6014
+    const val TELEHEALTH_ATTACHMENT_TYPE_ERROR = 7017
+    const val TELEHEALTH_ATTACHMENT_RETRY = 7018
+    const val TELEHEALTH_ATTACHMENT_RETRY_2 = 7019
+    const val TELEHEALTH_ATTACHMENT_SIZE_ERROR = 7020
+    const val TELEHEALTH_DUPLICATE_ATTACHMENT = 7022
+    
+    //Team Care errors
+    const val TEAM_CARE_NO_TEAM_FOUND = 404
+    
+    
+    const val GPS_SERVICES_OFF = 1000
+    const val ENTITY_TOO_LARGE = 413
+    const val NOT_SUPPORTED_EXCEL_FILE = 410
+    
+    // Ehala form
+    const val EHALA_ERROR_CODE = 991
+    
+    // Health profile
+    const val BIOMETRIC_AUTH_CREDENTIAL = 12213
+    
+    const val DEPENDENT_NVR_DATA_NOT_FOUND = 400
+    
+}
