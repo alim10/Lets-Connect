@@ -62,13 +62,13 @@ dependencies {
 
     implementation(libs.core.ktx)
 
-    implementation(libs.appcompat)
+    implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
+    implementation(libs.androidx.activity.compose)
     implementation(platform(libs.compose.bom))
     implementation(platform(libs.compose.bom))
     implementation(libs.composeMaterial3)
@@ -89,7 +89,7 @@ dependencies {
     implementation(libs.viewModel)
     implementation(libs.viewModelRuntime)
     implementation(libs.composeViewModel)
-    implementation(libs.composeViewModelRuntime)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
 
     androidTestImplementation(platform(libs.compose.bom))

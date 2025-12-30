@@ -3,8 +3,8 @@ pluginManagement {
     repositories {
         google {
             content {
-                includeGroupByRegex("org\\.android.*")
-                includeGroupByRegex("org\\.google.*")
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
                 includeGroupByRegex("androidx.*")
             }
         }
@@ -21,8 +21,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AppReviews"
+rootProject.name = "Lets-Connect"
 include(":app")
-include(":core")
-//include(":features:profile")
+include(":Core:common")
+//include(":features:Core")
 //include(":features:auth")
+include(":Core:Network")

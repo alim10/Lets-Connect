@@ -6,17 +6,15 @@ import androidx.lifecycle.MutableLiveData
 import org.alimapps.letsconnect.core.state.Event
 import org.alimapps.letsconnect.di.coroutines.ApplicationScope
 import com.github.glwithu06.semver.Semver
-import com.lean.sehhaty.BuildConfig
-import com.lean.sehhaty.common.state.Event
-import com.lean.sehhaty.remoteconfig.RemoteConfigSource
-import com.lean.sehhaty.session.IAppPrefs
-import com.lean.sehhaty.utils.di.coroutines.ApplicationScope
+import org.alimapps.letsconnect.BuildConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import org.alimapps.letsconnect.core.data.AppPreference
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigSource
 import javax.inject.Inject
 
 class VersionCheckHelper @Inject constructor(
-    val appPrefs: IAppPrefs,
+    val appPrefs: AppPreference,
     val remoteConfigSource: RemoteConfigSource,
     @ApplicationScope val applicationScope: CoroutineScope,
 ) {
@@ -49,8 +47,8 @@ class VersionCheckHelper @Inject constructor(
                 Log.d(TAG, "Current Running Version less than Store")
                 // if we have update check if it's FORCE or NORMAL update
                 val isForceUpdated = remoteConfigSource.getBooleanFromJson(
-                        com.lean.sehhaty.remoteconfig.RemoteConfigSource.KEY_FORCE_UPDATE,
-                        com.lean.sehhaty.remoteconfig.RemoteConfigSource.PARAM_IS_FORCE_UPDATE
+                        RemoteConfigSource.KEY_FORCE_UPDATE,
+                        RemoteConfigSource.PARAM_IS_FORCE_UPDATE
                 )
                 Log.d(TAG, "Is This ForceUpdate ? = $isForceUpdated")
 

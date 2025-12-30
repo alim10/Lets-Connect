@@ -23,6 +23,63 @@
           "other_platform_oauth_client": []
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239666311936:android:e6eceb438ad29f317e39e5",
+        "android_client_info": {
+          "package_name": "org.alimapps.letsconnect.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239666311936:android:2e6afeb0787bb67a7e39e5",
+        "android_client_info": {
+          "package_name": "org.alimapps.letsconnect.qa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239666311936:android:dd523136e411ccc37e39e5",
+        "android_client_info": {
+          "package_name": "org.alimapps.letsconnect.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"
