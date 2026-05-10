@@ -6,10 +6,6 @@ import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
 import androidx.lifecycle.viewmodel.compose.viewModel
-import org.alimapps.letsconnect.core.navigations.Activities
-import org.alimapps.letsconnect.core.navigations.Navigator
-import org.alimapps.letsconnect.notification.NotificationsManager
-//import org.alimapps.letsconnect.utils.InAppUpdateService
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

@@ -1,7 +1,7 @@
 package org.alimapps.letsconnect.core.common.utils
 
-import org.alimapps.letsconnect.core.BuildConfig
-import org.alimapps.letsconnect.core.BuildConfig.IMAGE_URL
+import org.alimapps.letsconnect.core.common.BuildConfig
+import org.alimapps.letsconnect.core.common.BuildConfig.IMAGE_URL
 
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
@@ -17,7 +17,7 @@ object Const {
 
     const val SECOND_TO_MILLIS = 1000
     const val DAY_TO_SECOND = 24 * 60 * 60
-    const val isProd = _root_ide_package_.org.alimapps.letsconnect.core.BuildConfig.FLAVOR_build == "prod"
+    const val isProd = BuildConfig.FLAVOR_build == "prod"
 
     /**  Response code error   */
     const val ERROR_EXCEPTION = 1001

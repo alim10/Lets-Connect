@@ -10,6 +10,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -20,10 +21,12 @@ dependencyResolutionManagement {
         maven("https://jitpack.io")
     }
 }
-
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Lets-Connect"
 include(":app")
-include(":Core:common")
-//include(":features:Core")
-//include(":features:auth")
+include(":Core:Common")
 include(":Core:Network")
+
+//include(":Features:Core")
+//include(":Features:auth")
+//include(":Features:Home")

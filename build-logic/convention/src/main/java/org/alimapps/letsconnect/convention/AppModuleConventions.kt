@@ -3,6 +3,7 @@ package org.alimapps.letsconnect.convention
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.alimapps.letsconnect.convention.internal.configureAndroid
 import org.alimapps.letsconnect.convention.internal.configureCompose
+import org.alimapps.letsconnect.convention.internal.configureRoom
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureNavigation
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
@@ -11,7 +12,8 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 
 class AppModuleConventions : Plugin<Project> {
-    override fun apply(target: Project) = with(target) {
+    
+	override fun apply(target: Project) = with(target) {
         with(pluginManager) {
             apply("com.android.application")
         }
@@ -22,29 +24,17 @@ class AppModuleConventions : Plugin<Project> {
                 targetSdk = 35
                 versionCode = 1
                 versionName = "1.0"
-
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
                 vectorDrawables {
                     useSupportLibrary = true
                 }
-            }
-            buildTypes {
-                release {
-                    isMinifyEnabled = false
-                    proguardFiles(
-                        getDefaultProguardFile("proguard-android-optimize.txt"),
-                        "proguard-rules.pro"
-                    )
-                }
-            }
-            packaging {
-                resources {
-                    excludes += "/META-INF/{AL2.0,LGPL2.1}"
-                }
+				versionCode = project.property("VERSION_CODE").toString().toInt()
+				versionName = project.property("VERSION_NAME").toString()
             }
         }
 
         configureAndroid<BaseAppModuleExtension>()
+        configureRoom()
         configureHilt()
         configureCompose<BaseAppModuleExtension>()
         configureNavigation()

@@ -1,7 +1,7 @@
 package org.alimapps.letsconnect.core.common.data
 
 import android.content.Context
-import org.alimapps.letsconnect.core.utils.Const
+import org.alimapps.letsconnect.core.common.utils.Const
 import com.google.gson.Gson
 
 import org.intellij.lang.annotations.Language

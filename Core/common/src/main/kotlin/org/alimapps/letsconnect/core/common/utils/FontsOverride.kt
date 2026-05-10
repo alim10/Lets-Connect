@@ -2,7 +2,7 @@ package org.alimapps.letsconnect.core.common.utils
 
 import android.content.Context
 import android.graphics.Typeface
-import org.alimapps.letsconnect.core.logging.AppLogs.handleException
+import org.alimapps.letsconnect.core.common.logging.AppLogs.handleException
 import java.lang.reflect.Field
 
 object FontsOverride {

@@ -1,4 +1,4 @@
-package org.alimapps.letsconnect.common.remoteconfig.repository
+package org.alimapps.letsconnect.core.common.remoteconfig.repository
 
 import kotlinx.coroutines.flow.Flow
 

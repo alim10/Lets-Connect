@@ -26,8 +26,8 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("appModule") {
-            id = "convention.appModule"
+        register("appplicationModule") {
+            id = "convention.appplicationModule"
             implementationClass = "org.alimapps.letsconnect.convention.AppModuleConventions"
         }
         register("dataModule") {
@@ -45,6 +45,10 @@ gradlePlugin {
         register("appFlavors") {
             id = "convention.appFlavors"
             implementationClass = "org.alimapps.letsconnect.convention.AppFlavorsConventions"
+        }
+        register("appFlavorsEndPoint") {
+            id = "convention.appFlavorsEndPoint"
+            implementationClass = "org.alimapps.letsconnect.convention.AppFlavorsEndPointConvention"
         }
         register("appRefreshDependencies") {
             id = "convention.appRefreshDependencies"

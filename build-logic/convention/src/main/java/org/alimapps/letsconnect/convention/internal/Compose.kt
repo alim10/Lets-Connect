@@ -20,12 +20,12 @@ internal inline fun <reified T : CommonExtension<*, *, *, *, *, *>> Project.conf
         add("implementation", getLibrary("androidx.compose.ui"))
         add("implementation", getLibrary("androidx.compose.graphics"))
         add("implementation", getLibrary("androidx.compose.preview"))
-        add("implementation", getLibrary("androidx.compose.material"))
+        add("implementation", getLibrary("androidx.compose.material3"))
         add("implementation", getLibrary("androidx.compose.icons"))
         add("implementation", getLibrary("coil.compose"))
-        add("implementation", getLibrary("androidx.lifecycle"))
-        add("implementation", getLibrary("androidx.activity"))
-        add("implementation", getLibrary("androidx.browser"))
+        add("implementation", getLibrary("androidx.lifecycle.runtime.ktx"))
+        add("implementation", getLibrary("androidx.compose.activity"))
+//        add("implementation", getLibrary("androidx.browser"))
         add("debugImplementation", getLibrary("androidx.compose.ui.tooling"))
     }
 }

@@ -1,6 +1,5 @@
 package org.alimapps.letsconnect.apps
 
-import org.alimapps.letsconnect.core.navigations.Navigator
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
