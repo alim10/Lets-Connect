@@ -1,7 +1,7 @@
 package org.alimapps.letsconnect.core.common.state
 
 import androidx.lifecycle.MediatorLiveData
-import org.alimapps.letsconnect.core.general.ErrorObject
+import org.alimapps.letsconnect.core.common.general.ErrorObject
 
 class StateLiveData<T> : MediatorLiveData<StateData<T>>() {
     /**

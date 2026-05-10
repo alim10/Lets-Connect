@@ -8,7 +8,7 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.text.TextUtils
 import android.util.Log
-import org.alimapps.letsconnect.core.utils.Const
+import org.alimapps.letsconnect.core.common.utils.Const
 
 class NetworkReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {

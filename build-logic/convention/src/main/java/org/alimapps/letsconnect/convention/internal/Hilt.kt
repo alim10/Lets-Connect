@@ -5,12 +5,12 @@ import org.gradle.kotlin.dsl.dependencies
 
 internal fun Project.configureHilt() {
     with(pluginManager) {
-        apply("dagger.hilt.android.plugin")
+        apply("com.google.dagger.hilt.android")
+        apply("com.google.devtools.ksp")
     }
 
     dependencies {
-        add("implementation", getLibrary("dagger.hilt"))
-        add("kapt", getLibrary("dagger.hilt.compiler"))
-        add("kapt", getLibrary("dagger.hilt.android.compiler"))
+        add("implementation", getLibrary("dagger.hilt.android"))
+        add("ksp", getLibrary("dagger.hilt.android.compiler"))
     }
 }

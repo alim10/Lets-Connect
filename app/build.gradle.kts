@@ -1,168 +1,53 @@
-@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlinKapt)
-    alias(libs.plugins.daggerHilt)
-    alias(libs.plugins.googleGmsServices)
-    alias(libs.plugins.app.letsConnect.flavors)
-    alias(libs.plugins.app.letsConnect.refreshDependencies)
+    alias(libs.plugins.letsConnect.appHost)
+    alias(libs.plugins.letsConnect.appFlavors)
+    alias(libs.plugins.letsConnect.appFlavorsEndPoint)
+    alias(libs.plugins.letsConnect.appRefreshDependencies)
 }
 
 android {
-    namespace = "org.alimapps.letsconnect"
-    compileSdk = 35
+
+    ndkVersion = libs.versions.ndkVersion.get()
 
     defaultConfig {
-        applicationId = "com"
-        minSdk = 24
-//        targetSdk = 35
-        versionCode = 4
-        versionName = "1.0.4"
+        multiDexEnabled = true
+        testInstrumentationRunner = "com.example.shcomposedemo.HiltTestRunner"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
-
-        ndk {
-            debugSymbolLevel = "FULL"
-        }
-    }
-    buildFeatures {
-        buildConfig  = true
-    }
-
-
-    buildTypes {
-        release {
-            isMinifyEnabled = true
-            buildConfigField("String", "IMAGE_URL", "\"https://app.karwaty.com/\"")
-            buildConfigField("String", "BASE_URL", "\"https://app.karwaty.com/\"")
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-
-        debug {
-            isMinifyEnabled = false
-            isDebuggable = true
-            buildConfigField("String", "BASE_URL", "\"https://app.karwaty.com/\"")
-            buildConfigField("String", "IMAGE_URL", "\"https://app.karwaty.com/\"")
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-
-    }
-
-    productFlavors {
-        getByName("letsConnectDev") {
-            applicationId = "org.alimapps.letsconnect"
-            applicationIdSuffix =".dev"
-        }
-        getByName("letsConnectQa") {
-            applicationId = "org.alimapps.letsconnect"
-            applicationIdSuffix =".qa"
-        }
-        getByName("letsConnectStaging") {
-            applicationId = "org.alimapps.letsconnect"
-            applicationIdSuffix =".staging"
-        }
-        getByName("letsConnectProd") {
-            applicationId = "org.alimapps.letsconnect"
-            applicationIdSuffix =".prod"
+        externalNativeBuild.cmake.apply {
+            libs.versions.cMakeVersion.get()
+            // Magic flag for 16 KB alignment
+            arguments += "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=16384"
         }
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-    buildFeatures {
-        compose = true
-        viewBinding = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
-//        kotlinCompilerExtensionVersion = "1.5.1"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+        jniLibs.useLegacyPackaging = false
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug { isMinifyEnabled = false }
     }
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom))
-    implementation ("androidx.core:core-splashscreen:1.0.0-beta02")
-
-    implementation(libs.androidx.appcompat)
-    implementation(libs.constraintlayout)
-    implementation(libs.constraintlayoutCore)
-//    implementation(libs.constraintCompose)
-    implementation(libs.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.ui)
-    implementation(libs.ui.graphics)
-    implementation(libs.ui.tooling.preview)
-    implementation(libs.androidx.compose.material3)
-
-    implementation(libs.androidx.work.runtime.ktx)
-    implementation(libs.androidx.navigation.runtime.android)
-    testImplementation(libs.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.ui.test.junit4)
-    debugImplementation(libs.ui.tooling)
-    debugImplementation(libs.ui.test.manifest)
-
-
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.lifecycle.runtime.compose)
-
-    implementation(libs.gsonConverter)
-    implementation(libs.retrofit)
-    implementation(libs.retrofitConvertorScalor)
-    implementation(libs.okhttp)
-    implementation(libs.loggingInterceptor)
-
-
-    implementation(libs.coil)
-    implementation(libs.coil.compose)
-
-    implementation(libs.dagger.hilt)
-    kapt(libs.dagger.hilt.ompiler)
-
-    implementation(libs.app.update)
-    implementation(libs.app.update.ktx)
-    implementation(libs.app.review)
-    implementation(libs.app.review.ktx)
-//    implementation(libs.android.play.core)
-    implementation(libs.semver.kt)
-
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.messaging)
-    // Add the dependencies for the Remote Config and Analytics libraries
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation(libs.firebase.config)
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebaseCrashlytics)
-    // Add the dependencies for the In-App Messaging and Analytics libraries
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation(libs.firebase.inappmessaging.display)
-
-    implementation(project(":Core:common"))
-//    implementation(project(":auth"))
-//    implementation(project(":profile"))
+    implementation(projects.core.common)
+    implementation(projects.core.network)
+    implementation(libs.maps.compose)
+    implementation(libs.accompanist.permissions)
+    implementation(libs.bundles.navigation)
+    implementation(libs.bundles.network)
+    implementation(libs.bundles.work.manager)
+    implementation(libs.bundles.accompanist.pager)
+//    implementation(libs.bundles.group.firebase)
+    implementation(libs.bundles.group.gms.map.location)
 }

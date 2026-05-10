@@ -1,10 +1,10 @@
 package org.alimapps.letsconnect.core.common.logging
 import android.util.Log
-import org.alimapps.letsconnect.core.BuildConfig
+import org.alimapps.letsconnect.core.common.BuildConfig
 
 object AppLogs {
 
-    private val isDebug = _root_ide_package_.org.alimapps.letsconnect.core.BuildConfig.DEBUG
+    private val isDebug = BuildConfig.DEBUG
 
     fun log(tag: String?, message: String) {
         if (isDebug) {

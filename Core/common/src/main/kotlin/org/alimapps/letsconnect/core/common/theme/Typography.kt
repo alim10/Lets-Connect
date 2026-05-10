@@ -5,7 +5,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import org.alimapps.letsconnect.core.R
+import org.alimapps.letsconnect.core.common.R
 
 
 val gothicA1 = FontFamily(

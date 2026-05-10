@@ -1,7 +1,7 @@
 package org.alimapps.letsconnect.core.common.networks
 
 import android.text.TextUtils
-import org.alimapps.letsconnect.core.utils.Const
+import org.alimapps.letsconnect.core.common.utils.Const
 import com.google.gson.annotations.SerializedName
 
 data class WrappedListResponse<T> (

@@ -1,6 +1,5 @@
 package org.alimapps.letsconnect.core.common.logging
 
-import org.alimapps.letsconnect.core.common.logging.TimberLogging
 import timber.log.Timber
 
 object Logger {

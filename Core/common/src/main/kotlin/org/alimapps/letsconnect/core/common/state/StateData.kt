@@ -1,6 +1,6 @@
 package org.alimapps.letsconnect.core.common.state
 
-import org.alimapps.letsconnect.core.general.ErrorObject
+import org.alimapps.letsconnect.core.common.general.ErrorObject
 
 
 class StateData<T> {

@@ -1,6 +1,6 @@
 package org.alimapps.letsconnect.core.common.general
 
-import org.alimapps.letsconnect.core.state.StateData
+import org.alimapps.letsconnect.core.common.state.StateData
 
 @Deprecated("Please consider to use or refactor to [ResponseResult] since its sealed class", replaceWith = ReplaceWith("ResponseResult","com.lean.sehhaty.util.ResponseResult"))
 data class Resource<out T>(
