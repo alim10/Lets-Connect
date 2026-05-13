@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Let\'s Connect</string>
     <string name="default_notification_channel_id">General_channel</string>
+    <string name="title_medications">title</string>
+    <string name="notification_desc">notification description</string>
+    <string name="title_general">title general</string>
+    <string name="general_service_description">general service description</string>
 </resources>

@@ -7,8 +7,8 @@ version_core = "1.52.0"
 #version_core_ktx = "1.52.0"
 #version_core_ktx = "1.17.2"
 version_core_ktx = "1.16.0"
-version_kotlin = "2.2.20"
-version_ksp = "2.2.20-2.0.3"     #kspVersion = "2.2.20-2.3.0"   #kspVersion = "2.3.0-2.2.20"
+version_kotlin = "2.1.0"
+version_ksp = "2.1.0-1.0.29"
 version_junit = "4.13.2"
 version_junitTest_Ext = "1.3.0"
 espressoCore = "3.7.0"
@@ -49,7 +49,7 @@ version_chucker = "4.0.0"     #chucker_version = "3.5.1"
 constraintlayoutCompose = "1.1.1"
 
 version_firebase_bom = "34.13.0"
-version_amplitude_analytics = '1.+'
+version_amplitude_analytics = "1.+"
 
 version_sql_cipher = "4.5.4"
 version_security = "1.1.0"
@@ -87,6 +87,7 @@ version_lifecycle_runtime_ktx = "2.10.0"
 #  ndk versions/ used in app host gradles
 ndkVersion = "29.0.14206865"
 cMakeVersion = "3.22.1"
+appcompatVersion = "1.7.1"
 
 
 [libraries]
@@ -153,7 +154,6 @@ hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "version
 
 
 
-
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "version_appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "version_material" }
 
@@ -184,11 +184,11 @@ gms-location = { module = "com.google.android.gms:play-services-location", versi
 gms-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "version_maps_services" }
 maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "version_maps_compose" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "version_firebase_bom" }
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
-firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
-firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
-firebase-pref = { group = "com.google.firebase", name = "firebase-perf-ktx" }
-firebase-remote-config = { group = "com.google.firebase", name = "firebase-config-ktx" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+firebase-pref = { group = "com.google.firebase", name = "firebase-perf" }
+firebase-remote-config = { group = "com.google.firebase", name = "firebase-config" }
 
 amplitude-analytics = { module = "com.amplitude:analytics-android", version.ref = "version_amplitude_analytics" }
 
@@ -322,13 +322,13 @@ group-paging = [
     "androidx-paging-common-android",
 ]
 
-#group-firebase = [
+group-firebase = [
 #    "firebase-pref",
-#    "firebase-messaging",
-#    "firebase-analytics",
-#    "firebase-crashlytics",
-#    "firebase-remote-config"
-#]
+    "firebase-messaging",
+    "firebase-analytics",
+    "firebase-crashlytics",
+    "firebase-remote-config"
+]
 
 group-gms-map-location = [
     "gms-location",

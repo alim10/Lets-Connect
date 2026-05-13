@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.alimapps.letsconnect.auth.screen.SignupScreen
-import org.alimapps.letsconnect.core.navigations.Navigator
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -60,12 +59,5 @@ fun GreetingPreview() {
     // Use MaterialTheme for the preview
     MaterialTheme {
         Greeting("Android")
-    }
-}
-
-object GoToAuthActivity : Navigator {
-
-    override fun navigate(activity: Activity) {
-        AuthActivity.launchActivity(activity)
     }
 }

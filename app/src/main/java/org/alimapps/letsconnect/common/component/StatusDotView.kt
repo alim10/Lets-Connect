@@ -10,9 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import org.alimapps.letsconnect.core.theme.ColorPrimary
-import org.alimapps.letsconnect.core.theme.ColorYellow
-import org.alimapps.letsconnect.core.theme.MyAppTheme
+import org.alimapps.letsconnect.core.common.theme.ColorPrimary
+import org.alimapps.letsconnect.core.common.theme.ColorYellow
+import org.alimapps.letsconnect.core.common.theme.MyAppTheme
 
 @Composable
 fun StatusDotView(isActive: Boolean) {

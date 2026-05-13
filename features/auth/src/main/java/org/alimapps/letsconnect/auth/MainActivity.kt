@@ -32,6 +32,7 @@ import org.alimapps.letsconnect.core.theme.MyAppTheme
 import com.joelkanyi.jcomposecountrycodepicker.component.CountryCodePicker
 import com.joelkanyi.jcomposecountrycodepicker.component.KomposeCountryCodePicker
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import org.alimapps.letsconnect.auth.screen.CountryCodePicker
 
 class AuthActivity1 : ComponentActivity() {
 

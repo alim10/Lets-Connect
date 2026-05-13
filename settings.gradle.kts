@@ -24,6 +24,7 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Lets-Connect"
 include(":app")
+
 include(":core:common")
 include(":core:network")
 

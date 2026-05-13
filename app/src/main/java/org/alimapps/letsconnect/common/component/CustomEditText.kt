@@ -14,8 +14,8 @@ import androidx.compose.ui.unit.dp
 import org.alimapps.letsconnect.apps.AppCornerRadius
 import org.alimapps.letsconnect.apps.AppHeight
 import org.alimapps.letsconnect.apps.AppPadding
-import org.alimapps.letsconnect.core.theme.ColorGrayExtraLight1
-import org.alimapps.letsconnect.core.theme.Typography
+import org.alimapps.letsconnect.core.common.theme.ColorGrayExtraLight1
+import org.alimapps.letsconnect.core.common.theme.Typography
 
 
 

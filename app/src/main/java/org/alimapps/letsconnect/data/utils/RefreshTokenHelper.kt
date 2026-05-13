@@ -2,10 +2,9 @@ package org.alimapps.letsconnect.data.utils
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import org.alimapps.letsconnect.core.state.Event
-import org.alimapps.letsconnect.core.state.StateData
+import org.alimapps.letsconnect.core.common.state.Event
+import org.alimapps.letsconnect.core.common.state.StateData
 import org.alimapps.letsconnect.di.coroutines.ApplicationScope
-//import com.lean.sehhaty.common.state.StateData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -27,16 +26,16 @@ class RefreshTokenHelper @Inject constructor(
 
         refreshTokenJob = applicationScope.launch {
             // Now we don't need the return back Boolean but we can use it later
-            val syncRefreshToken = userRepository.refreshTokenBackground()
+//            val syncRefreshToken = userRepository.refreshTokenBackground()
 
-            when (syncRefreshToken.status) {
-                StateData.DataStatus.SUCCESS -> {
-                    _tokenRefreshed.postValue(Event(true))
-                }
-                else -> {
-                    _tokenRefreshed.postValue(Event(false))
-                }
-            }
+//            when (syncRefreshToken.status) {
+//                StateData.DataStatus.SUCCESS -> {
+//                    _tokenRefreshed.postValue(Event(true))
+//                }
+//                else -> {
+//                    _tokenRefreshed.postValue(Event(false))
+//                }
+//            }
         }
     }
 

@@ -14,8 +14,8 @@ import org.alimapps.letsconnect.notification.manager.data.Headers
 import org.alimapps.letsconnect.notification.manager.data.Notification
 import org.alimapps.letsconnect.notification.manager.data.NotificationSuperObject
 import org.alimapps.letsconnect.notification.manager.data.Timestamp
-import org.alimapps.letsconnect.core.utils.toModel
-import org.alimapps.letsconnect.core.utils.toObject
+import org.alimapps.letsconnect.core.common.utils.toModel
+import org.alimapps.letsconnect.core.common.utils.toObject
 import kotlinx.coroutines.CoroutineScope
 import org.json.JSONObject
 import javax.inject.Inject
@@ -27,7 +27,7 @@ class NotificationsManager @Inject constructor() {
     @ApplicationScope
     @Inject
     lateinit var coroutineScope: CoroutineScope
-    
+
     fun handleEvent(
         payload: Map<String, String?>,
     ): Boolean {
@@ -42,7 +42,7 @@ class NotificationsManager @Inject constructor() {
             return false
         }
     }
-    
+
     private fun handleNotifications(notification: NotificationSuperObject) {
     }
 
@@ -50,12 +50,12 @@ class NotificationsManager @Inject constructor() {
     fun handlePushNotification(notification: Notification) {
 
     }
-    
+
     private fun handleDependentPushNotification(notification: Notification) {
         // in case the request has been approved we need to update dependent cache + access token
 
     }
-    
+
     /**
      * Build constraints that will keep manager waiting until meet them to fire
      *
@@ -64,14 +64,14 @@ class NotificationsManager @Inject constructor() {
     private fun getRequiredWorkerConstraints(): Constraints = Constraints.Builder()
         .setRequiredNetworkType(NetworkType.CONNECTED)
         .build()
-    
+
     /**
      * Like Bundle we can pass data to the worker
      */
     private fun buildBodyData(key: String, body: String) = Data.Builder()
         .putString(key, body)
         .build()
-    
+
     companion object {
         private const val SYNC_VIRTUAL_APPOINTMENTS = "sync-virtual-appointments"
         private const val SYNC_TEAM_CARE = "sync-team-care"
@@ -83,21 +83,21 @@ fun getNotificationObject(remoteData: Map<String, String?>): NotificationSuperOb
     val headersObject = if (jsonObject.has(NOTIFICATION_HEADERS_KEY)) {
         toModel<Headers>(jsonObject.get(NOTIFICATION_HEADERS_KEY).toString())
     } else null
-    
+
     val keyString = if (jsonObject.has(NOTIFICATION_KEY_KEY)) {
         jsonObject.get(NOTIFICATION_KEY_KEY).toString()
     } else null
-    
+
     val timestampObject = if (jsonObject.has(NOTIFICATION_TIMESTAMP_KEY)) {
         toModel<Timestamp>(jsonObject.get(NOTIFICATION_TIMESTAMP_KEY).toString())
     } else null
-    
+
     val value = if (jsonObject.has(NOTIFICATION_VALUE_KEY)) {
         (jsonObject.get(NOTIFICATION_VALUE_KEY) as String).toObject(Map::class.java)
             ?.asSequence()
             ?.associate { (key, value) -> key?.toString() to value?.toString() }
     } else null
-    
+
     val type = if (jsonObject.has(NOTIFICATION_TYPE_KEY)) {
         jsonObject.getString(NOTIFICATION_TYPE_KEY)
     } else null

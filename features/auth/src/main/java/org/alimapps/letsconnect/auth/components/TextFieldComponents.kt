@@ -1,6 +1,6 @@
 package org.alimapps.letsconnect.auth.components
 
-//import android.graphics.drawable.Icon
+import android.graphics.drawable.Icon
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -16,6 +16,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -32,7 +33,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.alimapps.letsconnect.core.theme.*
+import org.alimapps.letsconnect.core.common.theme.*
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -45,7 +46,7 @@ fun CustomOutlinedTextField(labelValue: String, icon: Painter) {
         label = { Text(text = labelValue) },
         value = textValue,
         shape = RoundedCornerShape(AppCornerRadius.large),
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,
@@ -76,7 +77,7 @@ fun CustomOutlinedTextField1(labelValue: String) {
     OutlinedTextField(
         label = { Text(text = labelValue) },
         value = textValue,
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,
@@ -105,7 +106,7 @@ fun PasswordTextField(labelValue: String) {
         label = { Text(text = labelValue) },
         value = textValue,
         shape = RoundedCornerShape(AppCornerRadius.large),
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,
@@ -138,7 +139,7 @@ fun CustomPasswordTextField2(labelValue: String, icon: Painter) {
             ),
         placeholder = { Text(text = labelValue) },
         value = textValue,
-        colors = TextFieldDefaults.textFieldColors(
+        colors = TextFieldDefaults.colors(
             disabledTextColor = Color.Transparent,
 //            backgroundColor = Color.White,
             focusedIndicatorColor = Color.Transparent,
@@ -178,12 +179,12 @@ fun CustomPasswordTextField1(labelValue: String) {
             ),
         label = { Text(text = labelValue) },
         value = textValue,
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
+            focusedTextColor = ColorPrimary,
             cursorColor = ColorPrimary,
-
-            ),
+        ),
         keyboardOptions = KeyboardOptions.Default,
         keyboardActions = KeyboardActions(
             onDone = {
@@ -212,7 +213,7 @@ fun CustomPasswordTextField(labelValue: String, icon: Painter) {
         label = { Text(text = labelValue) },
         value = textValue,
         shape = RoundedCornerShape(AppCornerRadius.large),
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,
@@ -268,7 +269,7 @@ fun CustomOutlinedTextField1() {
     )
 }
 
-
+/*
 
 @Composable
 fun TwoLineTextField(
@@ -314,7 +315,7 @@ fun TwoLineTextField(
 
 }
 
-/*
+
 package org.alimapps.letsconnect.auth.components
 
 
@@ -370,7 +371,7 @@ fun CustomOutlinedTextField(labelValue: String) {
         label = { Text(text = labelValue) },
         value = textValue,
         shape = RoundedCornerShape(AppCornerRadius.large),
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,
@@ -398,7 +399,7 @@ fun CustomOutlinedTextField1(labelValue: String) {
     OutlinedTextField(
         label = { Text(text = labelValue) },
         value = textValue,
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,
@@ -427,7 +428,7 @@ fun PasswordTextField(labelValue: String) {
         label = { Text(text = labelValue) },
         value = textValue,
         shape = RoundedCornerShape(AppCornerRadius.large),
-        colors = TextFieldDefaults.outlinedTextFieldColors(
+        colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = ColorPrimary,
             focusedLabelColor = ColorPrimary,
             cursorColor = ColorPrimary,

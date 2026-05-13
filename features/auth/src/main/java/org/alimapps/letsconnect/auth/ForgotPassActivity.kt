@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import org.alimapps.letsconnect.core.navigations.Navigator
+import org.alimapps.letsconnect.features.auth.R
 
 class ForgotPassActivity : AppCompatActivity() {
     companion object{
@@ -18,12 +18,4 @@ class ForgotPassActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_pass)
     }
-}
-
-object GoToForgotActivity : Navigator {
-
-    override fun navigate(activity: Activity) {
-        AuthActivity.launchActivity(activity)
-    }
-
 }

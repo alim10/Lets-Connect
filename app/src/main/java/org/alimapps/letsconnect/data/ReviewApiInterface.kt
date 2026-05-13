@@ -1,6 +1,6 @@
 package org.alimapps.letsconnect.data
 
-import org.alimapps.letsconnect.core.networks.WrappedResponse
+import org.alimapps.letsconnect.core.common.networks.WrappedResponse
 import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.Body

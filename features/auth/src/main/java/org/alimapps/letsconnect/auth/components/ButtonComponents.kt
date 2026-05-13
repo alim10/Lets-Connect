@@ -14,10 +14,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.alimapps.letsconnect.core.theme.AppBtnWidth
-import org.alimapps.letsconnect.core.theme.AppHeight
-import org.alimapps.letsconnect.core.theme.ColorAppText
-import org.alimapps.letsconnect.core.theme.ColorWhite
+import org.alimapps.letsconnect.core.common.theme.AppBtnWidth
+import org.alimapps.letsconnect.core.common.theme.AppHeight
+import org.alimapps.letsconnect.core.common.theme.ColorAppText
+import org.alimapps.letsconnect.core.common.theme.ColorWhite
 
 @Composable
 fun CustomButtonSmall(value: String) {

@@ -19,8 +19,6 @@ class SplashActivity : ComponentActivity() {
 //    @Inject
 //    lateinit var versionCheckHelper: VersionCheckHelper
 
-    @Inject
-    lateinit var refreshTokenHelper: RefreshTokenHelper
 
 
 //    @Inject

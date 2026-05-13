@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import org.alimapps.letsconnect.core.utils.Delayed
+import org.alimapps.letsconnect.core.common.utils.Delayed
 
 object ProgressIndicatorDefaults {
     val sizeLarge = 32.dp to 2.dp

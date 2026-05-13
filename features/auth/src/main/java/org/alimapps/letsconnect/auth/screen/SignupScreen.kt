@@ -1,5 +1,6 @@
 package org.alimapps.letsconnect.auth.screen
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import org.alimapps.letsconnect.auth.components.CustomButton
 import org.alimapps.letsconnect.auth.components.CustomOutlinedTextField
 import org.alimapps.letsconnect.auth.components.CustomPasswordTextField
@@ -130,17 +132,17 @@ fun CountryCodePicker() {
     var fullPhoneNumber: String by rememberSaveable { mutableStateOf("") }
     var isNumberValid: Boolean by rememberSaveable { mutableStateOf(false) }
 //
-//    TogiCountryCodePicker(
-//        modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp),
-//        onValueChange = { (code, phone), isValid ->
-//            Log.d("CCP", "onValueChange: $code $phone -> $isValid")
-//
-//            phoneNumber = phone
-//            fullPhoneNumber = code + phone
-//            isNumberValid = isValid
-//        },
-//        label = { Text("Phone Number") },
-//    )
+    TogiCountryCodePicker(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp),
+        onValueChange = { (code, phone), isValid ->
+            Log.d("CCP", "onValueChange: $code $phone -> $isValid")
+
+            phoneNumber = phone
+            fullPhoneNumber = code + phone
+            isNumberValid = isValid
+        },
+        label = { Text("Phone Number") },
+    )
 
 }
 

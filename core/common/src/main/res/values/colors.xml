@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_black">#FF000000</color>
+    <color name="color_white">#FFFFFFFF</color>
+    <color name="color_light_background">#F8F8F8</color>
+
+    <color name="color_accent">#FFBB86FC</color>
+<!--    <color name="color_primary">#3EAB4A</color>-->
+    <color name="color_primary">#33A840</color>
+    <color name="color_secondary">#3EAB4A</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="status_bar_app_theme">#F55B52</color>
+
+    <color name="status_bar_app_gfhgfhftheme">#CCCCCC</color>
+    <color name="status_bar_app_gfxvcxhgfhftheme">#0078D4</color>
+
+    <color name="color_red">#FF0000</color>
+    <color name="color_text_red">#F55B52</color>
+    <color name="color_red_light">#F44336</color>
+    <color name="color_app_button">#f7a831</color>
+    <color name="color_yellow">#F8BC32</color>
+<!--    <color name="color_yellow_light">#E1DDD3</color>-->
+    <color name="color_yellow_light">#FFE8D0</color>
+    <color name="color_yellow_text">#B1793E</color>
+
+    <color name="color_gray_extra_dark">#212121</color>
+    <color name="color_gray_normal">#a8a8a8</color>
+    <color name="color_gray_light">#EAEAEA</color>
+    <color name="color_gray_light_extra">#F8F8F8</color>
+    <color name="color_app_text_autocomplete">#5c5c5c</color>
+
+    <color name="ucrop_color_toolbar">@color/color_primary</color>
+    <color name="ucrop_color_statusbar">@color/color_secondary</color>
+    <color name="ucrop_color_widget_active">@color/color_primary</color>
+
+    <!--Text color  -->
+    <color name="color_app_text">#1a1a19</color>
+    <color name="color_app_text_trans">#9c1a1a19</color>
+    <color name="color_app_text_default">#020204</color>
+    <color name="color_app_text_white">#FFFFFF</color>
+    <color name="color_transparent_white">#00ffffff</color>
+    <color name="color_app_text_light">#434343</color>
+    <color name="color_app_text_extra_light">#8C8C8C</color>
+    <color name="color_text_blue">#2D79CC</color>
+
+    <color name="color_gray_iron">#DADCDD</color>
+    <color name="color_gray_iron_light">#90ffffff</color>
+
+    <color name="color_gray_text">#909090</color>
+    <color name="color_default_icon">#666666</color>
+    <color name="color_app_divider">#D0D0D0</color>
+    <color name="color_app_gray_trans">#a9d0d0d0</color>
+
+    <color name="color_green_text">#33399418 </color>
+    <color name="color_green_dark">#105719</color>
+    <color name="color_green">#33A840</color>
+    <color name="color_green_light">#D9FCDE</color>
+    <color name="color_light_green">#EFF9F0</color>
+    <color name="color_green_extra_light">#E3FFE4</color>
+    <color name="color_purple_light">#EEEBFE</color>
+    <color name="color_purple">#5A35F5</color>
+
+    <color name="color_blue">#142FC5</color>
+    <color name="color_sky_blue">#0DCAF0</color>
+    <color name="color_blue_light">#DCEFFE</color>
+
+    <color name="color_app_background">#ffffff</color>
+    <color name="color_app_label">#b41a1a19</color>
+
+    <color name="color_text_pink_dark">#6B0513</color>
+    <color name="color_pink_light">#FFC9D1</color>
+    <color name="color_pink_extra_light">#FCF0F4</color>
+    <color name="color_card_header">#E6E5ED</color>
+
+    <color name="pressed_color">#f9f9f9</color>
+    <color name="normal_color">#00FFFFFF</color>
+
+</resources>

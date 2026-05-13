@@ -42,7 +42,7 @@ fun showNotification(
             PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE
         else PendingIntent.FLAG_ONE_SHOT
     )
-    
+
     showNotification(
         context = context,
         title = title,
@@ -65,7 +65,7 @@ fun showNotification(
     // Create the notification
     val builder = NotificationCompat.Builder(context, channelId)
         .setSmallIcon(R.drawable.ic_launcher_background)
-        .setColor(context.resources.getColor(org.alimapps.letsconnect.core.R.color.color_accent))
+        .setColor(context.resources.getColor(R.color.purple_500))
         .setContentTitle(title)
         .setContentText(message)
         .setAutoCancel(true)
@@ -73,7 +73,7 @@ fun showNotification(
         .setContentIntent(pendingIntent)
         .setPriority(NotificationCompat.PRIORITY_HIGH)
         .setVibrate(LongArray(0))
-    
+
     with(NotificationManagerCompat.from(context)) {
         // notificationId is a unique int for each notification that you must define
         notify(notificationId, builder.build())
@@ -92,7 +92,7 @@ fun showCampaignNotification(context: Context, title: String?, message: String?,
             PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE
         else PendingIntent.FLAG_ONE_SHOT
     )
-    
+
     showNotification(
         context = context,
         title = title,

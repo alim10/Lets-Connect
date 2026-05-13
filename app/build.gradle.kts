@@ -30,6 +30,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -40,18 +41,16 @@ android {
 }
 
 dependencies {
-//    implementation(projects.core.common)
-//    implementation(projects.core.network)
-
-    implementation(project(":core:common"))
-
-
+    implementation(projects.core.common)
+    implementation(projects.core.network)
     implementation(libs.maps.compose)
+    implementation(libs.lottie.compose)
     implementation(libs.accompanist.permissions)
     implementation(libs.bundles.group.navigation)
     implementation(libs.bundles.group.network)
     implementation(libs.bundles.work.manager)
     implementation(libs.bundles.group.accompanist.pager)
-//    implementation(libs.bundles.group.firebase)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.bundles.group.firebase)
     implementation(libs.bundles.group.gms.map.location)
 }

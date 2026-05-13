@@ -1,8 +1,8 @@
 package org.alimapps.letsconnect.domain
 
-import org.alimapps.letsconnect.core.networks.WrappedResponse
-import org.alimapps.letsconnect.core.logging.AppLogs
-import org.alimapps.letsconnect.core.utils.Const
+import org.alimapps.letsconnect.core.common.networks.WrappedResponse
+import org.alimapps.letsconnect.core.common.logging.AppLogs
+import org.alimapps.letsconnect.core.common.utils.Const
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.flow.Flow

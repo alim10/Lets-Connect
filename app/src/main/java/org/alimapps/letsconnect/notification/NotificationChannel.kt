@@ -2,6 +2,7 @@ package org.alimapps.letsconnect.notification
 
 import android.app.NotificationManager
 import androidx.annotation.StringRes
+import org.alimapps.letsconnect.R
 
 enum class Channel(
     val id: String,
@@ -11,14 +12,14 @@ enum class Channel(
 ) {
     MEDICATION(
         Constants.NOTIFICATIONS.MEDICATION_CHANNEL_ID,
-        com.lean.ui.R.string.title_medications,
-        com.lean.ui.R.string.my_medications_service_description,
+        R.string.title_medications,
+        R.string.notification_desc,
         NotificationManager.IMPORTANCE_HIGH
     ),
     GENERAL(
         Constants.NOTIFICATIONS.GENERAL_CHANNEL_ID,
-        com.lean.ui.R.string.title_general,
-        com.lean.ui.R.string.general_service_description,
+        R.string.title_general,
+        R.string.general_service_description,
         NotificationManager.IMPORTANCE_HIGH
     ),
 }
