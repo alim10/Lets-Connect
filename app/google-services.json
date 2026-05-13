@@ -1,21 +1,78 @@
 {
   "project_info": {
-    "project_number": "1077599822861",
-    "project_id": "connects-project",
-    "storage_bucket": "connects-project.appspot.com"
+    "project_number": "239666311936",
+    "project_id": "lets-connect-3617e",
+    "storage_bucket": "lets-connect-3617e.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1077599822861:android:46198ba96ce3931ada6144",
+        "mobilesdk_app_id": "1:239666311936:android:ccb23289ea0ac9f47e39e5",
         "android_client_info": {
-          "package_name": "com.alim.letsconnect"
+          "package_name": "org.alimapps.letsconnect"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDvlmeMbU6jkG5kbkrTJbjf5A6zQgPaRd0"
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239666311936:android:e6eceb438ad29f317e39e5",
+        "android_client_info": {
+          "package_name": "org.alimapps.letsconnect.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239666311936:android:2e6afeb0787bb67a7e39e5",
+        "android_client_info": {
+          "package_name": "org.alimapps.letsconnect.qa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239666311936:android:dd523136e411ccc37e39e5",
+        "android_client_info": {
+          "package_name": "org.alimapps.letsconnect.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMoQQ-09DasrtOn71QA74ZJb4sMe51_c"
         }
       ],
       "services": {
