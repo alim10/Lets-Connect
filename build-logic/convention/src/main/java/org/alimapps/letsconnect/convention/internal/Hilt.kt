@@ -10,7 +10,7 @@ internal fun Project.configureHilt() {
     }
 
     dependencies {
-        add("implementation", getLibrary("dagger.hilt.android"))
-        add("ksp", getLibrary("dagger.hilt.android.compiler"))
+        add("implementation", getLibrary("hilt.android"))
+        add("ksp", getLibrary("hilt.android.compiler"))
     }
 }

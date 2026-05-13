@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("org.alimapps.letsconnect.Core.test", appContext.packageName)
+        assertEquals("org.alimapps.letsconnect.features.profile.test", appContext.packageName)
     }
 }

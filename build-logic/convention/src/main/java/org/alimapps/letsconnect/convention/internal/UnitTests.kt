@@ -7,10 +7,10 @@ import org.gradle.kotlin.dsl.dependencies
 
 internal fun Project.configureUnitTest() {
     dependencies {
-        add("testImplementation", getLibBundle("test.unit"))
-        add("testImplementation", getLibBundle("compose.test"))
+        add("testImplementation", getLibBundle("group.test.unit"))
+        add("testImplementation", getLibBundle("group.compose.test"))
 //        add("testImplementation", getLibrary("kotlinx.coroutines.test"))
 //        add("testImplementation", getLibrary("turbine"))
-        add("androidTestImplementation", getLibBundle("android.test"))
+        add("androidTestImplementation", getLibBundle("group.android.test"))
     }
 }

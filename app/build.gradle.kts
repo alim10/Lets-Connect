@@ -40,14 +40,18 @@ android {
 }
 
 dependencies {
-    implementation(projects.core.common)
-    implementation(projects.core.network)
+//    implementation(projects.core.common)
+//    implementation(projects.core.network)
+
+    implementation(project(":core:common"))
+
+
     implementation(libs.maps.compose)
     implementation(libs.accompanist.permissions)
-    implementation(libs.bundles.navigation)
-    implementation(libs.bundles.network)
+    implementation(libs.bundles.group.navigation)
+    implementation(libs.bundles.group.network)
     implementation(libs.bundles.work.manager)
-    implementation(libs.bundles.accompanist.pager)
+    implementation(libs.bundles.group.accompanist.pager)
 //    implementation(libs.bundles.group.firebase)
     implementation(libs.bundles.group.gms.map.location)
 }

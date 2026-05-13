@@ -1,14 +1,13 @@
-@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
 //    alias(libs.plugins.app.letsConnect.uiModule)
-    alias(libs.plugins.app.letsConnect.featuresModule)
-    alias(libs.plugins.app.letsConnect.flavors)
+    alias(libs.plugins.letsConnect.appFeaturesModule)
+    alias(libs.plugins.letsConnect.appFlavors)
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "org.alimapps.letsconnect.Core"
-    compileSdk = 35
+    namespace = "org.alimapps.letsconnect.features.profile"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -20,33 +19,35 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-//            proguardFiles(
-//                getDefaultProguardFile("proguard-alimapps-optimize.txt"),
-//                "proguard-rules.pro"
-//            )
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
 }
 
-dependencies {
-    implementation(libs.constraintlayout)
-    implementation(libs.constraintlayoutCore)
-//    implementation(libs.constraintCompose)
-    implementation(libs.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
-
-    implementation(project(":core"))
-}
+//dependencies {
+//    implementation(libs.androidx.constraintlayout)
+//    implementation(libs.androidx.compose.constraintlayout)
+////    implementation(libs.constraintCompose)
+//    implementation(libs.androidx.core.ktx)
+//    implementation(libs.androidx.appcompat)
+//    implementation(libs.material)
+//
+//
+//    testImplementation(libs.junit)
+//    androidTestImplementation(libs.androidx.junit)
+//    androidTestImplementation(libs.androidx.espresso.core)
+//    androidTestImplementation(platform(libs.androidx.compose.bom))
+//    androidTestImplementation(libs.androidx.compose.ui.testing.junit4)
+//    debugImplementation(libs.androidx.compose.ui.tooling)
+//    debugImplementation(libs.androidx.compose.ui.testing.manifest)
+//
+//
+////    implementation(project(":core"))
+//}
