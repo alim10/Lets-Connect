@@ -24,8 +24,8 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Lets-Connect"
 include(":app")
-include(":Core:Common")
-include(":Core:Network")
+include(":core:common")
+include(":core:network")
 
 //include(":Features:Core")
 //include(":Features:auth")
