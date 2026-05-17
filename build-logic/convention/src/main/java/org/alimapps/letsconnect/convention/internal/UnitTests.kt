@@ -11,8 +11,6 @@ internal fun Project.configureUnitTest(
     dependencies {
         add("testImplementation", getLibBundle("group.test.unit"))
         add("testImplementation", getLibBundle("group.compose.test"))
-//        add("testImplementation", getLibrary("kotlinx.coroutines.test"))
-//        add("testImplementation", getLibrary("turbine"))
         add("androidTestImplementation", getLibBundle("group.android.test"))
     }
 }

@@ -5,7 +5,6 @@ import org.gradle.kotlin.dsl.dependencies
 
 internal fun Project.configureRoom() {
     with(pluginManager) {
-//        apply("com.google.dagger.hilt.android")
         apply("com.google.devtools.ksp")
     }
 

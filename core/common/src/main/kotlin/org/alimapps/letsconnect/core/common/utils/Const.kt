@@ -439,26 +439,13 @@ object Const {
     }
 
     /**
-     * all activity and fragment TAG for log
+     * all screen TAG for log
      */
-    object Tags {
-        const val LOGIN_SCREEN = "Login Activity"
-        const val SIGNGUP_SCREEN = "Signup Activity"
-        const val HOME_ACTIVITY = "HOME_ACTIVITY"
-        const val DASHBOARD_ACTIVITY = "DASHBOARD_ACTIVITY"
-        const val BASE_ACTIVITY = "BaseActivity"
-        const val LOGIN_ACTIVITY = "LOGIN_ACTIVITY"
-        const val MAP_ACTIVITY = "MAP_ACTIVITY"
-        const val DISCOVERY_ACTIVITY = "DISCOVERY_ACTIVITY"
-        const val SPLASH_SCREEN_ACTIVITY = "SPLASH_SCREEN_ACTIVITY"
-        const val UPDATE_PROFILE_ACTIVITY = "UPDATE_PROFILE_ACTIVITY"
-        const val ORDER_DETAILS_ACTIVITY = "ORDER_DETAILS_ACTIVITY"
-        const val DISCOVERY_FRAGMENT = "DISCOVERY_FRAGMENT"
-        const val KARWATY_FRAGMENT = "KARWATY_FRAGMENT"
-        const val SERVICES_FRAGMENT = "SERVICES_FRAGMENT"
-        const val HOME_FRAGMENT = "HOME_FRAGMENT"
-        const val PROFILE_FRAGMENT = "PROFILE_FRAGMENT"
-        const val LISTING_FRAGMENT = "HOME_FRAGMENT"
+    object ScreenTags {
+        const val SCREEN_LOGIN = "Login SCREEN"
+        const val SCREEN_SIGNGUP = "SIGNGUP_SCREEN"
+        const val SCREEN_PROFILE = "SCREEN PROFILE"
+        const val SCREEN_HOME = "HOME SCREEN"
     }
 
     object Keys {

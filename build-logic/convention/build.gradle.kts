@@ -5,17 +5,14 @@ plugins {
 group = "org.alimapps.letsconnect.convention"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 kotlin {
-/*    jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(<MAJOR_JDK_VERSION>))
+   jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
-    // Or shorter:
-    jvmToolchain(<MAJOR_JDK_VERSION>)*/
-    // For example:
-//    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
 dependencies {
