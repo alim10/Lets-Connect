@@ -6,15 +6,16 @@ import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.configure
 
 class DataModuleConventions : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
-        with(pluginManager) {
-            apply("com.android.library")
-        }
+        pluginManager.apply("com.android.library")
 
-        configureAndroid<LibraryExtension>()
+        extensions.configure<LibraryExtension> {
+            configureAndroid(this)
+            configureUnitTest(this)
+        }
         configureHilt()
-        configureUnitTest()
     }
 }

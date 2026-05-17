@@ -13,13 +13,8 @@ object FirebaseInitModule {
 
     @Provides
     @Singleton
-    fun provideFirebaseMessagingInstance(): FirebaseMessaging {
-        return FirebaseMessaging.getInstance()
-    }
-
-    @Provides
-    @Singleton
-    fun provideInitFirebaseApp(initializer: FirebaseInitializer): FirebaseMessaging {
+    fun provideFirebaseMessagingInstance(initializer: FirebaseInitializer): FirebaseMessaging {
+        initializer.initialize()
         return FirebaseMessaging.getInstance()
     }
 }

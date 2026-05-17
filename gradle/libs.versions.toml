@@ -1,14 +1,17 @@
 [versions]
 version_accompanist_pager = "0.36.0"
 version_accompanist_permissions = "0.37.3"
-version_android_gradle = "8.11.2"
+version_android_gradle = "9.1.0"
 version_annotations = "26.0.2-1"
 version_core = "1.52.0"
 #version_core_ktx = "1.52.0"
 #version_core_ktx = "1.17.2"
 version_core_ktx = "1.16.0"
-version_kotlin = "2.1.0"
-version_ksp = "2.1.0-1.0.29"
+#version_kotlin = "2.3.21"
+version_kotlin = "2.2.20"
+#version_ksp = "2.1.0-1.0.29"
+version_ksp = "2.3.2"
+#version_ksp = "2.3.8"
 version_junit = "4.13.2"
 version_junitTest_Ext = "1.3.0"
 espressoCore = "3.7.0"
@@ -37,7 +40,6 @@ version_material = "1.13.0"
 
 compose = "1.7.8"
 
-navigation = "2.8.9"
 
 lifecycle = "2.8.7"
 
@@ -54,7 +56,7 @@ version_amplitude_analytics = "1.+"
 version_sql_cipher = "4.5.4"
 version_security = "1.1.0"
 version_room = "2.8.4"
-version_hilt = "2.57.2"
+version_hilt = "2.59.2"
 version_android_hilt_compiler = "1.3.0"
 version_hilt_navigation_compose = "1.3.0"
 
@@ -108,7 +110,11 @@ androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", 
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "version_lifecycle_viewmodel_ktx" }
 annotations = { module = "org.jetbrains:annotations", version.ref = "version_annotations" }
 google-ar-core = { module = "com.google.ar:core", version.ref = "version_core" }
+
+
+ksp-lib = { group = "com.google.devtools.ksp", name = "symbol-processing-api", version.ref = "version_ksp" }
 kotlin-std = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "version_kotlin" }
+android-hilt = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "version_hilt" }
 accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "version_accompanist_permissions" }
 android-tools-build-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "version_android_gradle" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "version_core_ktx" }
@@ -118,6 +124,8 @@ androidx-browser = { module = "androidx.browser:browser", version.ref = "version
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "version_kotlin" }
 kotlinx-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "version_kotlinx_immutable_collections" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "version_kotlinx_coroutines_test" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "version_ksp" }
+
 
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "version_androidx_compose_bom" }
 androidx-compose-activity = { module = "androidx.activity:activity-compose"}

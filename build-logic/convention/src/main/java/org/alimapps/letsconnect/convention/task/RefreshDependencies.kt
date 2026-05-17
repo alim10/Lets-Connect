@@ -1,6 +1,5 @@
 package org.alimapps.letsconnect.convention.task
 
-import com.android.build.gradle.BaseExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import java.io.File

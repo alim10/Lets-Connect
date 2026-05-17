@@ -8,17 +8,19 @@ import org.alimapps.letsconnect.convention.internal.configureCompose
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureNavigation
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
+import org.gradle.kotlin.dsl.configure
 
 class FeatureModuleConventions : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
-        with(pluginManager) {
-            apply("com.android.library")
+        pluginManager.apply("com.android.library")
+
+        extensions.configure<LibraryExtension> {
+            configureAndroid(this)
+            configureUnitTest(this)
+            configureCompose(this)
         }
 
-        configureAndroid<LibraryExtension>()
         configureHilt()
-        configureUnitTest()
-        configureCompose<LibraryExtension>()
         configureNavigation()
     }
 }

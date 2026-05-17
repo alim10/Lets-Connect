@@ -17,7 +17,7 @@ object Const {
 
     const val SECOND_TO_MILLIS = 1000
     const val DAY_TO_SECOND = 24 * 60 * 60
-    const val isProd = BuildConfig.FLAVOR_build == "prod"
+//    val isProd = BuildConfig.BUILD_FLAVOR == "prod"
 
     /**  Response code error   */
     const val ERROR_EXCEPTION = 1001

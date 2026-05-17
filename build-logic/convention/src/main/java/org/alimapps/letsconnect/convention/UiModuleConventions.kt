@@ -9,18 +9,19 @@ import org.alimapps.letsconnect.convention.internal.configureNavigation
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.configure
 
 class UiModuleConventions : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
-        with(pluginManager) {
-            apply("com.android.library")
+        pluginManager.apply("com.android.library")
+
+        extensions.configure<LibraryExtension> {
+            configureAndroid(this)
+            configureCompose(this)
+            configureUnitTest(this)
         }
 
-        configureAndroid<LibraryExtension>()
-        configureCompose<LibraryExtension>()
-        configureNavigation()
-
         configureHilt()
-        configureUnitTest()
+        configureNavigation()
     }
 }
