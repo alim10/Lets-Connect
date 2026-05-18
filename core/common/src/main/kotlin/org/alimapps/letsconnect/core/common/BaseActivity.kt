@@ -4,11 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.IntentFilter
 import android.os.Bundle
-import android.text.TextUtils
 import androidx.appcompat.app.AppCompatActivity
-import org.alimapps.letsconnect.core.common.data.AppPreference
 import org.alimapps.letsconnect.core.common.helper.LanguageHelper
 import org.alimapps.letsconnect.core.common.helper.NetworkReceiver
+import org.alimapps.letsconnect.core.common.session.AppPrefsRepository
 import org.alimapps.letsconnect.core.common.utils.Const
 import org.alimapps.letsconnect.core.common.utils.FontsOverride
 import java.text.SimpleDateFormat
@@ -21,7 +20,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var webFormat: SimpleDateFormat
 
     @Inject
-    lateinit var preference: AppPreference
+    lateinit var preference: AppPrefsRepository
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(
             LanguageHelper.wrapper(
@@ -38,7 +37,7 @@ abstract class BaseActivity : AppCompatActivity() {
         Const.SELECTED_LANGUAGE = preference.languageName
         Const.SELECTED_LANGUAGE_CODE = preference.languageCode
         initDateFormat()
-        if (preference.accessToken.isEmpty()) {
+        if (preference.accessToken.isNullOrEmpty()) {
             getFcmDeviceToken()
         }
     }
@@ -76,7 +75,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     fun isUserLogin(): Boolean {
-        return !TextUtils.isEmpty(preference.userId)
+        return preference.isLoggedIn
     }
 
 }

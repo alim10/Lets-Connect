@@ -29,16 +29,17 @@
         <activity
             android:name=".presentation.ui.MainActivity"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name="org.alimapps.letsconnect.presentation.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity-->
-<!--            android:name="org.alimapps.letsconnect.presentation.SplashActivity"-->
-<!--            android:exported="true">-->
-<!--        </activity>-->
 
 <!--        <meta-data-->
 <!--            android:name="com.google.firebase.messaging.default_notification_icon"-->
@@ -53,7 +54,7 @@
 <!--            android:value="@string/default_notification_channel_id" />-->
 
         <service
-            android:name="org.alimapps.letsconnect.firebase.AppFirebaseMessagingService"
+            android:name="org.alimapps.letsconnect.fcm.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
