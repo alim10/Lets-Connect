@@ -33,6 +33,7 @@ import com.joelkanyi.jcomposecountrycodepicker.component.CountryCodePicker
 import com.joelkanyi.jcomposecountrycodepicker.component.KomposeCountryCodePicker
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import org.alimapps.letsconnect.auth.screen.CountryCodePicker
+import org.alimapps.letsconnect.core.common.theme.MyAppTheme
 
 class AuthActivity1 : ComponentActivity() {
 

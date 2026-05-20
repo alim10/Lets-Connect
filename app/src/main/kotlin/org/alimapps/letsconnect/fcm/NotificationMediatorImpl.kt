@@ -11,9 +11,9 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.alimapps.letsconnect.core.common.logging.debug
-import org.alimapps.letsconnect.core.common.session.AppPrefsRepository
-import org.alimapps.letsconnect.di.coroutines.IoDispatcher
-import org.alimapps.letsconnect.notification.NotificationsManager
+import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.common.di.coroutines.IoDispatcher
+import org.alimapps.letsconnect.notification.manager.NotificationsManager
 import org.alimapps.letsconnect.notification.NotificationsRepository
 import org.alimapps.letsconnect.notification.showNotification
 import javax.inject.Inject
@@ -24,7 +24,7 @@ import kotlin.random.Random
 class NotificationMediatorImpl
 @Inject
 constructor(
-    private val appPrefs: AppPrefsRepository,
+    private val appPrefs: SharedPrefsRepository,
 //    private val analytics: Analytics,
     private val notificationsManager: NotificationsManager,
     private val notificationsRepository: NotificationsRepository,
@@ -108,7 +108,6 @@ constructor(
 
     companion object {
         const val TAG = "MyFirebaseMessaging"
-        private const val SEHHATY_VOIP_SERVICE_CONSTANT = "Sehhaty VoIP Service"
         private const val NOTIFICATION_TYPE = "type"
         private const val NOTIFICATION_TELEHEALTH_CALL = "call"
     }

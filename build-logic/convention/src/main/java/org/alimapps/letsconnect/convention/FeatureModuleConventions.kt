@@ -19,7 +19,6 @@ class FeatureModuleConventions : Plugin<Project> {
             configureUnitTest(this)
             configureCompose(this)
         }
-
         configureHilt()
         configureNavigation()
     }

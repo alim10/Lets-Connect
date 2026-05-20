@@ -30,7 +30,11 @@ include(":app")
 
 include(":core:common")
 include(":core:network")
+include(":core:database")
 
 include(":features:auth")
 include(":features:home")
 include(":features:profile")
+include(":core:analytics")
+include(":core:remoteConfig")
+include(":core:utils")

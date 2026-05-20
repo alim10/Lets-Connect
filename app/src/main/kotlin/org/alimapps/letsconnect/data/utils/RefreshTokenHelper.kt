@@ -3,8 +3,7 @@ package org.alimapps.letsconnect.data.utils
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import org.alimapps.letsconnect.core.common.state.Event
-import org.alimapps.letsconnect.core.common.state.StateData
-import org.alimapps.letsconnect.di.coroutines.ApplicationScope
+import org.alimapps.letsconnect.core.common.di.coroutines.ApplicationScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch

@@ -3,10 +3,10 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import org.alimapps.letsconnect.notification.NotificationsCache
 import org.alimapps.letsconnect.notification.NotificationsRemote
 import org.alimapps.letsconnect.notification.NotificationsRemoteImpl
-import org.alimapps.letsconnect.notification.RoomNotificationsCache
+import org.alimapps.letsconnect.notification.local.source.RoomNotificationsCache
+import org.alimapps.letsconnect.notification.local.source.NotificationsCache
 
 @Module
 @InstallIn(SingletonComponent::class)

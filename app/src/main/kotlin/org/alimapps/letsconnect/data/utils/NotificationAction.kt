@@ -7,6 +7,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.navigation.NavDeepLinkBuilder
 import org.alimapps.letsconnect.R
+import org.alimapps.letsconnect.core.common.navigation.DeepLinkDestination
 
 abstract class NotificationAction(private val context: Context) {
     

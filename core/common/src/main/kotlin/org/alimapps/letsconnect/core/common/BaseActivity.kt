@@ -7,9 +7,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.alimapps.letsconnect.core.common.helper.LanguageHelper
 import org.alimapps.letsconnect.core.common.helper.NetworkReceiver
-import org.alimapps.letsconnect.core.common.session.AppPrefsRepository
 import org.alimapps.letsconnect.core.common.utils.Const
 import org.alimapps.letsconnect.core.common.utils.FontsOverride
+import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
@@ -20,7 +20,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var webFormat: SimpleDateFormat
 
     @Inject
-    lateinit var preference: AppPrefsRepository
+    lateinit var preference: SharedPrefsRepository
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(
             LanguageHelper.wrapper(

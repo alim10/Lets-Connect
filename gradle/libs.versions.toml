@@ -30,13 +30,17 @@ version_material = "1.14.0"
 
 version_androidx_preference = "1.2.1"
 version_security_crypto = "1.1.0"
+version_desugar = "2.1.5"
+version_android_sqlight = "2.2.0"
+version_sqlight_framework = "2.4.0"
+version_sql_cipher = "4.16.0"
+version_sqlite = "2.6.2"
+#version_sql_cipher = "4.11.0"
+
 version_chucker = "4.3.1"
 
 version_firebase_bom = "34.13.0"
 version_amplitude_analytics = "1.+"
-
-version_sql_cipher = "4.5.4"
-version_security = "1.1.0"
 version_room = "2.8.4"
 version_hilt = "2.59.2"
 version_android_hilt_compiler = "1.3.0"
@@ -57,6 +61,8 @@ version_google_play_services = "4.4.4"
 version_crashlytics = "3.0.7"
 version_location_services = "21.3.0"
 version_maps_services = "20.0.0"
+version-app-update = "2.1.0"
+version-app-review = "2.0.2"
 
 version_camerax= "1.6.1"
 version_compression_zelory = "3.0.1"
@@ -72,6 +78,7 @@ version_lifecycle_runtime_ktx = "2.10.0"
 ndkVersion = "29.0.14206865"
 cMakeVersion = "3.22.1"
 appcompatVersion = "1.7.1"
+firebaseConfigKtxVersion = "23.1.0"
 
 
 [libraries]
@@ -167,8 +174,12 @@ androidx-preference = { module = "androidx.preference:preference", version.ref =
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "version_room" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "version_room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "version_room" }
-sql-cipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "version_sql_cipher" }
+#sql-cipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "version_sql_cipher" }
+sql-cipher = { module = "net.zetetic:sqlcipher-android", version.ref = "version_sql_cipher" }
 androidx-security-crypto = { module = "androidx.security:security-crypto", version.ref = "version_security_crypto" }
+android-sqlite = { module = "com.android.tools:sqlite", version.ref = "version_android_sqlight" }
+androidx-sqlite = { group = "androidx.sqlite", name = "sqlite", version.ref = "version_sqlite" }
+androidx-sqlite-framwork = { module = "androidx.sqlite:sqlite-framework", version.ref = "version_sqlight_framework" }
 
 gms-location = { module = "com.google.android.gms:play-services-location", version.ref = "version_location_services" }
 gms-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "version_maps_services" }
@@ -184,6 +195,13 @@ amplitude-analytics = { module = "com.amplitude:analytics-android", version.ref 
 
 #ksp-lib = { group = "com.google.devtools.ksp:symbol-processing-api", version.ref = "version_ksp" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "version_lottie_compose" }
+
+
+google-play-update = { group = "com.google.android.play", name = "app-update", version.ref = "version-app-update" }
+google-play-update-ktx = { group = "com.google.android.play", name = "app-update-ktx", version.ref = "version-app-update" }
+google-play-review = { group = "com.google.android.play", name = "review", version.ref = "version-app-review" }
+google-play-review-ktx = { group = "com.google.android.play", name = "review-ktx", version.ref = "version-app-review" }
+
 
 google-gson = { module = "com.google.code.gson:gson", version.ref = "version_gson" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "version_retrofit" }
@@ -247,6 +265,7 @@ group-android-ui = [
 ]
 group-compose-ui1 = [
     "coil-compose3",
+    "lottie-compose",
     "androidx-compose-ui",
     "androidx-compose-icons",
     "androidx-compose-preview",
@@ -342,6 +361,13 @@ group-firebase = [
 group-gms-map-location = [
     "gms-location",
     "gms-maps"
+]
+
+group-google-play-update = [
+    "google-play-update",
+    "google-play-review",
+    "google-play-update-ktx",
+    "google-play-review-ktx"
 ]
 
 group-camera = [

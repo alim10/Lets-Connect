@@ -1,7 +1,6 @@
 package org.alimapps.letsconnect.convention
 
 import com.android.build.api.dsl.LibraryExtension
-import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.alimapps.letsconnect.convention.internal.configureAndroid
 import org.alimapps.letsconnect.convention.internal.configureCompose
 import org.alimapps.letsconnect.convention.internal.configureHilt

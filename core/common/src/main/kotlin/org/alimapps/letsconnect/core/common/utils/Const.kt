@@ -52,6 +52,9 @@ object Const {
         const val NETWORK_ACTION = "android.net.conn.CONNECTIVITY_CHANGE"
     }
 
+    // InApp Updates
+    const val IN_APP_UPDATE_IMMEDIATE_RESULT_CODE = 1770
+    const val IN_APP_UPDATE_FLEXIBLE_RESULT_CODE = 1771
     /**
      * all date format
      */

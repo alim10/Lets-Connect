@@ -1,67 +1,57 @@
 //package org.alimapps.letsconnect.common.versionCheck
 //
-//import android.util.Log
-//import androidx.lifecycle.LiveData
-//import androidx.lifecycle.MutableLiveData
-//import org.alimapps.letsconnect.core.state.Event
-//import org.alimapps.letsconnect.di.coroutines.ApplicationScope
-//import com.github.glwithu06.semver.Semver
-//import org.alimapps.letsconnect.BuildConfig
 //import kotlinx.coroutines.CoroutineScope
+//import kotlinx.coroutines.flow.MutableStateFlow
+//import kotlinx.coroutines.flow.asStateFlow
 //import kotlinx.coroutines.launch
-//import org.alimapps.letsconnect.core.data.AppPreference
-//import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigSource
+//import org.alimapps.letsconnect.BuildConfig
+//import org.alimapps.letsconnect.core.common.session.AppPrefsRepository
+//import org.alimapps.letsconnect.di.coroutines.ApplicationScope
 //import javax.inject.Inject
 //
-
+//
 //class VersionCheckHelper @Inject constructor(
-//    val appPrefs: AppPreference,
-//    val remoteConfigSource: RemoteConfigSource,
+//    val appPrefs: AppPrefsRepository,
+////    val remoteConfigSource: RemoteConfigSource,
 //    @ApplicationScope val applicationScope: CoroutineScope,
 //) {
 //
 //    // Live data holding checkVersion.ForceUpdate response
-//    private val _forceUpdate = MutableLiveData<Event<Boolean>>()
-//    val forceUpdate: LiveData<Event<Boolean>> = _forceUpdate
+//    private val _forceUpdate = MutableStateFlow<Boolean?>(null)
+//    val forceUpdate = _forceUpdate.asStateFlow()
 //
 //    // Flag to show/hide progress indicator
-//    private val _loadingState = MutableLiveData<Boolean>().apply { value = true }
-//    val loadingState: LiveData<Boolean> = _loadingState
+//    private val _loadingState = MutableStateFlow(true)
+//    val loadingState = _loadingState.asStateFlow()
 //
 //    fun checkVersion() {
 //        applicationScope.launch {
 //            // Read current store version code and compare it with the current running version
-//            var storeVersionString = remoteConfigSource.getStringFromJson(
-//                    RemoteConfigSource.KEY_FORCE_UPDATE,
-//                    RemoteConfigSource.PARAM_CURRENT_STORE_VERSION
-//            )
-//            Log.d(TAG, "Current Store Version: $storeVersionString")
+////            var storeVersionString = remoteConfigSource.getStringFromJson(
+////                RemoteConfigSource.KEY_FORCE_UPDATE,
+////                RemoteConfigSource.PARAM_CURRENT_STORE_VERSION
+////            )
 //
 //            if (storeVersionString.isEmpty()) {
 //                storeVersionString = "2.2.1" //default value, same as value in remote_config_defaults.xml
 //            }
 //
-//            val storeVersion = Semver(storeVersionString)
-//            val appVersion = Semver(BuildConfig.VERSION_NAME)
+//            var storeVersionBiggerThanAppVersion = false
+//            val storeVersion = storeVersionString.split(".").map { it.toInt() }
+//            val appVersion = (BuildConfig.VERSION_NAME).split(".").map { it.toInt() }
 //
-//            if (appVersion < storeVersion) {
-//                Log.d(TAG, "Current Running Version less than Store")
-//                // if we have update check if it's FORCE or NORMAL update
-//                val isForceUpdated = remoteConfigSource.getBooleanFromJson(
-//                        RemoteConfigSource.KEY_FORCE_UPDATE,
-//                        RemoteConfigSource.PARAM_IS_FORCE_UPDATE
-//                )
-//                Log.d(TAG, "Is This ForceUpdate ? = $isForceUpdated")
+//            if (storeVersion[0] > appVersion[0]) storeVersionBiggerThanAppVersion = true
+//            else if (storeVersion[0] >= appVersion[0] && storeVersion[1] > appVersion[1]) storeVersionBiggerThanAppVersion = true
+//            else if (storeVersion[0] >= appVersion[0] && storeVersion[1] >= appVersion[1] && storeVersion[2] > appVersion[2]) storeVersionBiggerThanAppVersion = true
 //
-//                if (isForceUpdated) {
-//                    _forceUpdate.postValue(Event(true))
-//                } else {
-//                    _forceUpdate.postValue(Event(false))
-//                }
-//            } else {
-//                Log.d(TAG, "Current Running Version is equal to Store")
-//                _loadingState.postValue(false)
-//            }
+//            if (storeVersionBiggerThanAppVersion) {
+////                val isForceUpdated = remoteConfigSource.getBooleanFromJson(
+////                    RemoteConfigSource.KEY_FORCE_UPDATE,
+////                    RemoteConfigSource.PARAM_IS_FORCE_UPDATE
+////                )
+//
+//                _forceUpdate.emit(isForceUpdated)
+//            } else _loadingState.emit(false)
 //        }
 //    }
 //

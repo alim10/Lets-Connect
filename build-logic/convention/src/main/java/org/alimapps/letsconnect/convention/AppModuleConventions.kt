@@ -15,7 +15,11 @@ import org.gradle.kotlin.dsl.configure
 class AppModuleConventions : Plugin<Project> {
     
 	override fun apply(target: Project) = with(target) {
-        pluginManager.apply("com.android.application")
+        with(pluginManager) {
+            apply("com.android.application")
+            apply("com.google.gms.google-services")
+            apply("com.google.firebase.crashlytics")
+        }
 
         extensions.configure<ApplicationExtension> {
             defaultConfig {

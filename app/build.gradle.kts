@@ -41,8 +41,11 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.database)
     implementation(projects.core.common)
     implementation(projects.core.network)
+    implementation(projects.core.analytics)
+
     implementation(libs.maps.compose)
     implementation(libs.lottie.compose)
     implementation(libs.accompanist.permissions)
@@ -53,4 +56,12 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.bundles.group.firebase)
     implementation(libs.bundles.group.gms.map.location)
+    implementation(libs.bundles.group.google.play.update)
+
+    implementation(libs.sql.cipher)
+    implementation(libs.androidx.security.crypto)
+
+
+    implementation(group = "net.zetetic", name = "sqlcipher-android", version = "4.11.0")
+    implementation(group = "androidx.sqlite", name = "sqlite", version = "2.2.0")
 }
