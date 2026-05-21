@@ -1,7 +1,7 @@
 package org.alimapps.letsconnect.notification
 
 import kotlinx.coroutines.flow.Flow
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.data.AppDatabase
 import org.alimapps.letsconnect.notification.local.model.CachedLatestNotifications
 import org.alimapps.letsconnect.notification.local.model.CachedNotifications

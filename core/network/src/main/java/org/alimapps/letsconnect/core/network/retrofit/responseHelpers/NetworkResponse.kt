@@ -1,6 +1,6 @@
-package com.lean.sehhaty.network.retrofit.responseHelpers
+package org.alimapps.letsconnect.core.network.retrofit.responseHelpers
 
-import com.lean.sehhaty.common.general.ErrorCodes
+import org.alimapps.letsconnect.core.common.general.ErrorCodes
 import java.io.IOException
 
 sealed class NetworkResponse<out T : Any, out U : Any> {

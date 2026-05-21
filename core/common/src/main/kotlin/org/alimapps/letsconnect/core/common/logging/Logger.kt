@@ -1,6 +1,7 @@
 package org.alimapps.letsconnect.core.common.logging
 
 import timber.log.Timber
+import kotlin.getValue
 
 object Logger {
     private val logger by lazy {

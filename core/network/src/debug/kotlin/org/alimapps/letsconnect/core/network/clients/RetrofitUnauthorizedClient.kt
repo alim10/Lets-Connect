@@ -2,21 +2,21 @@ package org.alimapps.letsconnect.core.network.clients
 
 import android.content.Context
 import com.google.gson.GsonBuilder
-import com.lean.sehhaty.network.retrofit.interceptors.AppHeader
-import com.lean.sehhaty.network.retrofit.interceptors.ChuckInterceptorInstance
-import com.lean.sehhaty.network.retrofit.interceptors.LanguageInterceptor
-import com.lean.sehhaty.network.retrofit.interceptors.MobileModeInterceptor
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.alimapps.letsconnect.core.analytics.Analytics
-import org.alimapps.letsconnect.core.data.nativeLib.Secrets
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.common.nativeLib.Secrets
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.core.network.BuildConfig
 import org.alimapps.letsconnect.core.network.interceptors.CertificatePinnerInterceptor
 import org.alimapps.letsconnect.core.network.interceptors.CurlLoggerInterceptor
+import org.alimapps.letsconnect.core.network.interceptors.MobileModeInterceptor
 import org.alimapps.letsconnect.core.network.retrofit.ApiConstants
 import org.alimapps.letsconnect.core.network.retrofit.adapters.NetworkResponseAdapterFactory
+import org.alimapps.letsconnect.core.network.retrofit.interceptors.AppHeader
+import org.alimapps.letsconnect.core.network.retrofit.interceptors.ChuckInterceptorInstance
+import org.alimapps.letsconnect.core.network.retrofit.interceptors.LanguageInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit

@@ -491,4 +491,9 @@ object RemoteConfigFeaturesConstants {
     object PartnersPage{
         const val PARTNERS_PAGE = "UC-SHE-EMP-001-Fl01"
     }
+
+    object Network {
+        const val REFRESH_TOKEN_EXPIRATION_FEATURE = "refresh_token_expiration_feature"
+        const val REFRESH_TOKEN_FEATURE = "refresh_token_feature"
+    }
 }

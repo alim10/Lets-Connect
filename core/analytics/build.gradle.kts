@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.letsConnect.appDataModule)
+    alias(libs.plugins.letsConnect.appFeaturesModule)
     alias(libs.plugins.letsConnect.appFlavors)
 }
 

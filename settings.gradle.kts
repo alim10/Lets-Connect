@@ -28,7 +28,9 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Lets-Connect"
 include(":app")
 
+include(":core:ui")
 include(":core:common")
+include(":core:session")
 include(":core:network")
 include(":core:database")
 

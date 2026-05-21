@@ -1,4 +1,4 @@
-package org.alimapps.letsconnect.core.database.session
+package org.alimapps.letsconnect.core.session
 
 
 interface SharedPrefsRepository {

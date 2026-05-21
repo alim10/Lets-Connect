@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CalendarPicker">
+        <attr name="pickerType" format="enum">
+            <enum name="single" value="0" />
+            <enum name="range" value="1" />
+        </attr>
+        <attr name="showDayOfWeekTitle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <attr name="android:orientation"/>
+    </declare-styleable>
+
+    <declare-styleable name="CalendarMonthList">
+
+        <!-- layout resource for day cell layout -->
+        <attr name="cal_dayViewRes" format="reference" />
+
+        <!-- layout resource for month header layout -->
+        <attr name="cal_monthViewRes" format="reference" />
+
+        <!-- scroll direction H | V -->
+        <attr name="cal_scrollDirection" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <!-- locale of calendar [ ar | en ] etc... -->
+        <attr name="cal_locale" format="string" />
+
+        <!-- calendar display Gregorian or Hijri or both :] -->
+        <attr name="cal_calendarType" format="enum">
+            <enum name="gregorian" value="0" />
+            <enum name="hijri" value="1" />
+            <enum name="both" value="2" />
+        </attr>
+
+        <!-- min year of calendar -->
+        <attr name="cal_calendarMinYear" format="integer" />
+
+        <!-- max year of calendar -->
+        <attr name="cal_calendarMaxYear" format="integer" />
+
+        <!-- start day of week by default SUNDAY-->
+        <attr name="cal_calendarStartOfWeek" format="enum">
+            <enum name="monday" value="0" />
+            <enum name="tuesday" value="1" />
+            <enum name="wednesday" value="2" />
+            <enum name="thursday" value="3" />
+            <enum name="friday" value="4" />
+            <enum name="saturday" value="5" />
+            <enum name="sunday" value="6" />
+        </attr>
+
+        <!-- reference for week day text style -->
+        <attr name="cal_WeekTextStyle" format="reference" />
+
+        <!-- enable or disable swipe | by default it's enabled -->
+        <attr name="cal_enableCalendarSwipe" format="boolean"/>
+
+    </declare-styleable>
+    <!-- Custom Colors Attrs -->
+    <attr name="menuIconTintColor" format="color" />
+    <attr name="menuIconBackgroundColor" format="color" />
+    <!--    <attr name="textColor" format="color" />-->
+    <attr name="buttonMinHeight" format="dimension" />
+    <attr name="mainButtonCornerRadius" format="dimension" />
+    <attr name="buttonBackgroundVariant" format="color" />
+    <attr name="buttonFilledDisabledBackgroundColor" format="color" />
+
+    <attr name="textColorWarning" format="color" />
+    <attr name="textColorError" format="color" />
+    <attr name="textColorPositive" format="color" />
+    <attr name="textLightColor" format="color" />
+    <attr name="textRedColor" format="color" />
+    <attr name="textHintColor" format="color" />
+    <attr name="disabledTextColor" format="color" />
+    <attr name="textSubtitleColor" format="color" />
+    <attr name="buttonTextColor" format="color" />
+    <attr name="rootBackgroundColor" format="color" />
+    <attr name="drawerIconColor" format="color" />
+    <attr name="backIconColor" format="color" />
+    <attr name="strokeColor" format="color" />
+    <attr name="subtitleDarkTextColor" format="color" />
+
+    <attr name="primaryColor" format="color" />
+    <attr name="primaryColorOpacity" format="color" />
+    <attr name="iconBackground" format="color" />
+    <attr name="primaryTitle" format="color" />
+    <attr name="primaryBackground" format="color" />
+    <attr name="primarySubtitle" format="color" />
+    <attr name="primaryColorDark" format="color" />
+    <attr name="secondaryTitle" format="color" />
+    <attr name="inactiveButtonStyle" format="color" />
+    <attr name="selectedStyle" format="color" />
+    <attr name="secondaryButtonsBackground" format="color" />
+    <attr name="appHeaderBackground" format="color" />
+    <attr name="errorOpacity" format="color" />
+    <attr name="successOpacity" format="color" />
+    <attr name="warningOpacity" format="color" />
+    <attr name="_black" format="color" />
+    <attr name="_grey" format="color" />
+    <attr name="_white" format="color" />
+    <attr name="tabColor" format="color" />
+    <attr name="shadow" format="color" />
+    <attr name="success" format="color" />
+    <attr name="warning" format="color" />
+    <attr name="error" format="color" />
+    <attr name="boarderColor" format="color" />
+    <attr name="transparentColor" format="color" />
+    <attr name="hayatPrimaryColor" format="color" />
+    <attr name="hayatSecondaryColor" format="color" />
+    <attr name="hayatPrimaryBackground" format="color" />
+    <attr name="hayatSubtitle" format="color" />
+    <attr name="hayatSecondaryBackground" format="color" />
+    <attr name="hayatSurface" format="color" />
+
+
+
+    <!--    <attr name="toastBackgroundColor" format="color" />-->
+    <!--    <attr name="toastWarningBackgroundColor" format="color" />-->
+    <!--    <attr name="toastNotificationBackgroundColor" format="color" />-->
+
+
+    <declare-styleable name="BaseEditTextStyle">
+        <attr name="inputType" format="reference">
+            <enum name="password" value="0" />
+            <enum name="text" value="1" />
+            <enum name="number" value="2" />
+        </attr>
+
+        <attr name="iconRight" format="reference" />
+        <attr name="iconLeft" format="reference" />
+
+        <attr name="hasIcon" format="boolean" />
+        <attr name="android:background" format="reference" />
+        <attr name="editable" format="boolean" />
+        <attr name="android:text" format="string" />
+        <attr name="textUnit" format="string" />
+        <attr name="android:hint" format="string" />
+        <attr name="android:textAppearance" format="reference" />
+        <attr name="textError" format="string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textErrorColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseCalendarViewStyle">
+        <attr name="dimmedItemsBg" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseMaterialButtonStyle">
+        <attr name="textValue" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseTextViewStyle">
+        <attr name="rightIcon" format="reference" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="topIcon" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="BaseButtonStyle">
+        <attr name="android:text" format="string" />
+        <attr name="isLoading" format="boolean" />
+        <attr name="android:enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AppHeader">
+        <attr name="headerTitle" format="string" />
+        <attr name="headerSubtitle" format="string" />
+        <attr name="headerIcon" format="reference" />
+        <attr name="headerEndIcon" format="reference" />
+        <attr name="wavesDrawable" format="reference" />
+        <attr name="progressEnabled" format="boolean" />
+        <attr name="progress" format="integer" />
+        <attr name="isReversed" format="boolean" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="headerSubtitleTextColor" format="color" />
+        <attr name="headerTitleTextSize" format="float" />
+        <attr name="headerIconVisibility">
+            <!-- Visible on screen; the default value. -->
+            <enum name="visible" value="0" />
+            <!-- Not displayed, but taken into account during layout (space is left for it). -->
+            <enum name="invisible" value="1" />
+            <!-- Completely hidden, as if the view had not been added. -->
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="headerEndIconVisibility">
+            <!-- Visible on screen; the default value. -->
+            <enum name="visible" value="0" />
+            <!-- Not displayed, but taken into account during layout (space is left for it). -->
+            <enum name="invisible" value="1" />
+            <!-- Completely hidden, as if the view had not been added. -->
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="titleTextAlignment" format="integer">
+            <!-- Default. -->
+            <enum name="inherit" value="0" />
+            <!-- Default for the root view. The gravity determines the alignment, ALIGN_NORMAL,
+                ALIGN_CENTER, or ALIGN_OPPOSITE, which are relative to each paragraph’s
+                text direction. -->
+            <enum name="gravity" value="1" />
+            <!-- Align to the start of the paragraph, for example: ALIGN_NORMAL. -->
+            <enum name="textStart" value="2" />
+            <!-- Align to the end of the paragraph, for example: ALIGN_OPPOSITE. -->
+            <enum name="textEnd" value="3" />
+            <!-- Center the paragraph, for example: ALIGN_CENTER. -->
+            <enum name="center" value="4" />
+            <!-- Align to the start of the view, which is ALIGN_LEFT if the view’s resolved
+                layoutDirection is LTR, and ALIGN_RIGHT otherwise. -->
+            <enum name="viewStart" value="5" />
+            <!-- Align to the end of the view, which is ALIGN_RIGHT if the view’s resolved
+                layoutDirection is LTR, and ALIGN_LEFT otherwise. -->
+            <enum name="viewEnd" value="6" />
+        </attr>
+        <attr name="extended" format="boolean" />
+        <attr name="centerIcon" format="reference" />
+        <attr name="heightPercent" format="float" />
+        <attr name="wavesBackground" format="integer">
+            <!-- Default. -->
+            <enum name="lilac" value="0" />
+            <enum name="white" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="android:enabled" format="boolean" />
+        <attr name="backgroundEnabledColor" format="color" />
+        <attr name="buttonCornerRadius" format="dimension" />
+        <attr name="android:icon" format="reference" />
+        <attr name="android:textColor" format="color" />
+        <attr name="android:textSize" format="dimension" />
+        <attr name="android:text" format="string" />
+        <attr name="customTextStyle" format="reference">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="lightTheme" format="boolean" />
+        <attr name="isChecked" format="boolean" />
+        <attr name="contentDisabledColor" format="color" />
+        <attr name="backgroundDisabledColor" format="color" />
+        <attr name="customIconGravity" format="integer">
+            <!-- Push icon to the start of the button. -->
+            <flag name="start" value="0x1" />
+            <!-- Push the icon to the start of the text keeping a distance equal to
+                 {@link R.attr#iconPadding} from the text. -->
+            <flag name="textStart" value="0x2" />
+            <!-- Push icon to the end of the button. -->
+            <flag name="end" value="0x3" />
+            <!-- Push the icon to the end of the text keeping a distance equal to
+                 {@link R.attr#iconPadding} from the text. -->
+            <flag name="textEnd" value="0x4" />
+            <!-- Push the icon to the top of the button. -->
+            <flag name="top" value="0x10" />
+            <!-- Push the icon to the top of the text keeping a distance equal to
+                 {@link R.attr#iconPadding} from the text. -->
+            <flag name="textTop" value="0x20" />
+        </attr>
+        <attr name="pb_strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PrimaryTextView">
+        <attr name="android:enabled" format="boolean" />
+        <attr name="android:textColor" format="color" />
+        <attr name="disabledColor" format="color" />
+        <attr name="isButton" format="boolean" />
+        <attr name="android:text" format="string" />
+        <attr name="textViewCornerRadius" format="dimension" />
+        <attr name="textViewBackgroundColor" format="color" />
+        <attr name="android:drawableStart" format="reference|color" />
+        <attr name="android:drawableEnd" format="reference|color" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="textPaddingStart" format="dimension" />
+        <attr name="textPaddingEnd" format="dimension" />
+        <attr name="textPaddingBottom" format="dimension" />
+        <attr name="textPaddingTop" format="dimension" />
+        <attr name="android:textStyle" format="reference">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="android:textAlignment" format="integer">
+            <!-- Default. -->
+            <enum name="inherit" value="0" />
+            <!-- Default for the root view. The gravity determines the alignment, ALIGN_NORMAL,
+                ALIGN_CENTER, or ALIGN_OPPOSITE, which are relative to each paragraph’s
+                text direction. -->
+            <enum name="gravity" value="1" />
+            <!-- Align to the start of the paragraph, for example: ALIGN_NORMAL. -->
+            <enum name="textStart" value="2" />
+            <!-- Align to the end of the paragraph, for example: ALIGN_OPPOSITE. -->
+            <enum name="textEnd" value="3" />
+            <!-- Center the paragraph, for example: ALIGN_CENTER. -->
+            <enum name="center" value="4" />
+            <!-- Align to the start of the view, which is ALIGN_LEFT if the view’s resolved
+                layoutDirection is LTR, and ALIGN_RIGHT otherwise. -->
+            <enum name="viewStart" value="5" />
+            <!-- Align to the end of the view, which is ALIGN_RIGHT if the view’s resolved
+                layoutDirection is LTR, and ALIGN_LEFT otherwise. -->
+            <enum name="viewEnd" value="6" />
+        </attr>
+        <attr name="customTextDirection" format="integer">
+            <!-- Default. -->
+            <enum name="inherit" value="0" />
+            <!-- Default for the root view. The first strong directional character determines the
+                 paragraph direction.  If there is no strong directional character, the paragraph
+                 direction is the view’s resolved layout direction. -->
+            <enum name="firstStrong" value="1" />
+            <!-- The paragraph direction is RTL if it contains any strong RTL character, otherwise
+                 it is LTR if it contains any strong LTR characters.  If there are neither, the
+                 paragraph direction is the view’s resolved layout direction. -->
+            <enum name="anyRtl" value="2" />
+            <!-- The paragraph direction is left to right. -->
+            <enum name="ltr" value="3" />
+            <!-- The paragraph direction is right to left. -->
+            <enum name="rtl" value="4" />
+            <!-- The paragraph direction is coming from the system Locale. -->
+            <enum name="locale" value="5" />
+            <!-- The first strong directional character determines the paragraph direction. If
+                 there is no strong directional character, the paragraph direction is LTR. -->
+            <enum name="firstStrongLtr" value="6" />
+            <!-- The first strong directional character determines the paragraph direction. If
+                 there is no strong directional character, the paragraph direction is RTL. -->
+            <enum name="firstStrongRtl" value="7" />
+        </attr>
+        <attr name="customLayoutDirection" format="reference">
+            <!-- Left-to-Right. -->
+            <enum name="ltr" value="0" />
+            <!-- Right-to-Left. -->
+            <enum name="rtl" value="1" />
+            <!-- Inherit from parent. -->
+            <enum name="inherit" value="2" />
+            <!-- Locale. -->
+            <enum name="locale" value="3" />
+        </attr>
+        <attr name="android:textSize" format="dimension" />
+        <attr name="android:textAllCaps" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiExpandableCard">
+        <attr name="showActionButton" format="boolean" />
+        <attr name="actionButtonText" format="string" />
+        <attr name="reverseRecyclerView" format="boolean" />
+        <attr name="expandedHeight" format="dimension" />
+        <attr name="disableToggling" format="boolean" />
+        <attr name="isPregnancyView" format="boolean" />
+        <attr name="showAllergiesEdittext" format="boolean" />
+        <attr name="searchEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseTabLayoutStyle">
+        <attr name="textValues" format="reference" />
+        <attr name="android:textAppearance" format="reference" />
+        <attr name="indicatorHeight" format="integer" />
+        <attr name="itemCount" format="integer" />
+        <attr name="itemBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseRadioButtonStyle">
+        <attr name="android:checked" format="boolean" />
+        <attr name="android:text" format="string" />
+        <attr name="android:textColor" format="color" />
+        <attr name="android:background" format="reference" />
+        <attr name="android:textAppearance" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StepProgressBar">
+        <attr name="step" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="stepDoneColor" format="color|reference" />
+        <attr name="stepUndoneColor" format="color|reference" />
+        <attr name="stepMargin" format="dimension" />
+    </declare-styleable>
+
+</resources>

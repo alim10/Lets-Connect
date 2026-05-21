@@ -1,7 +1,7 @@
 package org.alimapps.letsconnect.core.network.interceptors
 
 import okhttp3.CertificatePinner
-import org.alimapps.letsconnect.core.data.nativeLib.Secrets
+import org.alimapps.letsconnect.core.common.nativeLib.Secrets
 
 object CertificatePinnerInterceptor {
     fun intercept(): CertificatePinner {

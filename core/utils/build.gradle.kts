@@ -5,7 +5,6 @@ plugins {
 
 android {
     namespace = "org.alimapps.letsconnect.core.utils"
-    ndkVersion = libs.versions.ndkVersion.get()
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -14,17 +13,8 @@ android {
         buildConfigField("String", "BASE_URL", "\"https://www.google.com/\"")
         buildConfigField("String", "IMAGE_URL", "\"https://www.google.com/\"")
 
-        externalNativeBuild.cmake.apply {
-            cppFlags("-std=c++17")
-            // Support for 16 KB page sizes (Android 15+)
-            arguments("-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=16384")
-        }
     }
 
-    externalNativeBuild.cmake.apply {
-        path = file("src/main/cpp/CMakeLists.txt")
-        version = libs.versions.cMakeVersion.get()
-    }
 
     buildTypes {
         release {

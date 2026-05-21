@@ -1,0 +1,49 @@
+<resources>
+    <!-- Brand Colors -->
+    <color name="primary_color">#1B8354</color>
+    <color name="primary_color_dark">#1B8354</color>
+    <color name="primary_color_opacity">#54C08A</color>
+
+    <!-- Text Colors -->
+    <color name="primary_title">#1F2A37</color>
+    <color name="primary_subtitle">#384250</color>
+    <color name="secondary_title">#6C737F</color>
+    <color name="inactive_button_style">#9FB1C4</color>
+
+    <color name="selected_style">#F3F8FC</color>
+    <color name="appHeader_title">#18203C</color>
+
+    <!-- Background Colors -->
+    <color name="primary_background">#FFFFFF</color>
+    <color name="secondary_buttons_background">#F7FDF9</color>
+    <color name="appHeader_background">#F4F7FA</color>
+
+    <!-- State Colors -->
+    <color name="error">#B42318</color>
+    <color name="error_opacity">#14E85454</color>
+
+    <color name="success">#067647</color>
+    <color name="success_opacity">#1469C6AF</color>
+
+    <color name="warning">#DC6803</color>
+    <color name="warning_opacity">#14F3943D</color>
+
+    <color name="_grey">#6C737F</color>
+    <color name="_black">#161616</color>
+
+    <!-- UI Element Colors -->
+    <color name="icon_background">#F3FCF6</color>
+    <color name="boarder_color">#D2D6DB</color>
+    <color name="tab_color">#E3E9ED</color>
+    <color name="_white">#FFFFFF</color>
+    <color name="shadow">#7F000000</color>
+    <color name="transparent_color">#00000000</color>
+
+    <!-- Hayat -->
+    <color name="hayat_primary_color">#EB6D89</color>
+    <color name="hayat_secondary_color">#945361</color>
+    <color name="hayat_primary_background">#FFEFE9</color>
+    <color name="hayat_subtitle">#8A7A77</color>
+    <color name="hayat_secondary_background">#FFEEE9</color>
+    <color name="hayat_surface">#FFF4F3</color>
+</resources>

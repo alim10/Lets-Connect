@@ -11,9 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import org.alimapps.letsconnect.apps.AppCornerRadius
-import org.alimapps.letsconnect.apps.AppHeight
-import org.alimapps.letsconnect.apps.AppPadding
+import org.alimapps.letsconnect.core.common.theme.AppCornerRadius
+import org.alimapps.letsconnect.core.common.theme.AppHeight
+import org.alimapps.letsconnect.core.common.theme.AppPadding
 import org.alimapps.letsconnect.core.common.theme.ColorGrayExtraLight1
 import org.alimapps.letsconnect.core.common.theme.Typography
 
@@ -115,7 +115,7 @@ fun TwoLineTextField(
             .background(color = ColorGrayExtraLight1,
                 shape = RoundedCornerShape(AppCornerRadius.large) )
             .heightIn(AppHeight.h_65)
-            .padding(AppPadding.pRegular), // Adjust padding according to your layout
+            .padding(AppPadding.regular), // Adjust padding according to your layout
         decorationBox = { innerTextField ->
             Box(modifier = Modifier) {
                 if (text.isEmpty()) {

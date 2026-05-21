@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="appointments_title">
+        <item>@string/upcoming_appointments</item>
+        <item>@string/past_appointments</item>
+    </string-array>
+
+    <integer-array name="progress_colors">
+        <item>?attr/colorSecondary</item>
+        <item>?attr/primaryColor</item>
+        <item>@color/inactive_button_style</item>
+    </integer-array>
+
+    <string-array name="pregnancy_weeks">
+        <item> </item>
+        <item>Week 1</item>
+        <item>Week 2</item>
+        <item>Week 3</item>
+        <item>Week 4</item>
+        <item>Week 5</item>
+        <item>Week 6</item>
+        <item>Week 7</item>
+        <item>Week 8</item>
+        <item>Week 9</item>
+        <item>Week 10</item>
+        <item>Week 11</item>
+        <item>Week 12</item>
+        <item>Week 13</item>
+        <item>Week 14</item>
+        <item>Week 15</item>
+        <item>Week 16</item>
+        <item>Week 17</item>
+        <item>Week 18</item>
+        <item>Week 19</item>
+        <item>Week 20</item>
+        <item>Week 21</item>
+        <item>Week 22</item>
+        <item>Week 23</item>
+        <item>Week 24</item>
+        <item>Week 25</item>
+        <item>Week 26</item>
+        <item>Week 27</item>
+        <item>Week 28</item>
+        <item>Week 29</item>
+        <item>Week 30</item>
+        <item>Week 31</item>
+        <item>Week 32</item>
+        <item>Week 33</item>
+        <item>Week 34</item>
+        <item>Week 35</item>
+        <item>Week 36</item>
+        <item>Week 37</item>
+        <item>Week 38</item>
+        <item>Week 39</item>
+        <item>Week 40</item>
+    </string-array>
+
+    <string-array name="create_pregnancy_weeks">
+        <item>Week 1</item>
+        <item>Week 2</item>
+        <item>Week 3</item>
+        <item>Week 4</item>
+        <item>Week 5</item>
+        <item>Week 6</item>
+        <item>Week 7</item>
+        <item>Week 8</item>
+        <item>Week 9</item>
+        <item>Week 10</item>
+        <item>Week 11</item>
+        <item>Week 12</item>
+        <item>Week 13</item>
+        <item>Week 14</item>
+        <item>Week 15</item>
+        <item>Week 16</item>
+        <item>Week 17</item>
+        <item>Week 18</item>
+        <item>Week 19</item>
+        <item>Week 20</item>
+        <item>Week 21</item>
+        <item>Week 22</item>
+        <item>Week 23</item>
+        <item>Week 24</item>
+        <item>Week 25</item>
+        <item>Week 26</item>
+        <item>Week 27</item>
+        <item>Week 28</item>
+        <item>Week 29</item>
+        <item>Week 30</item>
+        <item>Week 31</item>
+        <item>Week 32</item>
+        <item>Week 33</item>
+        <item>Week 34</item>
+        <item>Week 35</item>
+        <item>Week 36</item>
+        <item>Week 37</item>
+        <item>Week 38</item>
+        <item>Week 39</item>
+        <item>Week 40</item>
+    </string-array>
+
+    <string-array name="tabTextValues" translatable="false">
+        <item>@string/citizen_resident</item>
+        <item>@string/visitor</item>
+    </string-array>
+
+    <string-array name="calendarTypes" translatable="false">
+        <item>@string/gregorian_format</item>
+        <item>@string/hijri_format</item>
+    </string-array>
+
+    <string-array name="medication_next_prev">
+        <item>@string/title_medication_next</item>
+        <item>@string/title_medication_prev</item>
+    </string-array>
+
+    <string-array name="visits">
+        <item>@string/visits_emergency</item>
+        <item>@string/visits_outpatient</item>
+        <item>@string/visits_inpatient</item>
+    </string-array>
+
+    <string-array name="well_being">
+        <item>@string/appointment_type_all</item>
+        <item>@string/columns</item>
+        <item>@string/media</item>
+    </string-array>
+
+    <string-array name="insurance_approval_pager">
+        <item>@string/insurance_approval_list</item>
+        <item>@string/insurance_transaction_list</item>
+    </string-array>
+
+    <string-array name="notification_center">
+        <item>@string/general_notifications</item>
+        <item>@string/private_notifications_title</item>
+    </string-array>
+
+
+    <string-array name="prescriptions_current_previous">
+        <item>@string/current_prescriptions</item>
+        <item>@string/previous_prescriptions</item>
+    </string-array>
+
+    <string-array name="as3afny_current_previous">
+        <item>@string/as3afny_report_current_title</item>
+        <item>@string/as3afny_report_previous_title</item>
+    </string-array>
+
+    <string-array name="steps_leaderboard">
+        <item>@string/day</item>
+        <item>@string/month</item>
+        <item>@string/year</item>
+    </string-array>
+
+    <string-array name="family_relatives">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+    </string-array>
+
+    <string-array name="blood_type">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+</resources>

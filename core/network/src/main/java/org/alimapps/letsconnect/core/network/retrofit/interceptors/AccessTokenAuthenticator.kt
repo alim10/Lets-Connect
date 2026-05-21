@@ -3,23 +3,24 @@ package org.alimapps.letsconnect.core.network.retrofit.interceptors
 import android.util.Log
 import com.lean.sehhaty.network.userToken.RefreshTokenRequest
 import com.lean.sehhaty.network.userToken.RefreshTokenResponse
-import com.lean.sehhaty.remoteconfig.repository.IRemoteConfigRepository
-import com.lean.sehhaty.ui.ext.isNotNull
 import okhttp3.Interceptor
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.Protocol
 import okhttp3.Request
 import okhttp3.Response
-import okhttp3.ResponseBody
+import okhttp3.ResponseBody.Companion.toResponseBody
 import org.alimapps.letsconnect.core.analytics.event.EventPublisher
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
-import org.alimapps.letsconnect.core.network.BuildConfig
+import org.alimapps.letsconnect.core.common.extension.isNotNull
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.core.network.clients.RetrofitUnauthorizedClient
+import org.alimapps.letsconnect.core.network.repository.IRemoteConfigRepository
 import org.alimapps.letsconnect.core.network.retrofit.ApiConstants.AUTH_HEADER
 import org.alimapps.letsconnect.core.network.retrofit.ApiConstants.TOKEN_TYPE
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Header
 import retrofit2.http.POST
+import timber.log.Timber
 import java.util.Calendar
 import java.util.Date
 import java.util.concurrent.atomic.AtomicBoolean
@@ -58,30 +59,35 @@ constructor(
 
         oldAccessToken = appPrefs.accessToken
 
-        return if (remoteConfig.getRefreshTokenExpirationFeatureKey() && isExpired && tokenRefreshInProgress.get() == false) {
-                newAccessToken = appPrefs.accessToken
-                if (newAccessToken == oldAccessToken) {
-                    synchronized(this) {
-                        return tryRefreshToken(requestWithToken, 1)?.let { chain.proceed(it) }
-                            ?: returnDefaultRequest(originalRequest)
-                    }
-                } else return chain.proceed(requestWithToken)
+        return if (remoteConfig.getRefreshTokenExpirationFeatureKey() && isExpired && !tokenRefreshInProgress.get()) {
+            newAccessToken = appPrefs.accessToken
+            if (newAccessToken == oldAccessToken) {
+                synchronized(this) {
+                    tryRefreshToken(requestWithToken, 1)?.let { chain.proceed(it) }
+                        ?: returnDefaultRequest(originalRequest)
+                }
+            } else chain.proceed(requestWithToken)
 
         } else {
-            val response = try { chain.proceed(requestWithToken) } catch (e: Exception) { returnDefaultRequest(requestWithToken) }
+            val response = try {
+                chain.proceed(requestWithToken)
+            } catch (_: Exception) {
+                returnDefaultRequest(requestWithToken)
+            }
             val isUnauthorized = response.code == 401
             val currentTimerForRequest =
                 response.header("__timer", getCurrentSeconds().toString())?.toLongOrNull()
-            if (isUnauthorized && tokenRefreshInProgress.get() == false) {
-                    newAccessToken = appPrefs.accessToken
-                    if (newAccessToken == oldAccessToken
-                        && (currentRefreshTimer == null || currentRefreshTimer?.get() == null || currentTimerForRequest == null
-                                || (currentTimerForRequest.minus(currentRefreshTimer?.get()!!)) >= 60)) {
-                        synchronized(this) {
-                            tryRefreshToken(requestWithToken, 1)
-                            returnDefaultRequest(originalRequest)
-                        }
-                    } else response
+            if (isUnauthorized && !tokenRefreshInProgress.get()) {
+                newAccessToken = appPrefs.accessToken
+                if (newAccessToken == oldAccessToken
+                    && (currentRefreshTimer == null || currentRefreshTimer?.get() == null || currentTimerForRequest == null
+                            || (currentTimerForRequest - currentRefreshTimer?.get()!!) >= 60)
+                ) {
+                    synchronized(this) {
+                        tryRefreshToken(requestWithToken, 1)
+                        returnDefaultRequest(originalRequest)
+                    }
+                } else response
             } else response
         }
     }
@@ -96,7 +102,7 @@ constructor(
         val refreshTokenResponse =
             refreshToken(appPrefs.refreshToken, currentRefreshTimer?.get(), numberOfTries)
         return if (refreshTokenResponse.isSuccessful && refreshTokenResponse.body() != null) {
-            Log.e("isTokenExpired", "====================== REFRESH TOKEN SUCCEED =====================")
+            Timber.e("====================== REFRESH TOKEN SUCCEED =====================")
             appPrefs.refreshToken = refreshTokenResponse.body()?.refresh_token
             appPrefs.accessToken = refreshTokenResponse.body()?.access_token
             newAccessToken = refreshTokenResponse.body()?.access_token
@@ -104,10 +110,10 @@ constructor(
             resendRequest(request, refreshTokenResponse.body()?.access_token)
         } else if (numberOfTries < 1 && (refreshTokenResponse.code() != 401 || refreshTokenResponse.code() != 400)) {
             val numberRetries = numberOfTries + 1
-            Log.e("isTokenExpired", "tryRefreshToken repeating >> $numberRetries")
+            Timber.e("tryRefreshToken repeating >> $numberRetries")
             tryRefreshToken(request, numberRetries)
         } else {
-            Log.e("isTokenExpired", "tryRefreshToken is logging out >>")
+            Timber.e("tryRefreshToken is logging out >>")
             applyLogout()
             null
         }
@@ -115,7 +121,7 @@ constructor(
 
     @Synchronized
     private fun resendRequest(request: Request, accessToken: String?): Request {
-        Log.e("isTokenExpired", "AppDebug: resend request >> ${request.url}")
+        Timber.e("AppDebug: resend request >> ${request.url}")
         return request.newBuilder()
             .header(AUTH_HEADER, TOKEN_TYPE + (accessToken ?: appPrefs.accessToken))
             .header("__timer", getCurrentSeconds().toString())
@@ -123,7 +129,7 @@ constructor(
     }
 
     private fun applyLogout(): Request? {
-        Log.e("isTokenExpired", "====================== REFRESH TOKEN FAILED =====================")
+        Timber.e("====================== REFRESH TOKEN FAILED =====================")
 //        eventPublisher.send(AppEvent.Logout)
         tokenRefreshInProgress.set(false)
         appPrefs.refreshToken = null
@@ -148,7 +154,7 @@ constructor(
         .code(202)
         .message("Token refresh in progress")
         .protocol(Protocol.HTTP_2)
-        .body(ResponseBody.create(null, ""))
+        .body("".toResponseBody(null))
         .build()
 
     private fun getCurrentSeconds() = Calendar.getInstance().toInstant().epochSecond
@@ -158,7 +164,7 @@ constructor(
 //        if (tokenExpiredDate.isNotNull()) {
 //            val calendar = Calendar.getInstance().apply {
 //                time = Date(tokenExpiredDate ?: Date().time)
-//                add(Calendar.SECOND, -((remoteConfig.getRefreshTokenFeatureKey().toString()).toIntOrNull() ?: 60))
+//                add(Calendar.SECOND, -((remoteConfig.getRefreshTokenFeatureKey()).toIntOrNull() ?: 60))
 //            }
 //            val adjustedExpirationDate = calendar.time
 //            return Date() >= adjustedExpirationDate

@@ -5,8 +5,8 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import jakarta.inject.Singleton
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepositoryImpl
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.session.SharedPrefsRepositoryImpl
 
 
 

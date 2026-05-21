@@ -1,7 +1,9 @@
 package org.alimapps.letsconnect.fcm
+
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
+import androidx.core.os.bundleOf
 import com.google.firebase.messaging.RemoteMessage
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
@@ -10,8 +12,10 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import org.alimapps.letsconnect.core.analytics.Analytics
+import org.alimapps.letsconnect.core.analytics.AnalyticsHelper
 import org.alimapps.letsconnect.core.common.logging.debug
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.core.common.di.coroutines.IoDispatcher
 import org.alimapps.letsconnect.notification.manager.NotificationsManager
 import org.alimapps.letsconnect.notification.NotificationsRepository
@@ -25,7 +29,7 @@ class NotificationMediatorImpl
 @Inject
 constructor(
     private val appPrefs: SharedPrefsRepository,
-//    private val analytics: Analytics,
+    private val analytics: Analytics,
     private val notificationsManager: NotificationsManager,
     private val notificationsRepository: NotificationsRepository,
     @param:IoDispatcher private val io: CoroutineDispatcher
@@ -97,13 +101,13 @@ constructor(
             TAG,
             "currentTimeMillis: ${System.currentTimeMillis()} - fcmSentTime: ${remoteMessage.sentTime} = latency: $latency"
         )
-//        analytics.logCustomEvent(
-//            AnalyticsHelper.Events.FCM_LATENCY,
-//            bundleOf(
-//                AnalyticsHelper.Params.FCM_MSG_ID to id,
-//                AnalyticsHelper.Params.FCM_MSG_LATENCY to latency
-//            )
-//        )
+        analytics.logCustomEvent(
+            AnalyticsHelper.Events.FCM_LATENCY,
+            bundleOf(
+                AnalyticsHelper.Params.FCM_MSG_ID to id,
+                AnalyticsHelper.Params.FCM_MSG_LATENCY to latency
+            )
+        )
     }
 
     companion object {

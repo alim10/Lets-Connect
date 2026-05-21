@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>UC_SHE_APP_001_FL06</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>UC_SHE_APP_001_FL07</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>contact_us_visibility</key>
+        <value>{
+            "contact_us": false,
+            "ehala": false,
+            "call": true,
+            "twitter": true,
+            "whatsapp": true,
+            "email": false,
+            "about_us_email": false
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>services_list_visibility</key>
+        <value>{
+            "appointments": true,
+            "immediate_appointments": true,
+            "dependents": true,
+            "child_vaccines": false,
+            "sick_leaves": true,
+            "virus_tests": true,
+            "tetamman": true,
+            "vital_signs": true,
+            "search_for_drugs": true,
+            "medications_list": false,
+            "pregnancy": false,
+            "school_testing": false,
+            "team_care": false
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>android_store_update</key>
+        <value>{
+            "current_store_version_code": "2.2.1",
+            "is_force_update_allowed": false
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>android_cache_intervals</key>
+        <value>{
+            "refresh_token": 780,
+            "user_profile": 1800,
+            "vital_signs_profile": 1800,
+            "dependents": 86400,
+            "tetamman_register_external": 86400,
+            "tetamman_dashboard": 86400,
+            "appointments_mawid": 1800,
+            "appointments_telehealth": 1800,
+            "telehealth_config": 86400,
+            "vital_signs_latest": 240,
+            "vital_signs_steps_get": 86400,
+            "vital_signs_steps_post": 86400,
+            "fcm_token": 86400,
+            "virus_get_status": 3600,
+            "virus_get_vaccines": 3600,
+            "virus_get_token": 3600,
+            "team_care": 3600
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>apigee_base_url</key>
+        <value>https://api.sehhaty.sa/</value>
+    </entry>
+    <entry>
+        <key>android_health_profile_lookup</key>
+        <value>{
+            "allergies": [
+            {
+            "id": 1,
+            "allergen_name": "Allergy to aspirin",
+            "allergen_name_arabic": "حساسية من الأسبرين",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 2,
+            "allergen_name": "Allergy to contrast media",
+            "allergen_name_arabic": "حساسية تجاه صبغات الأشعة",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 3,
+            "allergen_name": "Allergy to antifungal agent",
+            "allergen_name_arabic": "حساسية من مضادات الفطريات",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 4,
+            "allergen_name": "Allergy to antiviral agent",
+            "allergen_name_arabic": "حساسية من العامل مضادات الفيروسات",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 5,
+            "allergen_name": "Allergy to immunoglobulin product",
+            "allergen_name_arabic": "حساسية من منتج الغلوبولين المناعي",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 6,
+            "allergen_name": "Allergy to Antibiotics",
+            "allergen_name_arabic": "حساسية من المضادات الحيوية",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 7,
+            "allergen_name": "Allergy to penicillin",
+            "allergen_name_arabic": "حساسية من البنسلين",
+            "allergen_type": "DRUG"
+            },
+            {
+            "id": 8,
+            "allergen_name": "Allergy to wheat",
+            "allergen_name_arabic": "حساسية من القمح",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 9,
+            "allergen_name": "Allergy to nuts",
+            "allergen_name_arabic": "حساسية من المكسرات",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 10,
+            "allergen_name": "Allergy to peanut",
+            "allergen_name_arabic": "حساسية من الفول السوداني",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 11,
+            "allergen_name": "Allergy to seafood",
+            "allergen_name_arabic": "حساسية من المأكولات البحرية",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 12,
+            "allergen_name": "Allergy to eggs",
+            "allergen_name_arabic": "حساسية من البيض",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 13,
+            "allergen_name": "Allergy to milk",
+            "allergen_name_arabic": "حساسية من الحليب",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 14,
+            "allergen_name": "Allergy to shellfish",
+            "allergen_name_arabic": "حساسية من المحار",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 15,
+            "allergen_name": "Allergy to fish",
+            "allergen_name_arabic": "حساسية من الأسماك",
+            "allergen_type": "FOOD"
+            },
+            {
+            "id": 16,
+            "allergen_name": "Allergy to iodine compound",
+            "allergen_name_arabic": "حساسية من مركب اليود",
+            "allergen_type": "SUBSTANCE"
+            },
+            {
+            "id": 17,
+            "allergen_name": "Allergy to latex",
+            "allergen_name_arabic": "حساسية من اللاتكس",
+            "allergen_type": "SUBSTANCE"
+            },
+            {
+            "id": 18,
+            "allergen_name": "Allergy to bee venom",
+            "allergen_name_arabic": "حساسية من سم النحل",
+            "allergen_type": "SUBSTANCE"
+            },
+            {
+            "id": -1,
+            "allergen_name": "Other",
+            "allergen_name_arabic": "أخرى",
+            "allergen_type": "OTHER"
+            }
+            ],
+            "diseases": [
+            {
+            "id": 1,
+            "disease_name": "High blood pressure (Hypertension)",
+            "disease_name_arabic": "ضغط دم مرتفع"
+            },
+            {
+            "id": 2,
+            "disease_name": "High cholesterol",
+            "disease_name_arabic": "كولسترول"
+            },
+            {
+            "id": 3,
+            "disease_name": "Migraine headaches",
+            "disease_name_arabic": "صداع نصفي"
+            },
+            {
+            "id": 4,
+            "disease_name": "Stroke",
+            "disease_name_arabic": "السكتة الدماغية"
+            },
+            {
+            "id": 5,
+            "disease_name": "Alzheimer’s disease or dementia",
+            "disease_name_arabic": "مرض الزهايمر أو الخرف"
+            },
+            {
+            "id": 6,
+            "disease_name": "Arthritis",
+            "disease_name_arabic": "التهاب المفاصل"
+            },
+            {
+            "id": 7,
+            "disease_name": "Asthma",
+            "disease_name_arabic": "الربو"
+            },
+            {
+            "id": 8,
+            "disease_name": "Cancer",
+            "disease_name_arabic": "سرطان"
+            },
+            {
+            "id": 9,
+            "disease_name": "Diabetes",
+            "disease_name_arabic": "داء السكري"
+            },
+            {
+            "id": 10,
+            "disease_name": "Heart disease",
+            "disease_name_arabic": "أمراض القلب"
+            },
+            {
+            "id": 11,
+            "disease_name": "Kidney disease",
+            "disease_name_arabic": "أمراض كلى"
+            },
+            {
+            "id": 12,
+            "disease_name": "Chronic Obstructive Pulmonary Disease (COPD)",
+            "disease_name_arabic": "مرض الانسداد الرئوي المزمن (COPD)"
+            },
+            {
+            "id": 13,
+            "disease_name": "Osteoporosis",
+            "disease_name_arabic": "هشاشة العظام"
+            },
+            {
+            "id": 14,
+            "disease_name": "Bipolar, Cyclothymic, or Depression",
+            "disease_name_arabic": "ثنائي القطب أو اضطراب المزاج الدوري أو الاكتئاب"
+            },
+            {
+            "id": 15,
+            "disease_name": "Epilepsy",
+            "disease_name_arabic": "الصرع"
+            },
+            {
+            "id": 16,
+            "disease_name": "Crohn's disease",
+            "disease_name_arabic": "مرض كرونز"
+            },
+            {
+            "id": 17,
+            "disease_name": "HIV/AIDS",
+            "disease_name_arabic": "فيروس نقص المناعة البشرية / الإيدز"
+            },
+            {
+            "id": 18,
+            "disease_name": "Parkinson disease",
+            "disease_name_arabic": "مرض الشلل الرعاش"
+            },
+            {
+            "id": -1,
+            "disease_name": "Other",
+            "disease_name_arabic": "أخرى"
+            }
+            ]
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>android_virus_base_url</key>
+        <value>https://mass-appointments.sehhaty.sa/</value>
+    </entry>
+    <entry>
+        <key>key_biometric_salt</key>
+        <value>sugar</value>
+    </entry>
+    <entry>
+        <key>feature_first_start</key>
+        <value>{
+            "vital_signs": true
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>vital_signs_dashboard_links</key>
+        <value>{
+            "visible": false
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>virus_symptoms_period</key>
+        <value>{"first_dose":21,"second_dose":60,"third_dose":90,"fourth_dose":90}</value>
+    </entry>
+    <entry>
+        <key>virus_vaccine_reschedule_options</key>
+        <value>{"isRescheduleSecondDoseAllowed": true,"isRescheduleThirdDoseAllowed": true}</value>
+    </entry>
+    <entry>
+        <key>sehhaty_wallet_webview_url</key>
+        <value>https://stg-mass-appointments.sehhaty.com/healthWallet</value>
+    </entry>
+    <entry>
+        <key>nvr_vaccines_data</key>
+        <value>{
+            "virus_vaccines_group_id": 1,
+            "child_vaccines_group_id": 2,
+            "adult_vaccines_group_id": 4,
+            "child_vaccines_6_months_clinic_id": 512,
+            "child_vaccines_clinic_id": 80,
+            "adult_vaccines_clinic_id": 912,
+            "adult_vaccines_clinic_service_code": "T964"
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>tbc_signal_chat_url</key>
+        <value>{
+            "tbc_socket_url":"wss://sehhaty-signal.devclan.io/api/v1/connect/"
+            }
+        </value>
+    </entry>
+    <entry>
+        <key>service_unavailable_banner</key>
+        <value>{
+            "desc_En": null,
+            "desc_Ar": null,
+            "title_En": null,
+            "title_Ar": null,
+            "is_shown": null
+            }
+        </value>
+    </entry>
+</defaultsMap>

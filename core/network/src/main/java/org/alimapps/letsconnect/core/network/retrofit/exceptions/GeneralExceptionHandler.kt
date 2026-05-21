@@ -2,11 +2,9 @@ package org.alimapps.letsconnect.core.network.retrofit.exceptions
 
 import android.util.Log
 import com.google.gson.Gson
-import com.lean.sehhaty.common.general.ErrorObject
-import com.lean.sehhaty.network.retrofit.error.GeneralRemoteError
-import com.lean.sehhaty.utility.utils.toGson
-import com.lean.sehhaty.utility.utils.toObject
-import org.alimapps.letsconnect.core.data.general.ErrorObject
+import org.alimapps.letsconnect.core.common.general.ErrorObject
+import org.alimapps.letsconnect.core.common.utils.toGson
+import org.alimapps.letsconnect.core.common.utils.toObject
 import org.alimapps.letsconnect.core.network.retrofit.error.GeneralRemoteError
 import retrofit2.HttpException
 import java.io.BufferedReader

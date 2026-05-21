@@ -6,7 +6,7 @@ import javax.crypto.spec.SecretKeySpec
 import android.util.Base64
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import org.alimapps.letsconnect.core.data.nativeLib.Secrets
+import org.alimapps.letsconnect.core.common.nativeLib.Secrets
 
 fun encrypt(stringToEncrypt: String, key: String = Secrets.encryptionKey(), iv: String = Secrets.encryptionIVKey()): String? {
     try {

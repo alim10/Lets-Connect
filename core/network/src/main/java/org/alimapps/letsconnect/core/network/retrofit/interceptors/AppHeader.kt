@@ -3,8 +3,7 @@ package org.alimapps.letsconnect.core.network.retrofit.interceptors
 import android.os.Build
 import okhttp3.Interceptor
 import okhttp3.Response
-import org.alimapps.letsconnect.core.data.nativeLib.Secrets
-import org.alimapps.letsconnect.core.network.BuildConfig
+import org.alimapps.letsconnect.core.common.nativeLib.Secrets
 
 const val DEVICE_TYPE = "ANDROID"
 

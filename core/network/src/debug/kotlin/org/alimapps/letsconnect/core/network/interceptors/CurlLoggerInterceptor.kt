@@ -1,10 +1,5 @@
 package org.alimapps.letsconnect.core.network.interceptors
 
-import com.lean.sehhaty.network.data.local.model.CacheCurlModel
-import com.lean.sehhaty.network.data.local.source.IDeveloperOptionsCache
-import com.lean.sehhaty.network.util.CurlPrinter
-import com.lean.sehhaty.utility.utils.di.coroutines.IoDispatcher
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import okhttp3.Interceptor
@@ -12,7 +7,9 @@ import okhttp3.Interceptor.Chain
 import okhttp3.Request
 import okhttp3.Response
 import okio.Buffer
-import java.io.IOException
+import org.alimapps.letsconnect.core.network.model.CacheCurlModel
+import org.alimapps.letsconnect.core.network.source.IDeveloperOptionsCache
+import org.alimapps.letsconnect.core.network.util.CurlPrinter
 import java.nio.charset.Charset
 import javax.inject.Inject
 import javax.inject.Singleton

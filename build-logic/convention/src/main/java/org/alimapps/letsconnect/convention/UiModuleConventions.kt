@@ -2,6 +2,7 @@ package org.alimapps.letsconnect.convention
 
 import com.android.build.api.dsl.LibraryExtension
 import org.alimapps.letsconnect.convention.internal.configureAndroid
+import org.alimapps.letsconnect.convention.internal.configureAndroidDependencies
 import org.alimapps.letsconnect.convention.internal.configureCompose
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureNavigation
@@ -16,6 +17,7 @@ class UiModuleConventions : Plugin<Project> {
 
         extensions.configure<LibraryExtension> {
             configureAndroid(this)
+            configureAndroidDependencies()
             configureCompose(this)
             configureUnitTest(this)
         }

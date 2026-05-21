@@ -24,22 +24,15 @@ android {
 }
 
 dependencies {
+    implementation(libs.timber.lib)
+    implementation(libs.chucker.debug)
+
+    implementation(libs.bundles.group.network)
+    implementation(libs.bundles.group.security)
+    implementation(libs.bundles.group.room)
+
+    implementation(projects.core.session)
+    implementation(projects.core.common)
     implementation(projects.core.analytics)
     implementation(projects.core.database)
-    implementation(libs.timber.lib)
-    implementation(libs.bundles.group.network)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
-
-
-//    dawiProdApi(libs.chucker.release)
-////    dawiProdApi(libs.chucker.debug)
-//    dawiDevApi(libs.chucker.debug)
-//    dawiQaApi(libs.chucker.debug)
-    implementation(libs.chucker.debug)
 }

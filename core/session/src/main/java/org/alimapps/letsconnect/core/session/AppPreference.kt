@@ -1,4 +1,4 @@
-//package org.alimapps.letsconnect.core.common.session
+package org.alimapps.letsconnect.core.session
 //
 //import android.content.Context
 //import org.alimapps.letsconnect.core.common.utils.Const

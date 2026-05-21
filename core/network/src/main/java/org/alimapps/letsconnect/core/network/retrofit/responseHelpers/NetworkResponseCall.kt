@@ -1,14 +1,14 @@
-package com.lean.sehhaty.network.retrofit.responseHelpers
+package org.alimapps.letsconnect.core.network.retrofit.responseHelpers
 
 import androidx.core.os.bundleOf
-import com.lean.sehhaty.analytics.Analytics
-import com.lean.sehhaty.analytics.AnalyticsHelper
-import com.lean.sehhaty.core.BuildConfig
-import com.lean.sehhaty.network.retrofit.error.RemoteError
-import com.lean.sehhaty.network.retrofit.error.RemoteErrorObject
 import okhttp3.Request
 import okhttp3.ResponseBody
 import okio.Timeout
+import org.alimapps.letsconnect.core.analytics.Analytics
+import org.alimapps.letsconnect.core.analytics.AnalyticsHelper
+import org.alimapps.letsconnect.core.analytics.BuildConfig
+import org.alimapps.letsconnect.core.network.retrofit.error.RemoteError
+import org.alimapps.letsconnect.core.network.retrofit.error.RemoteErrorObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Converter
@@ -58,7 +58,7 @@ class NetworkResponseCall<S : Any, E : Any>(
                             Response.success(NetworkResponse.ApiError(errorBody, code))
                         )
 
-                        if (BuildConfig.FLAVOR_build == "prod") {
+                        if ("isProd" == "prod") {
                             val url = delegate.request().url.toString().takeLast(42)
 
                             analytics.logCustomEvent(

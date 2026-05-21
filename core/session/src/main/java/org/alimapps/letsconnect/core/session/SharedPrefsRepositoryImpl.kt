@@ -1,4 +1,4 @@
-package org.alimapps.letsconnect.core.database.session
+package org.alimapps.letsconnect.core.session
 
 import android.content.Context
 import android.content.SharedPreferences

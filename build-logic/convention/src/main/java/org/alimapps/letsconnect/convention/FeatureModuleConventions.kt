@@ -4,6 +4,7 @@ import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.alimapps.letsconnect.convention.internal.configureAndroid
+import org.alimapps.letsconnect.convention.internal.configureAndroidDependencies
 import org.alimapps.letsconnect.convention.internal.configureCompose
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureNavigation
@@ -16,6 +17,7 @@ class FeatureModuleConventions : Plugin<Project> {
 
         extensions.configure<LibraryExtension> {
             configureAndroid(this)
+            configureAndroidDependencies()
             configureUnitTest(this)
             configureCompose(this)
         }

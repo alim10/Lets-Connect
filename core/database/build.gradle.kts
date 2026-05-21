@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.letsConnect.appDataModule)
+    alias(libs.plugins.letsConnect.appFeaturesModule)
     alias(libs.plugins.letsConnect.appFlavors)
 }
 
@@ -8,22 +8,22 @@ android {
 
     ndkVersion = libs.versions.ndkVersion.get()
 
-    defaultConfig {
-        externalNativeBuild.cmake.apply {
-            cppFlags("-std=c++17")
-            // Support for 16 KB page sizes (Android 15+)
-            arguments("-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=16384")
-        }
-    }
-
-    externalNativeBuild.cmake.apply {
-        path = file("src/main/cpp/CMakeLists.txt")
-        version = libs.versions.cMakeVersion.get()
-    }
+//    defaultConfig {
+//        externalNativeBuild.cmake.apply {
+//            cppFlags("-std=c++17")
+//            // Support for 16 KB page sizes (Android 15+)
+//            arguments("-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=16384")
+//        }
+//    }
+//
+//    externalNativeBuild.cmake.apply {
+//        path = file("src/main/cpp/CMakeLists.txt")
+//        version = libs.versions.cMakeVersion.get()
+//    }
 }
 
 dependencies {
-//    implementation(projects.core.common)
+    implementation(projects.core.common)
 //    implementation(projects.core.network)
     implementation(projects.core.analytics)
 

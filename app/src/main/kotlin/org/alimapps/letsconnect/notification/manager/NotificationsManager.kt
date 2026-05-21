@@ -23,7 +23,7 @@ import org.alimapps.letsconnect.core.common.utils.toObject
 import kotlinx.coroutines.CoroutineScope
 import org.alimapps.letsconnect.R
 import org.alimapps.letsconnect.core.common.logging.Logger
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.data.utils.NotificationFactory
 import org.alimapps.letsconnect.core.common.di.coroutines.IoDispatcher
 import org.alimapps.letsconnect.notification.INotificationsRepository

@@ -1,27 +1,21 @@
 package org.alimapps.letsconnect.convention.internal
 
 import com.android.build.api.dsl.CommonExtension
-import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.withType
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+/**
+ * Configure basic Android settings (SDK, namespace, etc.)
+ * Does NOT include implementation dependencies or UI-specific plugins.
+ */
 internal fun Project.configureAndroid(commonExtension: CommonExtension) {
     with(pluginManager) {
-        apply("org.jetbrains.kotlin.plugin.compose")
         apply("kotlin-parcelize")
     }
-
     commonExtension.apply {
         compileSdk = 37
 
         defaultConfig.minSdk = 26
-
-        compileOptions.apply {
-            sourceCompatibility = JavaVersion.VERSION_17
-            targetCompatibility = JavaVersion.VERSION_17
-        }
 
         buildFeatures.apply {
             viewBinding = true
@@ -30,12 +24,13 @@ internal fun Project.configureAndroid(commonExtension: CommonExtension) {
         namespace = generateNamespace()
     }
 
-    tasks.withType<KotlinCompile>().configureEach {
-        compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-        }
-    }
+    configureKotlinAndroid(commonExtension)
+}
 
+/**
+ * Configure shared Android dependencies for modules that need them.
+ */
+internal fun Project.configureAndroidDependencies() {
     dependencies {
         add("implementation", getLibBundle("group.android.ui"))
     }

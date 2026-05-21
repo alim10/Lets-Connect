@@ -1,9 +1,9 @@
 package org.alimapps.letsconnect.core.network.retrofit.adapters
 
-import com.lean.sehhaty.analytics.Analytics
-import com.lean.sehhaty.network.retrofit.responseHelpers.NetworkResponse
-import com.lean.sehhaty.network.retrofit.responseHelpers.NetworkResponseCall
 import okhttp3.ResponseBody
+import org.alimapps.letsconnect.core.analytics.Analytics
+import org.alimapps.letsconnect.core.network.retrofit.responseHelpers.NetworkResponse
+import org.alimapps.letsconnect.core.network.retrofit.responseHelpers.NetworkResponseCall
 import retrofit2.Call
 import retrofit2.CallAdapter
 import retrofit2.Converter

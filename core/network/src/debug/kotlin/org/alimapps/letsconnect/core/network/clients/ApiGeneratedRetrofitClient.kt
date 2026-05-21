@@ -1,14 +1,14 @@
 package org.alimapps.letsconnect.core.network.clients
 import com.google.gson.GsonBuilder
-import com.lean.sehhaty.analytics.Analytics
-import com.lean.sehhaty.network.retrofit.interceptors.ChuckInterceptorInstance
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.alimapps.letsconnect.core.analytics.Analytics
 import org.alimapps.letsconnect.core.network.BuildConfig
 import org.alimapps.letsconnect.core.network.interceptors.CertificatePinnerInterceptor
 import org.alimapps.letsconnect.core.network.interceptors.CurlLoggerInterceptor
 import org.alimapps.letsconnect.core.network.retrofit.ApiConstants
 import org.alimapps.letsconnect.core.network.retrofit.adapters.NetworkResponseAdapterFactory
+import org.alimapps.letsconnect.core.network.retrofit.interceptors.ChuckInterceptorInstance
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit

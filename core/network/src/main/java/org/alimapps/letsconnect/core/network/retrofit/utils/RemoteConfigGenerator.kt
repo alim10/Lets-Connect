@@ -2,6 +2,8 @@ package org.alimapps.letsconnect.core.network.retrofit.utils
 
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import org.alimapps.letsconnect.core.network.retrofit.RemoteConfigFeaturesConstants
+import org.alimapps.letsconnect.core.network.retrofit.RemoteConfigFeaturesConstants.MyHealth.MY_HEALTH_NEPHIS_PARTNER_COUNT
 import kotlin.collections.listOf
 
 fun main() {

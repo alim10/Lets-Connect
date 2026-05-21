@@ -1,8 +1,15 @@
 package org.alimapps.letsconnect.core.common.extension
 
 import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Log
+import android.util.TypedValue
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import okhttp3.ResponseBody
 import org.alimapps.letsconnect.core.common.general.ErrorObject
@@ -38,4 +45,28 @@ fun Context.saveFile(body: ResponseBody, nameId: String?): Resource<Uri> {
         input?.close()
     }
     
+}
+
+
+
+/** Backwards compatible method that will clear all activities in the stack.  */
+fun Context.startLauncherActivity() {
+    val packageManager: PackageManager = packageManager
+    val intent = packageManager.getLaunchIntentForPackage(packageName)
+    val componentName = intent?.component
+    val mainIntent: Intent = Intent.makeRestartActivityTask(componentName)
+    startActivity(mainIntent)
+}
+
+fun Context.createDrawable(@DrawableRes id: Int) =
+    ContextCompat.getDrawable(
+        this,
+        id
+    )
+
+@ColorInt
+fun Context.getColorFromTheme(@AttrRes attr: Int): Int {
+    val typedValue = TypedValue()
+    theme.resolveAttribute(attr, typedValue, true)
+    return typedValue.data
 }

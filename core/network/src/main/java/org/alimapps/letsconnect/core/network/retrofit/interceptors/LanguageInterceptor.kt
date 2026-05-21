@@ -2,7 +2,7 @@ package org.alimapps.letsconnect.core.network.retrofit.interceptors
 
 import okhttp3.Interceptor
 import okhttp3.Response
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.core.network.retrofit.ApiConstants
 import java.io.IOException
 import java.util.*

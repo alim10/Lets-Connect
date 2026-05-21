@@ -1,2 +1,1 @@
-package letsconnect.common.component
 

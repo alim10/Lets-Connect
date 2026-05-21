@@ -5,7 +5,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import net.zetetic.database.sqlcipher.SupportOpenHelperFactory
 import org.alimapps.letsconnect.core.common.BuildConfig
-import org.alimapps.letsconnect.core.data.nativeLib.Secrets
+import org.alimapps.letsconnect.core.common.nativeLib.Secrets
 import java.io.File
 import java.io.FileInputStream
 

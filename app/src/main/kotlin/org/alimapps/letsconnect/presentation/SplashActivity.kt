@@ -12,7 +12,7 @@ import com.google.firebase.remoteconfig.remoteConfigSettings
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.alimapps.letsconnect.core.data.session.SharedPrefsRepository
+import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.notification.manager.NotificationsManager
 import org.alimapps.letsconnect.presentation.ui.MainActivity
 import org.alimapps.letsconnect.util.inAppUpdate.InAppUpdateService

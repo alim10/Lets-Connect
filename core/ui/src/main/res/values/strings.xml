@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">صحتي</string>
+
+    <string name="calendar_sunday" translatable="false">Sun</string>
+    <string name="calendar_monday" translatable="false">Mon</string>
+    <string name="calendar_tuesday" translatable="false">Tue</string>
+    <string name="calendar_wednesday" translatable="false">Wed</string>
+    <string name="calendar_thursday" translatable="false">Thu</string>
+    <string name="calendar_friday" translatable="false">Fri</string>
+    <string name="calendar_saturday" translatable="false">Sat</string>
+
+    <string name="pdf_cannot_handle_intent">Sorry, none of your installed applications supports sharing services</string>
+    <string name="show_less">show less</string>
+    <string name="show_more">show more</string>
+    <!-- Pattern for the v1 month and year string (localised) -->
+    <string name="mdtp_date_v1_monthyear">MMMM yyyy</string>
+    <!-- Pattern for the v2 day month and year string (localised) -->
+    <string name="mdtp_date_v2_daymonthyear">EEE, MMM dd</string>
+
+    <!-- Label for date or time [CHAR LIMIT=30] -->
+    <string name="mdtp_done_label">Done</string>
+    <string name="mdtp_ok">Ok</string>
+    <string name="mdtp_cancel">Cancel</string>
+    <!--
+         Content description for the hour selector in the time picker, which displays
+         selectable hours of the day along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="mdtp_hour_picker_description">Hours circular slider</string>
+    <!--
+         Content description for the minute selector in the time picker, which displays
+         selectable five-minute intervals along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="mdtp_minute_picker_description">Minutes circular slider</string>
+    <!--
+         Content description for the second selector in the time picker, which displays
+         selectable five-second intervals along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="mdtp_second_picker_description">Seconds circular slider</string>
+    <!-- Accessibility announcement for hour circular picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_hours">Select hours</string>
+    <!-- Accessibility announcement for minute circular picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_minutes">Select minutes</string>
+    <!-- Accessibility announcement for second circular picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_seconds">Select seconds</string>
+
+    <!--
+        Content description for the month and day selector in the date picker, which displays
+        a selectable grid of days laid out by month.
+        [CHAR LIMIT=50]
+     -->
+    <string name="mdtp_day_picker_description">Month grid of days</string>
+    <!--
+        Content description for the year selector in the date picker, which displays
+        a scrolling, vertical list of years.
+        [CHAR LIMIT=50]
+     -->
+    <string name="mdtp_year_picker_description">Year list</string>
+    <!-- Accessibility announcement for the day picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_day">Select month and day</string>
+    <!-- Accessibility announcement for the year picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_year">Select year</string>
+    <!-- Accessibility description for the item that is currently selected. -->
+    <string name="mdtp_item_is_selected"><xliff:g id="item" example="2013">%1$s</xliff:g> selected</string>
+    <!-- Accessibility announcement when a number that had been typed in is deleted [CHAR_LIMIT=NONE] -->
+    <string name="mdtp_deleted_key"><xliff:g id="key" example="4">%1$s</xliff:g> deleted</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_time_placeholder" translatable="false">00</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_time_separator" translatable="false">:</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_radial_numbers_typeface" translatable="false">sans-serif</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_sans_serif" translatable="false">sans-serif</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_day_of_week_label_typeface" translatable="false">sans-serif</string>
+
+    <string name="mdtp_am">am</string>
+    <string name="mdtp_pm">pm</string>
+    <string name="btn_launch_camera">Capture a photo with a camera</string>
+    <string name="btn_launch_gallery">Photo Album</string>
+    <string name="my_health_footer">My File</string>
+
+    <string name="location_services_message">Sehhaty collects and shares location data to provide a better service and the nearest health care centers.</string>
+    <string name="action_cancel_button">Cancel</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="permissions">Permissions</string>
+    <string name="required_absher_title">Need verification!</string>
+    <string name="required_absher_body">To take advantage of this service, please verify the dependent’s account in the Unified National Access Portal (Absher), by accessing the service through his account in the Sehhaty app.</string>
+    <string name="required_absher_negative">Ok</string>
+    <string name="update_mobile__verification">Verification </string>
+    <string name="selected_date_time_title">Selected date:</string>
+
+
+    <string name="time">Time</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="select_time">Select Time</string>
+    <string name="timer_initial_value">00:00</string>
+    <string name="select_all">select all</string>
+    <string name="delete">Delete</string>
+
+    <string name="cancel">Cancel</string>
+
+    <!-- ========================== Sehhaty App Permissions =================================== -->
+
+    <!-- CAMERA [ android.permission.CAMERA ] -->
+    <string name="camera_capture_permissions_title">Camera</string>
+    <string name="camera_capture_permissions_message">Sehhaty asks to access and use Camera data to enable starting your immediate and virtual consultation sessions with your doctors.</string>
+    <!-- ACTIONS -->
+    <string name="permission_action_cancel">Deny</string>
+
+    <string name="storage_permissions_title">Storage Permissions</string>
+    <string name="storage_permissions_body">Sorry in order to proceed, you need to allow the app to access external storage.</string>
+    <!-- LOCATION [ android.permission.ACCESS_FINE_LOCATION ]-->
+    <string name="location_permissions_title">Allow “Sehhaty” to access your location?</string>
+    <string name="location_permissions_required">Sehhaty collects and stores Location data to enable providing nearby health care centers.</string>
+    <!-- PRECISE LOCATION [ android.permission.ACCESS_FINE_LOCATION ]-->
+    <string name="precise_location_permissions_title">Allow “Sehhaty” to access your <b>precise</b> location?</string>
+    <string name="precise_location_permissions_required">Sehhaty collects <b>precise</b> Location data to enable providing nearby health care centers.</string>
+
+    <!-- CALENDAR [ android.permission.WRITE_CALENDAR - android.permission.READ_CALENDAR ]-->
+    <string name="calendar_permissions_title">Calendar</string>
+    <string name="calendar_permissions_body">Sehhaty asks to access and use write and read calendar data to enable insert and modify reminders of your booked PHCs appointments.</string>
+
+    <!-- FILES  [ android.permission.WRITE_EXTERNAL_STORAGE - android.permission.READ_EXTERNAL_STORAGE ] -->
+    <string name="file_permissions_title">Files</string>
+    <string name="file_permissions_message">Sehhaty asks to access and use write and read Images, Audio, Video, Files data to enable downloading immediate and virtual consultation, medical reports attachments, and media files.</string>
+
+    <!-- MICROPHONE [ android.permission.RECORD_AUDIO - android.permission.BLUETOOTH ] -->
+    <string name="microphone_permissions_title">Audio and Bluetooth</string>
+    <string name="microphone_permissions_message">Sehhaty asks to access and use Audio and Bluetooth data via microphone to enable starting your immediate and virtual consultation sessions with your doctors.</string>
+
+    <!-- GOOGLE FIT [ android.permission.ACTIVITY_RECOGNITION - com.google.android.gms.permission.ACTIVITY_RECOGNITION ]-->
+    <string name="google_fit_permissions_title">Physical Activity</string>
+    <string name="google_fit_permissions_message">Can you please allow Sehhaty to collect and store your Physical Activity data via Google Fit App to sync steps activity and walking distances?</string>
+
+    <string name="no_internet_title">No Internet Connection</string>
+    <string name="no_internet_message">You are not connected to the internet. Please check your Wi-Fi is on, Airplane Mode is off and try again.</string>
+    <string name="error_occurred">An error occurred, please try again</string>
+    <string name="login_required">You were logged out</string>
+    <string name="you_need_to_login_again">An error occurred, please log in again</string>
+
+    <string name="lable_privacy_policy">Privacy Policy</string>
+    <string name="lable_terms_conditions">Terms and Condition</string>
+    <string name="soft_launch">Soft launch</string>
+    <string name="soft_launch_body">Please rate the services provided in the soft launch</string>
+    <string name="health_summary_soft_launch_popup">
+        To improve health care in the Kingdom, we launched the unified health profile (soft launch) in cooperation with health service providers in the government and private sectors.
+        \n\n
+        The data in this release is not the final data as the service is still in the development stage.
+      \n\n
+         We care about your feedback by evaluating the service to improve the quality of the unified health profile and present it according to your expectations.
+    </string>
+    <string name="action_start">Start Now</string>
+    <string name="service_require_iam">The service required IAM (Abshr) to verify your ID \ Iqama</string>
+    <string name="empty"></string>
+    <string name="search">Search</string>
+    <string name="lable_other">Other</string>
+    <string name="str_health_pregnancy_select_date">Select Date</string>
+    <string name="health_profile_title">Health Profile</string>
+    <string name="str_health_profile_remove_section_confirmation">Are you sure you want to delete the registered [ %s ] information?</string>
+    <string name="button_im_sure">I’m sure</string>
+
+    <!-- *************************************** -->
+
+    <string name="title_fragment_intro" translatable="false">Introduction</string>
+    <string name="title_fragment_login" translatable="false">Login</string>
+    <string name="title_fragment_register" translatable="false">Register</string>
+    <string name="title_fragment_verify_phone" translatable="false">Verify Phone</string>
+    <string name="title_fragment_set_password" translatable="false">Set Password</string>
+    <string name="title_fragment_forgot_password" translatable="false">Forgot Password</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="title_activity_webview" translatable="false">WebViewActivity</string>
+    <string name="title_camera_activity" translatable="false">CameraActivity</string>
+    <string name="title_pdf_activity" translatable="false">PdfActivity</string>
+
+    <!--
+    Same value as Constants.Notifications.GENERAL_CHANNEL_ID. Added here to be used in AndroidManifest.xml
+    -->
+    <string name="notification_general_channel_id" translatable="false">general_channel_id</string>
+
+
+    <string name="title_appointments">Appointments</string>
+    <string name="title_dashboard">Home</string>
+    <string name="title_services">Services</string>
+    <string name="title_well_being">Wellbeing</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_medications">Medications</string>
+    <string name="blood_type_title">Choose</string>
+    <string name="title_update_email">Update email address</string>
+    <string name="title_update_healthcare_center">Update healthcare center</string>
+    <string name="title_select_city">Select city</string>
+    <string name="title_select_district">Select district</string>
+    <string name="title_choose_physician">Choose physician: </string>
+
+    <!--non-translatable strings-->
+    <string name="arabic" translatable="false">العربية</string>
+    <string name="english" translatable="false">English</string>
+
+    <!--Login screen-->
+    <string name="national_id_iqama">National ID/Iqama</string>
+    <string name="national_id_slash_iqama">National ID/Iqama</string>
+    <string name="password">Password</string>
+    <string name="forgot_password_question">Forgot Password?</string>
+
+    <!--Registration screen-->
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="this_is_hijri_format">Hijri Date</string>
+    <string name="support_email">Support@sehhaty.sa</string>
+    <string name="tetamman_support_email" translatable="false">937@moh.gov.sa</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string-array name="gregorian_months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="citizen_resident">Citizen/Resident</string>
+    <string name="visitor">Visitor</string>
+    <string name="back_to_main_page">Back to main page</string>
+
+    <!--Registration screen errors-->
+    <string name="error_phone_number_empty">Enter a valid phone number</string>
+    <string name="error_user_data_invalid">Please check the entered data: (National ID/ Iqama Number, Date of Birth)</string>
+
+    <!--Set Password screen-->
+
+    <!--Forgot Password screen-->
+
+    <!--Services List screen-->
+    <string name="my_appointments">My Appointments</string>
+    <string name="appointments">Appointments</string>
+    <string name="immediate_consultations">Immediate Consultations</string>
+    <string name="change_member">Change Dependent</string>
+    <string name="dependent">Dependent</string>
+    <string name="member_name">Dependent name</string>
+    <string name="my_family">My Dependent</string>
+    <string name="vital_signs">My vital signs</string>
+    <string name="empty_state">No Result Found</string>
+    <string name="sick_leaves_subtitle">Leave Reports</string>
+    <string name="vaccines">Vaccines</string>
+    <string name="my_vaccines">My Vaccines</string>
+    <string name="vaccines_choose_report">Choose report type:</string>
+    <string name="vaccines_hajj_report">Hajj vaccines report</string>
+    <string name="vaccines_full_report">Full vaccines report</string>
+    <string name="vaccines_download_report">Download report</string>
+    <string name="choose_one_of_the_members_from_the_list">Choose one of the dependents from the list:</string>
+    <string name="add_dependent_above_18">Please add a valid dependent who is over 18 years old to proceed.</string>
+
+    <!--No Results-->
+    <string name="no_results_found">No Results Found</string>
+
+
+
+    <!--Medications screen-->
+
+
+    <!--Search for drugs screen-->
+    <string name="drug_search_place_holder">Search by medication name</string>
+    <string name="drug_search_empty_data">No Data found</string>
+
+    <!--Drug Details screen-->
+
+    <!--Pharmacies Availability screen-->
+    <string name="show_on_map">Show On Map</string>
+    <string name="distance_variable_kilometer">%s km</string>
+    <string name="map_services_not_available">Map services not available on your device</string>
+
+    <!--School Testing And Surveys screen-->
+
+    <!--Dependents Picker screen-->
+    <string name="me_only">Me</string>
+    <string name="no_dependents_text">You could register your children to Sehhaty application, so you will able more take care for their health</string>
+    <string name="add_dependents">Add dependent</string>
+
+    <!--Profile screen-->
+    <string name="blood_type">Blood Type</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="maritial_status">Marital status</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="hypertension">Hypertension</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="location_and_healthcare_center">Location &amp; Healthcare Center:</string>
+    <string name="city_and_district">City &amp; District</string>
+    <string name="city_and_district_value">%s, %s</string>
+    <string name="primary_healthcare_center">Primary Healthcare Center</string>
+    <string name="account_title">Account</string>
+    <string name="i_dont_know">I don\'t know</string>
+    <string name="marital_status_single">Single</string>
+    <string name="marital_status_married">Married</string>
+    <string name="marital_status_divorced">Divorced</string>
+    <string name="marital_status_widowed">Widowed</string>
+    <string name="profile_health_id">Health ID: %s</string>
+    <string name="location_and_national_address">Location &amp; National address</string>
+    <string name="change_address">Change address</string>
+    <string name="use_national_address">Use national address</string>
+    <string name="edit_martial_status">Change martial status</string>
+    <string name="change_email">Change E-mail address</string>
+    <string name="passport_border">Passport /Border</string>
+
+    <!--  Male  -->
+    <string name="marital_status_single_male">Single</string>
+    <string name="marital_status_married_male">Married</string>
+    <string name="marital_status_divorced_male">Divorced</string>
+    <string name="marital_status_widowed_male">Widowed</string>
+
+    <!--  FeMale  -->
+    <string name="marital_status_single_female">Single</string>
+    <string name="marital_status_married_female">Married</string>
+    <string name="marital_status_divorced_female">Divorced</string>
+    <string name="marital_status_widowed_female">Widowed</string>
+
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="choose_all">All</string>
+    <string name="select">Select</string>
+    <string name="select_">Select</string>
+    <string name="date">Date</string>
+    <string name="filter_by">Filter By</string>
+    <string name="no_data_found">No Data</string>
+    <string name="my_vital_signs_no_readings">No readings yet</string>
+    <string name="family_history_title">Medical History</string>
+    <string name="family_medical_history_title">Family History</string>
+    <string name="entered_by_physician_v2">%s (Entered By Practitioner)</string>
+    <string name="entered_by_patient_v2">%s (Entered By User)</string>
+    <string name="other_disease">Other</string>
+    <string name="choose_disease">Select Health Conditions</string>
+
+    <!--Edit Profile screen-->
+    <string name="error_email_empty">Dear, please enter the Email address.</string>
+    <string name="error_email_invalid">Dear, the entered email address is incorrect or used before.</string>
+    <string name="city">City</string>
+    <string name="search_city">Search for a city name</string>
+    <string name="district">District</string>
+    <string name="search_district">Search for a district name</string>
+
+    <!--Dependents screen-->
+    <!--TODO (dependents) to be provide from BIZ -->
+    <string name="son">Son</string>
+    <string name="daughter">Daughter</string>
+    <string name="wife">Wife</string>
+    <string name="husband">Husband</string>
+    <string name="father">Father</string>
+    <string name="mother">Mother</string>
+    <string name="unspecified">Unspecified</string>
+    <string name="orphan">Orphan</string>
+
+    <string name="members_requests_title">Dependent Requests</string>
+    <string name="members_search_for_member">Search for Dependent</string>
+    <string name="members_no_dependents">No dependents added</string>
+    <string name="members_no_sent_requests">You don\'t have any Sent Requests</string>
+    <string name="members_no_sent_requests_body">Add dependent from spouses and children and follow their health condition.</string>
+    <string name="members_no_received_requests">You don\'t have any received requests</string>
+    <string name="members_no_received_requests_body">You can allow to be added as family dependent from spouses and parents to follow your health condition.</string>
+    <string name="members_add_new_member">Add a new dependent</string>
+    <string name="members_add_member">Add dependent</string>
+    <string name="members_select_relation_type">Select relationship type:</string>
+    <string name="members_you_can_add_dependent">Add dependents from spouses, childern and follow their health</string>
+    <string name="members_no_members_added">No dependents added</string>
+    <string name="members_add_manually">You can add unregistered dependents manually</string>
+    <string name="members_select_member_or_manually">Choose one of the dependents from the list or add manually:</string>
+    <string name="dependents_sent_requests">Sent Requests</string>
+    <string name="dependents_received_requests">Received Requests</string>
+    <string name="dependents_request_active">Active</string>
+    <string name="dependents_request_inactive">Inactive</string>
+    <string name="dependents_request_rejected">Rejected</string>
+    <string name="dependent_reject_added_request">Reject add request</string>
+    <string name="dependents_request_pending">Pending approval</string>
+    <string name="dependents_request_revoked">Revoked</string>
+    <string name="member_request_label_fill_dependent_info">Please confirm the dependent’s information:</string>
+    <string name="dependents_radio_son_daughter">Son, Daughter</string>
+    <string name="member_adult">Adults</string>
+    <string name="member_underage">Children</string>
+    <string name="dependents_radio_husband">Husband</string>
+    <string name="dependents_radio_wife">Wife</string>
+    <string name="dependents_radio_other">Other</string>
+    <string name="dependents_radio_father_mother">Father, Mother</string>
+    <string name="dependents_radio_orphan">Orphan</string>
+    <string name="member_radio_send_code">Send an OTP to dependent’s mobile</string>
+    <string name="member_radio_wait_for_approval">Through Sehhaty.</string>
+    <string name="member_resend_code">Send a new OTP to the Dependent</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="dependent_accept_request">Accept request</string>
+    <string name="dependent_accept__add_request">Accept add request</string>
+    <string name="dependent_accept_add_request_question">Accept add request?</string>
+    <string name="dependent_reject_request">Reject request</string>
+    <string name="dependent_revoke_request_v2">Yes I\'m sure</string>
+    <string name="dependent_revoke_request">Revoke data sharing</string>
+    <string name="dependent_revoke_request_keep">No</string>
+    <string name="dependent_revoke_request_keep_positive">Reject add request</string>
+    <string name="dependent_reject_request_confirmation">This action will send a rejection to the sender of the add request.</string>
+    <string name="dependent_reject_add_request_question">Reject add request?</string>
+    <string name="dependent_keep_request">Cancel</string>
+    <string name="dependent_cancel_request_question">Cancel the add request?</string>
+    <string name="dependent_cancel_request_confirmation">This action will cancel the request to add dependent.</string>
+    <string name="dependent_cancel_keep_request">Keep the request</string>
+    <string name="dependent_cancel_request">Cancel request</string>
+    <string name="dependent_accept_request_message">This will share your health data with the sender for 1 year from the acceptance date.</string>
+    <string name="dependent_revoke_request_confirmation">It will require a new request to reactivate the data </string>
+    <string name="dependent_revoke_request_confirmation_title">Are you sure you want to stop sharing your data?</string>
+    <string name="dependents_requests_not_found">You have no requests</string>
+    <string name="dependent_has_no_phone_error">To take advantage of this service, please verify the dependent’s account in the Unified National Access Portal (Absher), by accessing the service through his account in the Sehhaty app.</string>
+    <string name="member_tree_not_found_label">Dependent not on the list?</string>
+    <string name="members_add_request_manually"><u>Add a dependent manually</u></string>
+    <string name="national_id_label">National ID /Iqama<font color='red'> *</font></string>
+    <string name="national_id_label_normal">National ID /Iqama</string>
+    <string name="date_of_birth_label">Date of Birth<font color='red'> *</font></string>
+    <string name="dependent_add_back_image_label">Attach a photo of your family card - back side<font color='red'> *</font></string>
+    <string name="dependent_add_front_image_label">Attach a photo of your family card - front side<font color='red'> *</font></string>
+    <string name="dependent_add_attachment_hint">Example: ID\Iqama - Family ID - Birth Certificate</string>
+    <string name="dependent_attachment_added">File added</string>
+    <string name="member_request_sent_successfully">The request has been sent to the dependent successfully!</string>
+    <string name="member_added_successfully_done">Dependent added successfully</string>
+    <string name="member_check_reuqest_status">You can check the status of the request through the Dependent Requests.</string>
+    <string name="member_select_request_approval_type">Please choose a way to send the request to the dependent:</string>
+    <string name="dependent_label_back_image">Family Card - Back</string>
+    <string name="dependent_label_front_image">Family Card - Front</string>
+    <string name="btn_check_family_tree">Verify</string>
+    <string name="dependent_add_label_iqama_image">Attach a photo of iqama card</string>
+    <string name="dependent_label_iqama_image">photo of iqama card</string>
+    <string name="card_required_field_label">Required Field</string>
+    <string name="dependent_request_rejected_reason">Rejection Reason: %s</string>
+    <string name="dependent_add_manual_attachment_formats">Supported formats PNG, JPG, JPEG</string>
+    <string name="dependent_fail_to_verify">Sorry, we could’t retrieve the required information at this time.</string>
+    <string name="dependent_request_approval">Request Approval</string>
+    <string name="dependents_request_date">Request Date</string>
+    <string name="member_code_verification_skip_step_title">Skip this step?</string>
+    <string name="member_code_verification_skip_step_body">This action will cancel the verification, you can re-verify the dependent from my family list.</string>
+    <string name="member_code_verification_skip_step_positive">Yes</string>
+    <string name="member_code_verification_skip_step_negative">Cancel</string>
+
+    <!--Add Dependent screen-->
+    <string name="relation_type">Relation type</string>
+    <string name="cancel_add_dependent">Cancel Add Dependency?</string>
+    <string name="cancel_add_dependent_question">Are you sure you want to cancel without saving changes? You will not able to save or restore entered information.</string>
+    <string name="keep_on_page">Keep on page</string>
+
+    <string name="members_request_required_approval">This dependent is above 18. A request for approval has been sent to them</string>
+    <string name="members_confirm_information">Please confirm the dependent information: </string>
+    <string name="my_family_underage_error_message">Sorry, this service is available for ages 18 and above</string>
+    <string name="my_family_underage_error_message_title">Unavailable Servies</string>
+
+    <!--Appointments screen-->
+    <string name="book_appointment">Book Appointment</string>
+    <string name="join">JOIN</string>
+    <string name="appointment_scheduled">Scheduled</string>
+    <string name="appointment_attended">Attended</string>
+    <string name="appointment_completed">Completed Successfuly</string>
+    <string name="appointment_cancelled">Cancelled</string>
+    <string name="appointment_no_show">No Show</string>
+    <string name="appointment_in_progress">Started</string>
+    <string name="appointment_hospital_referral">Hospital Referral</string>
+    <string name="reschedule_appointment">Reschedule</string>
+    <string name="past_appointments">Previous</string>
+
+    <!--Book Appointment screen-->
+    <string name="patient">Patient</string>
+
+    <string name="you">You</string>
+
+    <string name="available_slots">Available Slots</string>
+    <string name="no_available_slots">No available time slots for booking in the selected date</string>
+    <string name="no_available_days_slots">Dear, there’s no available time slots for booking in chosen Healthcare Center.</string>
+
+    <string name="reason_for_appointment">Reason for appointment: </string>
+    <string name="please_enter_appointment_reason_cancel">Please enter appointment cancel</string>
+
+    <string name="confirm">Confirm</string>
+
+    <string name="cancel_book_appointment">Cancel Booking Appointment?</string>
+    <string name="cancel_book_appointment_question">Are you sure you want to cancel your booking?</string>
+
+    <string name="no_health_care_service_found">There are no facilities found near to you.</string>
+    <string name="no_physicians_found">No physicians found</string>
+
+    <string name="search_for_physician">Search for physician</string>
+
+    <string name="select_healthcare_center_title">Facilities List</string>
+    <string name="select_healthcare_center_status_open">Open</string>
+    <string name="select_healthcare_center_status_closed">Closed</string>
+    <string name="btn_choose_health_care_appointment">Select</string>
+    <string name="search_facilities">Search for a facility</string>
+    <string name="select_another_healthcare_center_title">Select another healthcare center</string>
+
+    <!--cancel screen-->
+    <string name="title_cancel_appointment">Cancel</string>
+    <string name="msg_please_mention_cancel_reason">Enter reason for cancellation</string>
+    <string name="msg_appointment_cancell_success">Appointment has been cancelled successfully</string>
+
+    <!-- Reschedule Appointment Screen -->
+    <string name="appointment_reschedule_reason">Reason of reschedule</string>
+    <string name="msg_please_mention_reschedule_reason">Enter reason for rescheduling</string>
+
+    <!--Dashboard screen-->
+    <string name="dashboard_reached_daily_steps_goal">Exceeded your goal</string>
+    <string name="see_leaderboard">See leaderboard</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="last_measured">Last reading:</string>
+    <string name="last_measured_with_date">Last reading: %s</string>
+    <string name="physisical_activity_description">Allow access to your Google Fit App to monitor your fitness activity</string>
+    <string name="physisical_activity_description_huawei">Allow access to your Health App to monitor your fitness activity</string>
+    <string name="dashboard_welcome_label">Welcome, %1$s</string>
+    <string name="google_fit_needed">Sehhaty requires to download the GoogleFit App to see your steps counts</string>
+
+    <!--Steps-->
+    <string name="lable_welcome_to_emsh_30">Welcome to Emsh 30 Campaign</string>
+    <string name="msg_welcome_to_emsh_30">The Emsh Campaign 30 aims to build up the awareness of walking in the community and promote public health by counting the number of steps of participants by setting a daily goal of 8000 steps.</string>
+    <string name="lable_emsh_join_us">Join Us Now!</string>
+    <string name="lable_emsh_agree_share_data">I agree to participate in the Emsh 30 Campaign by the Ministry of Health, and I agree to share my data which includes the first name, family name and the number of steps for the purpose of the campaign.</string>
+    <string name="lable_sign_me_up">Sign me up!</string>
+    <string name="label_join_me_up">Join</string>
+    <string name="label_later">Later</string>
+    <string name="title_steps">Steps</string>
+    <string name="alert_join_emsh_campaign">Good job! \n Would you like to share your progress to \n everyone and join Emsh Campaign?</string>
+    <string name="label_Daily">Day</string>
+    <string name="label_Monthly">Month</string>
+    <string name="label_weekly">Week</string>
+    <string name="label_year">Year</string>
+    <string name="lable_withdraw_campaign">Withdraw from campaign?</string>
+    <string name="action_leave">Withdraw</string>
+    <string name="msg_agree_share_date">You should agree campaign conditions to join</string>
+    <string name="msg_google_fit_permission_is_mandatory">You need to allow the app to use GoogleFit permissions.</string>
+    <string name="lable_distance_unit">km</string>
+    <string name="steps_general_informations">General Informations</string>
+    <string name="steps_what_is_it">What is it?</string>
+    <string name="steps_provider">The campaign is provided by the Ministry of Health</string>
+    <string name="leaderboard_top50">Leaderboards (Top 50)</string>
+    <string name="leaderboard_leave_massage">This action will result in your withdrawal from campaign and delete your steps record from the campaign. You can participate again later.</string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="stay_in_steps_campaign">Stay in the Campaign</string>
+    <string name="daily_steps_campaign">Daily Steps Campaign</string>
+    <string name="steps_me">(Me)</string>
+
+    <!-- Side Menu -->
+    <string name="lable_about_sehhaty">About Sehhaty</string>
+    <string name="lable_sign_out">Log out from Sehhaty?</string>
+    <string name="sign_out">Log out</string>
+    <string name="lable_sehhaty_not_translated" translatable="false">Sehhaty</string>
+    <string name="lable_copyright_year" translatable="false">\u00A9 2026</string>
+    <string name="msg_logout_are_you_sure">This action will log you out of Sehhaty, you can log back in again.</string>
+
+    <!-- About Us -->
+    <string name="about_app_text">Sehhaty is an electronic platform of health services for individuals in Saudi Arabia. Sehhaty aims to enable users to reach health information and medical e-services provided by different health organization in the Kingdom, such as: vital signs updates, tracking prescribed medicine, retrieving and sharing medical leaves, promoting healthy lifestyle, and other services related to the health of individuals and families and the health awareness.
+\n\n
+Sehhaty is provided under the supervision of the Ministry of Health in Saudi Arabia, in line with its vision to improve the standards of healthcare and develop its services.</string>
+    <string name="lable_contact_us">Contact Us</string>
+    <string name="save_to_clipboard">Saved to clipboard</string>
+
+    <!-- Virus Test Results Messages -->
+    <string name="label_result_date">Result date</string>
+    <string name="label_swap_date">SWAB date</string>
+    <string name="no_tests_msg_state">Sorry, there is no available test results</string>
+    <string name="virus_test_details_app_header_title">Test Result</string>
+    <string name="virus_test_health_center">Healthcare center</string>
+
+    <!--Telehealth-->
+    <string name="telehealth_check_in">Check-in to Virtual Appointment</string>
+    <string name="telehealth_let_doctor_know">Let know to the doctor that you are ready for the appointment!</string>
+    <string name="telehealth_check_permissions">We need some permissions</string>
+    <string name="telehealth_check_permissions_hint">To start the session Sehhaty would like to access the camera, microphone, and photo album  </string>
+    <string name="telehealth_call">Call</string>
+    <string name="access_microphone">Access to microphone</string>
+    <string name="access_camera">Access to camera</string>
+    <string name="access_storage">Access to storage</string>
+    <string name="lbl_access_to_notifications">Enable Notifications</string>
+    <string name="not_allowed">Tap to allow</string>
+    <string name="change_permissions_from_settings">You can always change your permission status from the Settings of your device.</string>
+    <string name="core_open_settings">Open Settings</string>
+    <string name="settings">Settings</string>
+    <string name="you_need_to_allow_permissions">Please enable access to your Microphone, Camera and Storage so you can start the call</string>
+    <string name="please_wait">Please wait</string>
+    <string name="call_setup_failed">Connection Error!</string>
+    <string name="call_setup_failed_desc">An error has occurred with the connection, please check the network and try again.</string>
+    <string name="something_went_wrong">Something went wrong, please try again</string>
+    <string name="doctor_join_late_notice">Dear, there is a possibility that the doctor may join later, as he/she is helping another patient. Thank you for your patience.</string>
+    <string name="doctor_waiting_message">Searching for a doctor...</string>
+    <string name="estimated_time_left">Expected Serving Time:</string>
+    <string name="end_session">End Session</string>
+    <string name="max_file_size_warning_message">Maximum storage space for uploading files is 9MB</string>
+    <string name="not_supported_excel_file_warning_message">Error, can not upload excel file</string>
+    <string name="call_retry"> Retry </string>
+    <string name="exit_call_question">You are about to end the consultation, are you sure you want to continue?</string>
+    <string name="type_your_message">Type your message here...</string>
+    <string name="download">Download</string>
+    <string name="download_report">Download report</string>
+    <string name="doctor_variable">Dr. %s</string>
+    <string name="file_too_large">Upload Error</string>
+    <string name="please_choose_smaller_file">The size of the file you selected is too large, please select a file with a maximum of 9MB</string>
+    <string name="pick_from_gallery">Pick image or file</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="record_video">Record Video</string>
+    <string name="your_doctor_left">Your Doctor Left</string>
+    <string name="invalid_appointment_title">Appointment Invalid</string>
+    <string name="invalid_appointment_message">It appears you\'ve joined the appointment too late, please try again later or book another appointment</string>
+    <string name="invalid_appointment_patient_late_message">Sorry! Time of virtual consultation is over</string>
+    <string name="invalid_appointment_doctor_late_message">Sorry! Your doctor cannot join the session</string>
+    <string name="sync_chat_history_dialog">Checking for new messages, please wait.</string>
+    <string name="doctor_extended_session">Your doctor extended the session</string>
+    <string name="doctor_paused_session">Your doctor is finishing up with another patient. Please wait</string>
+    <string name="doctor_resumed_session">Your doctor resumed the session</string>
+    <string name="companion_joined_session">Companion has joined the call</string>
+    <string name="companion_left_session">Companion has left the call</string>
+    <string name="session_closed">This session has ended</string>
+    <string name="chat_empty_msg">Please allow 5 business days maximum for the doctor to reply, in case of emergency please call 937 immediately</string>
+    <string name="chat_voice_msg_dialog">Please note that voice messages have a one-minute maximum length.</string>
+
+    <!--Chat Start-->
+    <string name="chat_attach_title">Add an image or file for the diagnosis</string>
+    <string name="chat_attach_take_photo">Take Photo</string>
+    <string name="chat_attach_library_photo">Photo library</string>
+    <string name="chat_attach_file">file</string>
+    <!--Chat End-->
+
+    <!--Call Rating-->
+    <string name="call_rating_title">Session closed</string>
+    <string name="call_rating_subtitle_1">We would love to hear your comments and opinions</string>
+    <string name="call_rating_comments">Your notes..</string>
+    <string name="call_rating_submit">Send</string>
+    <string name="call_rating_skip">Skip</string>
+    <string name="call_rating_success_title_ivc">We thank you for using our immediate consultation service</string>
+    <string name="call_rating_success_title_vc">We thank you for using our virtual appointments service</string>
+    <string name="call_rating_success_subtitle">We wish you health and wellness!</string>
+    <string name="call_rating_success_close">Close</string>
+    <string name="call_rating_bad">Very Poor</string>
+    <string name="call_rating_weak">Poor</string>
+    <string name="call_rating_accepted">Fair</string>
+    <string name="call_rating_good">Good</string>
+    <string name="call_rating_very_good">Very good</string>
+    <string name="call_rating_app_easy">Ease of use Sehhaty application?</string>
+    <string name="call_rating_faced_issue">Did you face any issues while using the application?</string>
+    <string name="call_rating_mention_issue">If yes, mention it</string>
+    <string name="call_rating_doctor_care">The physician interest of your questions or concerns</string>
+    <string name="call_rating_comments_title">General notes for improvement and enhance  the service</string>
+    <string name="call_rating_explanation">The explanations given to you by the physician about your problem or health condition</string>
+
+    <!-- Virtual Appointments Start Page -->
+
+    <!-- Appointment Details -->
+    <string name="appointment_details_patient">Patient Name:</string>
+
+    <!-- Immediate Appointments -->
+
+
+    <!-- Book Immediate Appointment -->
+    <string name="no_937_consults_available">You have exceeded the number of consultations you can request this month</string>
+    <string name="appointment_disease_error">Diseases cannot be empty</string>
+    <string name="appointment_allergies_error">Allergies cannot be empty</string>
+
+    <!-- Book Virtual Appointment -->
+
+
+    <!-- New Appointments -->
+    <string name="appointment_type_clinic_brackets">(In person)</string>
+    <string name="appointment_type_virtual_brackets">(Virtual)</string>
+    <string name="new_appointment_title_variable">%s appointment %s</string>
+    <string name="upcoming_appointments">Upcoming</string>
+
+    <!-- New Book Appointment -->
+    <string name="appointment_type_all">All</string>
+    <string name="make_default_phc">Set as default center</string>
+
+
+    <!-- Telehealth Disclaimer -->
+    <string name="telehealth_disclaimer_label" translatable="false">Telehealth disclaimer</string>
+    <string name="btn_agree">Agree</string>
+    <string name="btn_disgree">Disagree</string>
+
+
+    <!-- Telehealth errors -->
+    <string name="telehealth_user_balance_error">No balance Appointment left for this month</string>
+    <string name="telehealth_patient_id_empty_error">Empty input for variable \'PatientID\' in rule \'GetBookingBalance\'</string>
+    <string name="telehealth_patient_creation_error">Issue while creating patient</string>
+    <string name="telehealth_name_ar_empty_error">Patient Arabic name is null or empty</string>
+    <string name="telehealth_name_en_empty_error">Patient name is null or empty</string>
+    <string name="telehealth_name_ar_error">Name is not in Arabic</string>
+    <string name="telehealth_name_en_error">Name is not in English</string>
+    <string name="telehealth_date_of_birth_empty_error">Patient birthdate is null or empty</string>
+    <string name="telehealth_date_of_birth_invalid_error">Patient birthdate invalid format</string>
+    <string name="telehealth_date_of_birth_future_error">DOB cannot be future date</string>
+    <string name="telehealth_phone_number_empty_error">Patient phone no. is null or empty</string>
+    <string name="telehealth_phone_number_invalid_error">Invalid Patient phone no. format</string>
+    <string name="telehealth_gender_empty_error">Patient gender is null or empty</string>
+    <string name="telehealth_gender_invalid_error">Invalid gender format</string>
+    <string name="telehealth_cancel_temp_appointmnet_error">Temporary booking cannot be deleted as appointment is booked</string>
+    <string name="telehealth_user_language_error">User Language is invalid</string>
+    <string name="telehealth_attachment_type_error">Please attach another file with extension {pdf,word,mp4,img}</string>
+    <string name="telehealth_attachment_try_again_error">Please attach your file again</string>
+    <string name="telehealth_attachment_size_error">Please attach a file that under 9 MB</string>
+    <string name="telehealth_attachment_duplicate_error">You have attached the same file before</string>
+
+
+    <string name="storage_permissions_message">Sehhaty will asks to access your device’s photos, audio, and video files, to contact doctor in virtual or immediate consultation and to send Image, Audio, Video files to your doctor.</string>
+    <string name="alarms_permissions_message">Sorry in order to set an Exact alarm, You need to allow the permission.</string>
+    <string name="location_permissions_phc_message">Sorry in order to proceed, you need to allow the app to use location permissions. This is used in order to show you the nearest Healthcare center to your location</string>
+    <string name="allow">Allow</string>
+    <string name="huawei_health_permissions_title">Hi Health Permissions</string>
+    <string name="huawei_health_needed">Sehhaty requires to download the Health App to see your steps counts</string>
+
+
+    <string name="back">Back</string>
+    <string name="back_back">Back</string>
+    <string name="next">Next</string>
+    <string name="save">Save</string>
+    <string name="save_and_close">Save and close</string>
+    <string name="update">Update</string>
+    <string name="lable_return">Back</string>
+    <string name="show_details">Show Details</string>
+    <string name="lable_yes">Yes</string>
+    <string name="lable_no">No</string>
+
+    <string name="comma">,</string>
+    <string name="dash" translatable="false">-</string>
+
+    <!-- Settings -->
+
+    <!--    Delete Account-->
+    <string name="delete_account_title">Delete Account?</string>
+    <string name="delete_account_message">This action will delete the account and delete the data previously entered by you.</string>
+    <string name="delete_account">Delete account</string>
+    <string name="keep_account">Keep account</string>
+
+    <!-- Update -->
+    <string name="force_update_title">New version available!</string>
+    <string name="force_update_message">You need to update to the latest Sehhaty version to continue</string>
+    <string name="normal_update_title">New Version available!</string>
+    <string name="normal_update_message">You should update to enjoy the latest features and enhancements</string>
+    <string name="not_now">Not Now</string>
+    <string name="exit_app">Exit App</string>
+
+    <string name="channel_name" translatable="false">Sehhaty Application</string>
+    <string name="channel_description" translatable="false">Sehhaty Application Notification Channel</string>
+
+    <!--Tetamman-->
+    <string name="contact_relation_other_4">Other</string>
+    <string name="whats_app_not_found">WhatsApp not installed on your device</string>
+    <string name="text_email">E-mail</string>
+    <string name="contact_details_phone">Phone number</string>
+    <!-- Tetamman isolation survey -->
+
+    <!--Vaccines-->
+    <string name="virus_vaccine_action_register">Register</string>
+    <string name="virus_vaccine_action_survey">Register Symptoms</string>
+    <string name="virus_vaccine_action_certificate">Medical Report</string>
+
+    <!-- Ehalah Popup -->
+
+    <!-- Add Appointment to Calendar -->
+    <string name="calendar_permissions_message">Sorry in order to proceed, you need to allow the app to access your calendar.</string>
+    <string name="calendar_appointment_added_successfully">Appointment added to calendar successfully.</string>
+    <string name="calendar_appointment_updated_successfully">Appointment updated in calendar successfully.</string>
+    <string name="calendar_failed_to_add_appointment">Unfortunately we cannot add the appointment to calendar.</string>
+    <string name="calendar_failed_to_update_appointment">Unfortunately we cannot update the appointment in calendar.</string>
+
+
+    <!-- BIOMETRIC Strings -->
+    <string name="biometric_fragment_title" translatable="false">Biometric Auth</string>
+    <string name="biometric_title">Log in with face ID or fingerprint</string>
+    <string name="biometric_description">To access your account easily, you can use either fingerprint or face ID</string>
+    <string name="biometric_allowance_string">Allow Sehhaty to use Face ID/Fingerprint ID</string>
+    <string name="biometric_ask_to_allow_biometric_string">Do you want to allow Sehhaty to use Fingerprint or Face ID ?</string>
+    <string name="biometric_button_notallow">Skip</string>
+    <string name="biometric_privacy_policy"><u>Privacy Policy</u></string>
+    <string name="biometric_popup_title">Fingerprint or Face ID Authentication</string>
+    <string name="biometric_action_try_again">Try again</string>
+    <string name="biometric_action_login_with_otp">login with OTP</string>
+    <string name="biometric_action_open_settings">Open Device Settings</string>
+    <string name="biometric_is_disabled_message">FaceID and Fingerprint is disabled on your device, please check your device settings</string>
+    <string name="biometric_is_not_detected">Face/fingerprint not recognized, please try again</string>
+
+    <!-- Child Vaccines -->
+    <!-- Child Vaccines [Dashboard] -->
+    <string name="child_vaccines_title">Vaccines</string>
+    <string name="child_dependents_vaccines_tab" translatable="false">dependent vaccines tab</string>
+    <string name="child_dependents_vaccines_children_title">Children</string>
+    <string name="vaccines_general_title">General</string>
+
+    <!-- Child Vaccines [Dependents Vaccines] -->
+    <!-- PHASE TWO OF CHILD VACCINE -->
+    <string name="dependents_vaccines_button_certificate">Download report</string>
+    <string name="btnHistoricalRegisterion">Register Historical Vaccines</string>
+    <string name="vaccines_empty">No vaccines has been registered</string>
+    <string name="dependents_vaccines_name_relation">( %s )</string>
+
+    <!-- Child Vaccines [Dependents Vaccines Appointments] -->
+    <string name="child_vaccines_btn_reschedule">Reschedule</string>
+
+    <!-- Child Vaccines [Dependents Vaccines Appointments Details] -->
+    <string name="child_vaccines_upcoming_appointment_date_time">Date &amp; Time:</string>
+    <string name="child_vaccine_btn_download_certificate">Download Vaccination Certificate</string>
+    <string name="child_vaccine_nvr_data_not_found">There are no registered vaccinations</string>
+    <!-- Edit Phone Number -->
+    <string name="please_fill_the_required_info">Please fill the required information</string>
+    <string name="verification_code_entered">Dear, please enter the verification code that sent to (******%s)</string>
+    <string name="new_phone_number">New mobile number</string>
+    <string name="enter_phone_number">Please enter the new mobile number</string>
+    <string name="hijri_format">Hijri</string>
+    <string name="gregorian_format">Gregorian</string>
+    <string name="incorrect_phone_number">The entered mobile number is incorrect</string>
+    <string name="same_phone_number">The new mobile number matches the previously registered number</string>
+    <string name="absher_redirection">You\'re going to be redirected to IAM (Abshr) to verify your identity</string>
+    <string name="duplicated_phone_number">The new mobile number is registered before with two different accounts </string>
+
+    <!-- Add City -->
+    <string name="not_allow">Not Allow</string>
+    <string name="share_location">Share Location</string>
+    <string name="access_location_permission">Sehhaty ask you to share your Current Location</string>
+    <string name="select_city">Please select your City &amp; District.</string>
+    <string name="select_location">Select your location on the map or enter your location</string>
+    <string name="enter_location">Enter your location:</string>
+    <string name="title_accept">Yes, allow</string>
+
+    <!-- in-app update strings -->
+    <string name="app_downloaded_message">Sehhaty app just downloaded an update</string>
+    <string name="restart">Restart</string>
+    <string name="error_user_data">Sorry, we couldn’t confirm the person with entered data. Please check and try again.</string>
+
+    <!-- Virus Dashboard -->
+    <string name="label_type_national_id">ID number and type:</string>
+    <string name="national_id_type_saudi">National ID - %s</string>
+    <string name="national_id_type_iqama">Iqama ID - %s</string>
+    <string name="national_id_type_border">Border ID - %s</string>
+    <!-- Virus Test Results -->
+    <string name="virus_test_result_unknown" translatable="false">-</string>
+    <string name="virus_test_result_recovered">Recovered</string>
+    <string name="virus_test_result_pending">Pending</string>
+    <string name="virus_test_result_negative">Negative</string>
+    <string name="virus_test_result_positive">Positive</string>
+    <string name="virus_test_result_rejected">Rejected</string>
+    <!-- User Filter -->
+    <string name="user_filter_owner">( Personal )</string>
+    <string name="user_filter_daughter">( Daughter )</string>
+    <string name="user_filter_son">( Son )</string>
+    <string name="user_filter_wife">( Wife )</string>
+    <string name="user_filter_husband">( Husband )</string>
+    <string name="user_filter_father">( Father )</string>
+    <string name="user_filter_mother">( Mother )</string>
+    <string name="user_filter_sponsor">( Sponsor )</string>
+    <string name="user_filter_other">( Other )</string>
+    <string name="other_dependent">Other</string>
+    <!-- Virus Vaccine -->
+    <string name="virus_vaccine_dose_one_label">First Dose</string>
+    <string name="virus_vaccine_dose_two_label">Second Dose</string>
+    <string name="virus_vaccine_dose_booster_one_label">1st Booster Dose</string>
+    <string name="virus_vaccine_dose_booster_two_label">2nd Booster Dose</string>
+    <string name="virus_vaccine_dose_booster_third_label">3rd Booster Dose</string>
+    <string name="virus_vaccine_dose_date_label">Date and Time:</string>
+    <string name="virus_vaccine_appointment_attendend">Taken</string>
+    <string name="virus_vaccine_appointment_booked">Booked</string>
+    <string name="virus_vaccine_cancel_one_appointment">Cancel appointment</string>
+    <string name="virus_vaccine_survey_not_eligible">Ineligible</string>
+    <string name="virus_vaccine_survey_eligible">Eligible</string>
+    <string name="virus_vaccine_medical_centre">Medical Center</string>
+    <string name="virus_vaccine_full_line_details" translatable="false">%s\n%s\n%s</string>
+    <string name="virus_vaccine_appointment_full_line_details" translatable="false">%s, %s</string>
+    <string name="virus_eligible_dose_date">Appointment eligibility date: </string>
+    <string name="virus_user_not_registered">Not Registered</string>
+    <!-- Cancel Virus Appointment -->
+    <string name="virus_vaccine_cancel_appointment_label">Cancelling the first dose appointment will occur to cancel the second dose appointment too,Are you sure you want to cancel?</string>
+    <string name="virus_cancel_appointment_label">Please enter the cancellation reason</string>
+    <!-- Reschedule Virus Appointment -->
+
+    <!-- Medications & Prescriptions -->
+    <string name="short_name_medication_optional">الاسم المختصر للدواء (اختياري)</string>
+    <string name="my_medications_service_description">A service that allows you to view your medication list</string>
+    <string name="general_service_description">A service that allows you to view your general notification</string>
+    <string name="current_prescriptions">Current Prescriptions</string>
+    <string name="previous_prescriptions">Previous Prescriptions</string>
+    <string name="details">Details</string>
+    <string name="add_medication">Add Medication</string>
+    <string name="search_for_medication_hint">Search for the name of a medicinal or commercial drug</string>
+    <string name="search_for_medication">Search by medication name</string>
+    <string name="medication_image">Medication Image</string>
+    <string name="edit">Edit</string>
+    <string name="medication_added_successfully">Medication added successfully</string>
+    <string name="select_source">Select source</string>
+    <string name="medication_notification_message_format">Reminder to take medications %s</string>
+    <string name="medication_Reminder">Medication Reminder</string>
+    <string name="the_prescription">Prescriptions</string>
+    <string name="prescription_patient_name">Patient name</string>
+    <string name="write_reason_for_cancellation">Write reason</string>
+
+
+
+    <string name="prescription_medication_duration">Duration</string>
+    <string name="prescription_medication_dose_variable">%s %s</string>
+    <string name="prescription_medication_frequency_variable">%s time(s) %s every %s %s</string>
+    <string name="prescription_medication_duration_variable">%s %s</string>
+    <string name="prescription_medication_status">Drug Status</string>
+    <string name="prescription_medication_name">Generic drug name</string>
+    <string name="prescription_medication_trade_name">Trade Drug Name</string>
+    <string name="prescription_medication_prescribed_quantity">Prescribed Quantity</string>
+    <string name="prescription_medication_prescribed_dose">Prescribed Dosage Unit</string>
+    <string name="prescription_medication_refills">Refills</string>
+    <string name="prescription_medication_instructions">Instructions</string>
+    <string name="prescription_medication_unit_per_frequency">Unit Per Frequency</string>
+    <string name="prescription_medication_frequency">Frequency Value</string>
+    <string name="prescription_medication_dispense_date">Dispense Date</string>
+    <string name="prescription_medication_dispense_type">Dispensed Unit Type</string>
+    <string name="prescription_medication_dispense_quantity_pack">Dispensed Quantity by Pack</string>
+    <string name="prescription_medication_prescription_date">Prescription date</string>
+    <string name="prescription_medication_prescription_number_colon">Prescription ID:</string>
+    <string name="prescription_medication_prescription_facility">Prescription issued facility</string>
+    <string name="prescription_medication_prescription_physician">Physician name</string>
+    <string name="prescription_medication_prescription_source">Source</string>
+    <string name="prescription">Prescription</string>
+    <string name="prescription_details">Prescription Details</string>
+    <string name="show_prescription_details">View prescription details</string>
+    <string name="download_prescription_document">Download/Share Report</string>
+    <string name="medications_dispensed">Prescribed Medications (%s):</string>
+    <string name="prescription_dispensed">Prescription Date: </string>
+
+    <!-- Health Profile-->
+    <string name="relation_empty_value" translatable="false"> </string>
+    <string name="health_profile_diseases">Health Conditions</string>
+    <string name="health_profile_family_disease">Family History (Genetic diseases)</string>
+    <string name="health_profile_allergy">Allergies (Drug, Food, Substance)</string>
+    <string name="health_profile_latest_update_">Latest Update %s</string>
+    <!-- Health Profile-->
+
+    <!-- View Allergies -->
+    <string name="view_allergy_title">Allergies</string>
+    <string name="view_allergy_by_practitioner">Entered by doctor</string>
+    <string name="view_allergy_add">Add Allergy</string>
+    <string name="view_allergy_empty_practitioner_date">No entered data</string>
+    <string name="view_allergy_by_user">Entered by user</string>
+    <string name="view_allergy_name">Allergy Name</string>
+    <string name="view_allergy_type">Allergy Type</string>
+    <string name="view_allergy_severity">Allergy Severity</string>
+    <string name="view_allergy_severity_severe">Severe</string>
+    <string name="view_allergy_severity_moderate">Moderate</string>
+    <string name="view_allergy_severity_mild">Mild</string>
+    <string name="view_allergy_severity_unknown">Unknown</string>
+    <string name="view_allergy_onset_date">Onset Date</string>
+    <string name="view_allergy_reaction">Allergy Reactions</string>
+    <string name="view_allergy_practitioner_name">Practitioner Name</string>
+    <string name="view_allergy_facility_name">Facility Name</string>
+    <string name="view_allergy_latest_update">Latest Update</string>
+    <!-- View Allergies -->
+
+    <!-- TODO HEALTH PROFILE: To Be translated from BIZ -->
+
+    <string name="str_health_family_history_title">Indicate the medical history in the family (if any):</string>
+    <string name="str_health_family_disease_name_label">Disease</string>
+    <string name="str_health_family_disease_remove_button">Remove</string>
+    <string name="str_health_family_disease_delete_button">Delete</string>
+    <string name="str_health_family_relative_name_label">Relative type</string>
+    <string name="str_health_family_relative_name_title">Select relative type</string>
+    <string name="family_disease_deplicated_error_msg">This entry already added</string>
+
+    <string name="str_health_pregnancy_date_label">Pregnancy start date</string>
+    <string name="str_health_pregnancy_week_label">Pregnancy week</string>
+
+    <string name="str_health_family_disease_relation_label">@string/str_health_family_relative_name_label</string>
+    <string name="str_health_family_disease_add_another_button">Add disease</string>
+    <string name="str_health_family_disease_save_button">Save Changes</string>
+    <string name="str_health_allergies_type_food">Food Allergy</string>
+    <string name="str_health_allergies_type_drug">Medication Allergy </string>
+    <string name="str_health_allergies_type_substance">Substance Allergy </string>
+    <string name="str_health_allergies_type_other">Other</string>
+    <string name="str_family_medical_history_entered_by_user">Entered by user</string>
+    <string name="str_family_medical_history_edit_information">Edit Information</string>
+
+
+    <!-- Health Profile Disease-->
+    <string name="view_disease_title">Health Conditions</string>
+    <string name="view_disease_entered_by_practitioner">Entered by doctor</string>
+    <string name="view_disease_add">Add Condition</string>
+    <string name="view_disease_empty_practitioner_date">No entered data</string>
+    <string name="view_disease_entered_by_user">Entered by user</string>
+    <string name="view_disease_health_conditions">Health Conditions</string>
+    <string name="view_disease_condition_name">Condition Name</string>
+    <string name="view_disease_status">Status</string>
+    <string name="view_disease_recorded_date">Diagnosed Date</string>
+    <string name="view_disease_practitioner_name">Clinician name</string>
+    <string name="view_disease_active">Active</string>
+    <string name="view_disease_inactive">Inactive</string>
+    <!-- Health Profile Disease-->
+
+
+    <!-- Duplicate these values until remove the original if no longer needed, as mentioned in the design it will be only EN -->
+    <string name="health_profile_weight" translatable="false">%s kg</string>
+    <string name="health_profile_height" translatable="false">%s cm</string>
+
+    // TODO Health Profile: Until provided from BIZ
+    <string name="health_profile_update_failed">Health Profile Update Failed, please try again</string>
+    <string name="current_pregnant_update_failed">Pregnant Update Failed, please try again</string>
+
+    <!-- Team Care -->
+
+    <!-- Team Care Dashboard -->
+    <string name="care_team_dashboard_empty_title">There is no care team dedicated to you yet</string>
+    <string name="care_team_dashboard_empty_body">Assign a care team for you or your family members in one of the primary care centers</string>
+    <string name="care_team_dashboard_empty_positive">Assigning Care Team</string>
+    <string name="care_team_dashboard_title">My care team</string>
+    <string name="care_team_dashboard_positive">View all</string>
+    <string name="team_care_dashboard_title">My care team</string>
+    <string name="care_team_dashboard_title_holder">Doctor for every family</string>
+
+    <!-- Team Care User Team -->
+    <string name="team_care_user_team_members">Care team members:</string>
+    <string name="team_care_start_conversation">Conversation</string>
+    <string name="team_care_start_chat_bot_conversation">Start Chat</string>
+    <string name="team_care_no_team">There is no care team dedicated to you yet</string>
+    <string name="team_care_no_team_body">Assign a care team for you or your family members in one of the primary care centers</string>
+    <string name="team_care_no_team_btn">Assign care team</string>
+    <string name="team_care_chat_typing">Typing…</string>
+    <string name="team_care_chat_online">Online</string>
+    <string name="team_care_chat_offline">Offline</string>
+    <string name="doctor_title_notification_variable">Doctor %s</string>
+    <string name="doctor_replyed_notification_variable">, has replied to you %s</string>
+
+    <!-- Team Care Dependent Team -->
+
+
+    <!-- Team Care Book Appointment -->
+
+
+    <!-- Health Profile Family Relations -->
+    <string name="relation_father">My father</string>
+    <string name="relation_mother">My mother</string>
+    <string name="relation_sister">My sister</string>
+    <string name="relation_brother">My brother</string>
+    <string name="relation_grandfather">My grandfather</string>
+    <string name="relation_grandmother">My grandmother</string>
+
+    <!-- Birth Plan -->
+
+    <!-- Pregnancy Surveys -->
+
+    <!-- Health Summary -->
+    <string name="health_summary_component_header">Health File</string>
+    <string name="health_summary_sick_leave">Leaves</string>
+    <string name="health_summary_reports_and_documents">Reports and Documents</string>
+    <string name="health_summary_other_service">Other</string>
+    <string name="health_summary_marriageTest">Marriage Test</string>
+    <string name="health_summary_imaging">Imaging</string>
+    <string name="health_summary_medical_reports">Medical Reports</string>
+    <string name="health_summary_my_cards">My Cards</string>
+    <string name="health_summary_vaccines">Vaccines</string>
+    <string name="health_summary_Visits">Visits</string>
+    <string name="health_summary_health_record">Health Record</string>
+    <string name="health_summary_labs">Labs</string>
+    <string name="health_summary_operations_and_procedures">Operations and Procedures</string>
+    <string name="health_summary_medication">Medications and Prescriptions</string>
+    <string name="health_summary_prescription">Prescription</string>
+    <string name="health_summary_hayat">Women’s Health</string>
+    <string name="health_summary_dependents">Dependents</string>
+    <string name="health_summary_care_team">My care team</string>
+    <string name="health_summary_insurance_approvals">Insurance Approvals</string>
+    <string name="health_summary_tip_healthProfile_title">Personal Information</string>
+    <string name="health_summary_tip_healthProfile_body">You can view your Primary HealthCare, Address, Health ID and your personal info</string>
+    <string name="health_summary_tip_careTeam_body">You can view your care team, communicate directly with them, or book appointments</string>
+    <string name="health_summary_tip_health_record_body">You can connect your medical devices to monitor your readings and view your vital signs.</string>
+    <string name="health_summary_tip_medication_body">You can manage your medication and set reminders to take it</string>
+    <string name="health_summary_tip_hayat_body">A woman can enter her pregnancy details and track her pregnancy, create a birth plan, and share her pregnancy with her husband</string>
+    <string name="health_summary_tip_labs_body">You can view your lab results</string>
+    <string name="health_summary_tip_prescriptions_body">You can view your prescriptions and prescribed medication details</string>
+    <string name="health_summary_tip_medical_report_body">You can view and share your medical reports, such as Pre-marriage test, school screening, and other</string>
+    <string name="health_summary_tip_visits_body">You can view your previous visits in detail here and access medical reports and prescription issued in the visits</string>
+    <string name="health_summary_tip_procedures_body">You can view your procedures with their details</string>
+    <string name="health_summary_tip_vaccines_body">You can view your taken vaccines and register previous ones manually</string>
+    <string name="health_summary_tip_insurance_body">You can check the status of your insurance approval and eligibility requests</string>
+    <string name="health_summary_tip_dependent_body">You can add and manage your dependents, to have an easier access to their health profile</string>
+    <string name="health_summary_tip_sick_leave_body">You can view and share your leaves easily, such as sick leaves</string>
+    <string name="health_summary_tip_imaging_body">You can view and share the x-rays reports easily</string>
+    <string name="health_summary_tip_visit_report">Visits Report</string>
+    <string name="health_summary_tip_visit_report_body">You can view and share your visits report, such as discharge, newborn, and outpatient encounter summaries</string>
+    <string name="health_summary_tip_my_cards_body">You can view your cards such as insurance cards</string>
+    <string name="health_summary_tip_btn_next">Next</string>
+    <string name="health_summary_tip_btn_end">End</string>
+    <string name="health_summary_tip_btn_done">Done</string>
+    <string name="health_summary_tip_number_format">%d/%d</string>
+    <string name="national_id_number">National id</string>
+    <string name="health_summary_health_id">Health id</string>
+    <string name="supported_by">Supported by</string>
+    <string name="soft_launch_feeback">What do you think of your health profile?</string>
+    <string name="soft_launch_msg">Do you have any feedback for improvements and enhancements?</string>
+    <string name="health_summary_soft_launch">
+    To improve health care in the Kingdom, we launched the unified health profile (soft launch) in cooperation with health service providers in the government and private sectors.
+      \n\n
+    The data in this release is not the final data as the service is still in the development stage.
+    </string>
+    <string name="health_summary__my_cards">My Cards</string>
+    <string name="health_summary__display_all">Display All</string>
+    <string name="health_summary__health_id">Health ID: %s</string>
+    <string name="health_summary__passport_border">Passport /Border: %s</string>
+    <string name="health_summary__national_id_iqama_">National ID/Iqama: %s</string>
+
+    <string name="my_health">My File</string>
+    <string name="health_summary_privacy_and_terms">"I have read and agree to the Privacy Policy and terms of use"</string>
+    <string name="health_summary_privacy">Privacy Policy</string>
+    <string name="health_summary_terms">terms of use</string>
+    <string name="health_summary_naphies_positive">Approve</string>
+    <string name="healht_sumamry_my_care_team_label_tmp">My care team</string>
+
+    <!-- Delete Dependent -->
+    <string name="delete_member">Delete Dependent</string>
+    <string name="keep_member">Keep Dependent</string>
+    <string name="delete_this_member_title">Delete this dependent?</string>
+    <string name="delete_this_member_body">This action will remove the dependent from my dependent list, and will require a new request to re-share the data.</string>
+
+
+    <string name="send">Send</string>
+
+    <string name="medical_recored_title">Health Record</string>
+    <string name="health_profile_tell_us_about_your_health">Tell us more about your health by filling in the below data:</string>
+    <string name="health_record_title">Health Record</string>
+
+
+    <!--    Feedback-->
+    <string name="rating_unsatisfied">Unsatisfied</string>
+    <string name="rating_neutral">Neutral</string>
+    <string name="rating_satisfied">Satisfied</string>
+    <string name="health_summary_your_comments">Your comments..</string>
+    <string name="feedback_select_services">Select services:</string>
+
+    <!-- Visits -->
+    <string name="visits">Visits</string>
+    <string name="visits_outpatient">Outpatient</string>
+    <string name="visits_inpatient">Inpatient</string>
+    <string name="visits_emergency">Emergency</string>
+
+    <!-- Labs -->
+    <string name="lab_title">Labs</string>
+    <string name="lab_health_facility">Health Facility</string>
+    <string name="lab_number_tests">Number of Tests</string>
+    <string name="lab_test_date">Test Date</string>
+    <string name="lab_visit_date">Visit Date</string>
+    <string name="lab_tests">Lab Tests</string>
+    <string name="lab_test_result">Test Result</string>
+    <string name="lab_reference_range">Reference Range</string>
+    <string name="lab_reference_range_">Reference Range %s %s</string>
+    <string name="lab_interpretation">Interpretation</string>
+    <string name="lab_graph_result">Graph of the test results</string>
+    <string name="lab_test_details">Test Details</string>
+    <string name="lab_consult_my_doctor">Consult my Doctor</string>
+    <string name="lab_send_report_to">To whom will the report be sent?</string>
+    <string name="lab_choose_care_team_member">Choose a doctor from your care team</string>
+    <string name="lab_test_result_">%s %s</string>
+    <string name="lab_test_very_high">Very High</string>
+    <string name="lab_test_high">High</string>
+    <string name="lab_test_critical_high">Critical High</string>
+    <string name="lab_test_normal">Normal</string>
+    <string name="lab_test_abnormal">Abnormal</string>
+    <string name="lab_test_critical_abnormal">Critical Abnormal</string>
+    <string name="lab_test_low">Low</string>
+    <string name="lab_test_very_low">Very Low</string>
+    <string name="lab_test_critical_low">Critical Low</string>
+
+    <!-- Dashboard searches -->
+    <string name="clear_all">Clear All</string>
+    <string name="recent_searches">Recent searches</string>
+
+    <!-- Procedures -->
+    <string name="procedures">Operations and Procedures</string>
+    <string name="procedures_records">Procedure Records </string>
+
+    <!-- Sehhaty Wallet -->
+    <string name="sehhaty_my_cards_title">My Cards</string>
+    <string name="sehhaty_my_cards_description">You can change card order by long pressing it.</string>
+    <string name="sehhaty_my_cards_insurance_title">Insurance Company</string>
+    <string name="sehhaty_my_cards_national_id">National Id number</string>
+    <string name="sehhaty_my_cards_expiry_date">Expiry date</string>
+    <string name="sehhaty_my_card_number">Insurance number</string>
+    <string name="sehhaty_my_card_category">Category</string>
+    <string name="sehhaty_my_card_details"><u>Details</u></string>
+    <string name="sehhaty_my_cards_pwd_title">Handicapped Parking Permit</string>
+    <string name="sehhaty_my_cards_pwd_card_number">Card Number: %s</string>
+    <string name="sehhaty_insurance_card_details_deductible_rate">Deductible Rate</string>
+    <string name="sehhaty_insurance_card_details_sar">%s SAR</string>
+    <string name="sehhaty_insurance_card_details_percentage">%s %%</string>
+    <string name="sehhaty_insurance_card_details_max_rate">Max Limit</string>
+    <string name="sehhaty_insurance_card_details_network">Network</string>
+    <string name="sehhaty_insurance_card_details_share_card">Share the card</string>
+    <string name="sehhaty_insurance_card_details_approval">Insurance Approval</string>
+    <string name="sehhaty_insurance_card_details_inquiries">For complaints and inquiries please call: <font color='#0000FF'><u>920001177</u></font></string>
+    <string name="sehhaty_pwd_card_details_issue_date">Issue Date</string>
+    <string name="sehhaty_pwd_card_details_need_companion">Needs Companion</string>
+    <string name="sehhaty_pwd_card_details_expired_label">Expired</string>
+    <string name="sehhaty_priority_card_title">Priority Card</string>
+    <string name="sehhaty_priority_card_identity_number">Identity Number</string>
+    <string name="sehhaty_priority_card_birth_date">Birth Date</string>
+    <string name="sehhaty_priority_card_gender_title">Gender</string>
+    <string name="sehhaty_priority_card_nationality_title">Nationality</string>
+    <string name="sehhaty_priority_card_usage_control">Usage Controls:</string>
+    <string name="sehhaty_priority_card_first_usage_control">Used by the beneficiary only.</string>
+    <string name="sehhaty_priority_card_second_usage_control">Prior appointment required.</string>
+    <string name="sehhaty_priority_card_third_usage_control">It does not replace the national identity.</string>
+    <string name="sehhaty_priority_card_fourth_usage_control">Not allowed to be used in the emergency department.</string>
+    <string name="sehhaty_priority_card_definition">A priority card is a card granted by the Ministry of Health for specific categories of health facility visitors to facilitate access to health services for beneficiaries.</string>
+    <string name="sehhaty_priority_card_benefits">Priority Card Benefits:</string>
+    <string name="sehhaty_priority_card_benefits_title">Priority Card Benefits</string>
+    <string name="sehhaty_priority_card_benefits_description">• Facilitating and accelerating the procedures provided within health facilities.\n\n• Priority in obtaining services and reducing waiting time inside health facilities.\n\n• Facilitate movement within facilities and access to therapeutic services.</string>
+    <string name="label_male">Male</string>
+    <string name="label_female">Female</string>
+
+
+    <!--    Filter healthcare cneters-->
+    <string name="selection_nearest_distance">Nearest Distance</string>
+    <string name="selection_nearest_date">Nearest Date</string>
+    <string name="selection_all">All</string>
+    <string name="selection_open_phcs">Open Healthcare Centers</string>
+    <string name="selection_open_hospitals">Open Hospitals</string>
+
+
+    <!-- PREGNANCY SETTINGS -->
+
+    <!-- PREGNANCY SETTINGS -->
+
+    <!-- Team Care Assign Team -->
+    <string name="team_care_assign_title">Care team List</string>
+    <string name="team_care_assign_select_team">Select care team:</string>
+    <string name="team_care_assign_team">Register to care team</string>
+    <string name="team_care_request_change_team_care">Request to change care team</string>
+    <string name="team_care_view_team">View team members</string>
+    <string name="team_care_other_doctors">+ %s other members</string>
+    <string name="team_care_filter">Filter</string>
+    <string name="team_care_confirm_assign_team_title">Confirm assigning the care team?</string>
+    <string name="team_care_confirm_assign_team_body">This procedure will assign this team as your own care team, which you can change the team later only 3 times.</string>
+    <string name="team_care_confirm_assign_team_positive">Confirm assigning team</string>
+    <string name="team_care_confirm_assign_team_negative">return</string>
+
+    <!-- Team Care Change Team -->
+    <string name="team_care_change_3_times_message">Do you want to change your current care team to another care team?</string>
+    <string name="team_care_change_exceeded_message">You have exceeded the maximum number of times you can change the team, if you want to change the team, a request for change will be referred to the admin of the primary care center for the new team.</string>
+    <string name="team_care_change_reason_title">Mention why you want to change the team:</string>
+    <string name="team_care_change_reason_other">Please state the reason for the change</string>
+    <string name="team_care_change_team">Change care team</string>
+    <string name="team_care_change_team_header">Change your care team?</string>
+    <string name="team_care_request_change_team">Change care team</string>
+    <string name="team_care_request_change_team_attempts">attempts left to change: %s attempts out of 3</string>
+    <string name="team_care_submit_reason">Send</string>
+    <string name="team_care_change_request_approved">Your request is accepted by Primary healthcare center and you have been re-assigned to new care team.</string>
+    <string name="team_care_change_search_place_holder">Search for a care team</string>
+
+    <!-- Team Care City -->
+    <string name="team_care_no_teams">No result found in your region</string>
+    <string name="all_cities">All</string>
+
+    <!-- Chat Survey -->
+    <string name="chat_survey_success_title">Your feedback has been submitted!</string>
+    <string name="chat_survey_success_body">Thank you for providing your feedback to help improve the quality of our service. We always value your feedback and opinions.</string>
+    <string name="chat_survey_success_btn">Done</string>
+    <string name="chat_survey_title">How satisfied are you with the provided service?</string>
+    <string name="chat_survey_body">To improve the quality, we would be glad to hear your feedback and opinions</string>
+    <string name="chat_survey_skip">Continue the conversation</string>
+    <string name="chat_survey_send">Send</string>
+    <string name="chat_survey_confirm_title">Are you sure you want to submit your feedback?</string>
+    <string name="chat_survey_confirm_positive">Confirm</string>
+    <string name="chat_survey_confirm_negative">Cancel</string>
+
+    <string name="overall_rating">Overall Rating of physician</string>
+    <string name="likelihood_recommendation">Likelihood of your recommending our virtual consultations service to others</string>
+    <string name="overall_consultation">Overall rating of the care received during your consultation</string>
+    <string name="appointment_follow_up_needed">Follow up required</string>
+    <string name="appointment_no_action_needed">No action specified</string>
+    <string name="spare_you_of_visiting_hospital">Did this consultation spare you of visiting a hospital / center?</string>
+
+
+    <!-- Adult Vaccines -->
+    <string name="adult_vaccine_dose_taken">Taken</string>
+    <string name="medical_report">Medical Report</string>
+    <string name="adult_vaccines_download_report_error">You have not taken the required vaccines to download the report</string>
+
+    <!--.......................As3afny.....................-->
+    <string name="as3afny_title">Asafny</string>
+    <string name="as3afny_no_reports_title">لا يوجد لديك بلاغ لخدمة اسعفني،</string>
+    <string name="as3afny_add_new_report">Report Incident</string>
+    <string name="as3afny_no_of_injuries_title">Number of injured people:</string>
+    <string name="as3afny_report_category_title">Incident Category</string>
+    <string name="as3afny_report_type_title">Incident Type</string>
+    <string name="as3afny_report_notes_title">Comments</string>
+    <string name="as3afny_report_add_submission_title">Confirm Add incident?</string>
+    <string name="as3afny_report_cancel_btn_title">Cancel report</string>
+    <string name="as3afny_report_keep_btn_title">Keep report</string>
+    <string name="as3afny_report_add_dialog_title">Are you sure you want to raise this report? Raising false reports will result in legal penalties.</string>
+    <string name="as3afny_report_add_dialog_success_title">Your incident has been reported successfully!</string>
+    <string name="as3afny_report_cancel_dialog_title">Are you sure you want to cancel this incident?</string>
+    <string name="as3afny_report_cancel_dialog_success_title">Your incident has been canceled successfully!</string>
+    <string name="as3afny_report_cancel_dialog_success_body">You can track the status of the report in the (My Reports) list</string>
+    <string name="as3afny_report_current_title">Active Incident</string>
+    <string name="as3afny_report_previous_title">Previous Incident</string>
+    <string name="as3afny_report_date_title">Date</string>
+    <string name="as3afny_report_time_title">Time</string>
+    <string name="as3afny_report_injured_name_title">Name</string>
+    <string name="as3afny_report_location_search_title">Search</string>
+    <string name="as3afny_report_location_use_btn_title">Use this location</string>
+    <string name="as3afny_report_location_btn_title">Change location</string>
+    <string name="as3afny_report_back_btn_title">Back</string>
+    <string name="as3afny_location_title">Location</string>
+    <string name="as3afny_report_location_title">Location</string>
+    <string name="as3afny_report_info_header_title">Incident details</string>
+    <string name="as3afny_status_in_progress">In progress</string>
+    <string name="as3afny_status_rejected">Rejected</string>
+    <string name="as3afny_status_created">Created</string>
+    <string name="as3afny_status_canceled">Canceled</string>
+    <string name="as3afny_status_on_way">On the way</string>
+    <string name="as3afny_status_team_reached">Team Reached</string>
+    <string name="as3afny_status_closed">Closed</string>
+    <string name="as3afany_incident_accidents">Accidents</string>
+    <string name="as3afany_incident_diseases">Diseases</string>
+    <string name="as3afany_incident_poisoning">Poisoning</string>
+    <string name="as3afany_incident_childbirth">Women and childbirth</string>
+    <string name="as3afny_report_data">Report Data:</string>
+    <string name="as3afny_cancel_title">Cancel Report?</string>
+    <string name="as3afny_observations_hint">Mention any observations that may help the medical staff, if any</string>
+    <string name="as3afny_incident_id">Incident ID:</string>
+    <string name="as3afny_incident_issued_date">Report date: </string>
+    <string name="as3afany_incident_location">Select incident location:</string>
+    <string name="as3afany_request_new_ambulance">Request an ambulance (997)</string>
+    <string name="as3afany_my_reports">My reports</string>
+    <string name="as3afany_map_title">Incident location</string>
+
+    <string name="no_location_found">No location found!</string>
+    <string name="as3afny_no_of_injuries_count">Please check the entered values, number of injured people should be between 1-10</string>
+    <string name="location_outscope_saudi">Point is outside Saudi Arabia, please try again.</string>
+    <string name="as3afny_submit">Submit Incident</string>
+    <!-- In-App Rating -->
+    <string name="change_title">Change</string>
+
+    <!-- Pre-Authorization -->
+    <string name="pre_authorization_number_label">Pre-authorization #No</string>
+    <string name="pre_authorization_medical_providers">Medical providers</string>
+    <string name="pre_authorization_insurance_company">Insurance company</string>
+    <string name="pre_authorization_last_update">Last update</string>
+    <string name="pre_authorization_request_date">Request date</string>
+    <string name="pre_authorization_processed_date">Processed date</string>
+    <string name="pre_authorization_membership_no">Pre-authorization #No</string>
+    <string name="pre_authorization_amount">Amount</string>
+    <string name="date_title">Enter Birth Date</string>
+    <string name="insurance_approval_list">Insurance Approvals</string>
+    <string name="insurance_transaction_list">Insurance Transactions</string>
+
+
+    <string name="timer">%02dm:%02ds</string>
+    <string name="code_verification__resend_code"><u>Resend code</u></string>
+    <string name="code_verification__code_not_received">Didn\'t receive the code yet?</string>
+
+    <!-- SPL -->
+    <string name="spl_national_address_format">%s, %s., %s</string>
+    <string name="spl_building_number">Building number</string>
+    <string name="spl_postal_code">Postal code</string>
+    <string name="spl_additional_number">Additional number</string>
+    <string name="spl_unit_number">Unit number</string>
+    <string name="spl_short_code">Short code</string>
+    <string name="spl_street">Street</string>
+    <string name="spl_district">District</string>
+    <string name="spl_city">City</string>
+    <string name="spl_point_out_of_saudi_error">Point is outside Saudi Arabia, please try again</string>
+    <string name="spl_update_success_message">Address saved successfully!</string>
+    <string name="spl_update_message">Confirm your national address to locate the nearest Healthcare Center.</string>
+    <string name="spl_national_address">National address</string>
+    <string name="spl_confirm_national_address">Confirm Address</string>
+    <string name="spl_back">Cancel</string>
+    <string name="spl_update_address">Confirm your address!</string>
+    <string name="spl_update_national_address">Update National Address</string>
+    <string name="spl_current_national_address">(Your current Address)</string>
+    <string name="spl_confirm">Confirm Address</string>
+    <string name="spl_location_national_address">Location &amp; National Address</string>
+
+    <!-- ________________Medication new redesign__________________________ -->
+    <string name="title_medication_list">Medications</string>
+    <string name="title_medication_prev">Previous Medications</string>
+    <string name="title_medication_next">Current Medications</string>
+    <string name="add_new_medication">Add Medication</string>
+    <string name="edit_medication">Edit medication</string>
+    <string name="medication_details_title">Medication Details</string>
+    <string name="medication_stop_title">Stop medication</string>
+    <string name="medication_reuse_title">Reuse medication</string>
+    <string name="medication_remove_title">Delete medication</string>
+    <string name="medication_reminder_me">Reminder</string>
+    <string name="medication_name_title">Generic name</string>
+    <string name="medication_dose_information">Dose information</string>
+    <string name="medication_general_info">Generic medication information: </string>
+    <string name="medication_shape_title">Pharmacological form</string>
+    <string name="drug_freauency_title">Frequency use</string>
+    <string name="drug_dose_period">Period</string>
+    <string name="drug_dose_instructions">Administration notes</string>
+    <string name="choose_allergy">Choose your allergy:</string>
+    <string name="medication_allergy">Medication Allergy</string>
+    <string name="food_allergy">Food Allergy</string>
+    <string name="substance_allergy">Substance Allergy</string>
+    <string name="other_allergy">Other</string>
+    <string name="save_changes">Save changes</string>
+    <string name="save_changes_question">Save changes?</string>
+    <string name="no_medications_title">You don\'t have any medications</string>
+    <string name="no_medications_body">Add and schedule your medications for easy tracking.</string>
+    <string name="remove_medication_confirm_body">This will remove the medication from your Medication Schedule</string>
+    <string name="remove_medication">Delete medication</string>
+    <string name="leave_medication_text">Keep medication</string>
+    <string name="remove_medication_confirm_title">Are you sure you want to delete this Medication?</string>
+
+    <string name="stop_medication_confirm_title">Stop using medication ?</string>
+    <string name="stop_medication_confirm_body">Medication will be moved from “Current Medication“ list to “Previous Medication” list</string>
+    <string name="stop_medication">Stop medication</string>
+    <string name="medication_name">Medication Name:</string>
+
+    <string name="reuse_medication_confirm_title">Reuse medication ?</string>
+    <string name="reuse_medication_confirm_body">Medication will be moved from “Previous Medication“ list to “Current Medication” list</string>
+    <string name="reuse_medication">Reuse medication</string>
+    <string name="medication_dose_title">Strength value unit</string>
+    <string name="medication_taken_by_title">Route of administration</string>
+    <string name="medication_unit_title">Unit of volume</string>
+    <string name="medication_storage_way_title">Storage conditions</string>
+    <string name="scheduled_medications">You have %s Medication(s) in your reschedule today! </string>
+    <string name="entered_manually_title">Entered manually</string>
+    <string name="drug_dose1">First time</string>
+    <string name="drug_dose2">Second time</string>
+    <string name="drug_dose6">Sixth time</string>
+    <string name="drug_dose5">Fifth time</string>
+    <string name="drug_dose4">Fourth time</string>
+    <string name="drug_dose3">Third time</string>
+    <string name="reschedule_medication">Reschedule medication</string>
+
+    <string name="root_access_error_title">Root Access Detected</string>
+    <string name="root_access_error_message">Your device has been detected using root access, Sehhaty app will not run on rooted devices.</string>
+    <string name="birth_plan_questions_answers_count_"><![CDATA[<font color="#A1B2C5">%2$d/</font>%1$d]]></string>
+    <string name="birth_plan_completed_status">Completed</string>
+    <string name="birth_plan_not_completed_status">Not completed</string>
+
+    <!-- Well Being -->
+    <string name="educational_content">Educational Content</string>
+    <string name="columns">Columns</string>
+    <string name="column">Column</string>
+    <string name="media">Media</string>
+    <string name="sub_categories">subcategory</string>
+    <string name="filter_media_all">Media : All</string>
+    <string name="filter_media_video">Media : Videos</string>
+    <string name="filter_media_post">Media : Posts</string>
+    <string name="filter_media_event">Media : Events</string>
+    <string name="filter_columns_all">Columns : All</string>
+    <string name="filter_columns_article">Columns : Articles</string>
+    <string name="filter_columns_tip">Columns : Tips</string>
+    <string name="filter_columns_faq">Columns : FAQ</string>
+
+    <!--    start After brith-->
+    <string name="after_birth_gave">I gave birth!</string>
+    <string name="after_birth_did_gave_birth_title">Did you give birth?</string>
+    <string name="after_birth_did_gave_birth_positive">Yes</string>
+    <string name="after_birth_did_gave_birth_negative">No</string>
+    <string name="after_birth_birth_congratulations_title">Congratulations on your newborn baby!</string>
+    <string name="after_birth_birth_congratulations_body">You can now add your newborn to your dependents list to help you manage their overall health. </string>
+    <string name="after_birth_birth_congratulations_positive">Add newborn to my dependent list</string>
+    <string name="after_birth_birth_congratulations_negative"> Maybe later</string>
+    <!--    end After brith-->
+
+    <!-- NOTIFICATIONS CONTENT -->
+    <string name="general_notifications">General Notifications</string>
+    <string name="private_notifications_title">Private Notifications</string>
+    <string name="notification_general">General Notifications (%s)</string>
+    <string name="notification_private">Private Notifications (%s)</string>
+    <string name="notification_center">Notifications Center</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_clear_all_btn">Clear All</string>
+    <string name="notifications_clear_btn">Clear</string>
+    <string name="notification_delete_all_notifications_msg">Are you sure you want to clear all notifications?</string>
+    <string name="notifications_title">Title</string>
+    <string name="notifications_description">Description</string>
+    <string name="notifications_default_positive_btn">View Details</string>
+    <string name="notification_target_name_and_relation_">%1$s (%2$s)</string>
+
+
+
+    <!-- Dashboard V2 -->
+    <string name="dashboard_daily_activity">Daily Activity</string>
+    <string name="dashboard_not_activated_yet">Not linked yet</string>
+    <string name="dashboard_view_steps">View More</string>
+    <string name="dashboard_refresh_data">Refresh data</string>
+    <string name="dashboard_update_steps"><u>Update Target</u></string>
+    <string name="dashboard_achieve_steps">To reach target</string>
+    <string name="dashboard_time_m_">%s mins</string>
+    <string name="dashboard_time_h_">%s hrs</string>
+    <string name="dashboard_distance_km_">%s km</string>
+    <string name="dashboard_distance_m_">%s m</string>
+    <string name="dashboard_step_">%s steps</string>
+    <string name="dashboard_distance">Distance</string>
+    <string name="dashboard_duration">Duration</string>
+    <string name="dashboard_calories">Calories</string>
+    <string name="dashboard_calories_">%s Cal</string>
+    <string name="dashboard_upcoming_appointment">Upcoming Appointments</string>
+    <string name="dashboard_no_appointment">No upcoming appointments</string>
+    <string name="dashboard_no_appointment_body">You haven\'t booked an appointment yet, book an in-person or virtual appointment with the right doctor</string>
+
+    <!-- Dashboard Service -->
+    <string name="dashboard_search">Search for Sehhaty services</string>
+    <string name="dashboard_unavailable_service">This service is unavailable</string>
+    <string name="dashboard_unavailable_service_title">Sorry</string>
+
+
+    <string name="upcoming_appointments_title">Upcoming appointments</string>
+    <string name="book_new_appointment">Book new appointment</string>
+    <string name="view_all">View all</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm_reschedule_appointment_title">Confirm rescheduling the appointment</string>
+    <string name="reschedule_appointment_question">This action will update the appointment date and time.</string>
+    <string name="confirm_reschedule_appointment">Confirm Reschedule?</string>
+    <string name="keep_appointment_title">Keep Appointment</string>
+
+    <!-- educational content -->
+    <string name="educational_content_all">All</string>
+    <string name="educational_content_search">search for symptoms, ex: headache</string>
+    <string name="educational_content_FAQ_title">FAQ</string>
+    <string name="educational_content_for_you_title">Personalized</string>
+    <string name="educational_content_article_title">Articles</string>
+    <string name="educational_content_post_title">Posts</string>
+    <string name="educational_content_event_title">Events</string>
+    <string name="educational_content_video_title">Videos</string>
+    <string name="educational_content_tip_title">Tips</string>
+    <string name="educational_content_empty_state">There is no content yet.</string>
+    <string name="educational_content_show_all">Display All</string>
+
+
+    <!-- Steps details-->
+    <string name="steps_update_target_hint">00000</string>
+    <string name="steps_update_target_title">Daily Steps Goal</string>
+    <string name="steps_update_button">Update</string>
+    <string name="diff_week_steps">%s step from last week</string>
+    <string name="diff_month_steps">%s step from last month</string>
+    <string name="ministry_health_campaign">Ministry of Health Campaign</string>
+    <string name="daily_walking_campaign">Daily Walking Campaign</string>
+    <string name="steps_details_screen_label">Daily Activity</string>
+    <string name="target_error_message">Target should be between 5000 to 90000</string>
+    <string name="leaderboard_day">Leaderboard of the day:</string>
+    <string name="leaderboard_month">Leaderboard of the month:</string>
+    <string name="leaderboard_year">Leaderboard of the year:</string>
+    <string name="default_steps_value">0 Steps</string>
+    <string name="achievement_title">Achievements</string>
+    <string name="target_title">Target</string>
+    <string name="records_title">Records</string>
+    <string name="streak_title">Streak</string>
+    <string name="available_challenges">Available challenges</string>
+    <string name="empty_available_challenges_message">You don’t have any challenges yet, If there is any challenge you will find it here</string>
+    <string name="empty_active_challenges_message">You don’t have any challenges yet, Check out the available challenges or create a new challenge</string>
+    <string name="group_title">Group</string>
+    <string name="avg_steps">Average Steps</string>
+
+
+    <!-- Naphies Feature -->
+    <string name="nphies_sign_in_history">Access Log</string>
+    <string name="nphies_doctors_permission">Allow practitioner to access my health record.</string>
+    <string name="privacy_settings">Privacy Settings</string>
+
+    <string name="napies_description_holder">Once you disable the access, practitioner won’t be able to access your health record.</string>
+
+    <string-array name="steps_filter_period_hours">
+        <item> </item>
+        <item>"12 AM"</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>6 AM</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>12 PM</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>6 PM</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+    </string-array>
+
+    <string-array name="steps_filter_period_days">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+
+    <string-array name="steps_filter_period_months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!-- Challenge details-->
+    <string name="challenge_type">Challenge Type</string>
+    <string name="challenge_type_description">Choose the challenge type you want to send to your family or friends!</string>
+    <string name="step_challenge">Step Challenge</string>
+    <string name="challenge_name">Challenge Name</string>
+    <string name="challenge_category">Challenge Category</string>
+    <string name="challenge_name_description">Choose a unique name!</string>
+    <string name="challenge_name_example">E.g.: Champions Challenge</string>
+    <string name="challenge_goal">Challenge Goal</string>
+    <string name="challenge_duration">Challenge duration</string>
+    <string name="challenge_goal_description">Set the Challenge Goal</string>
+    <string name="challenge_goal_example">E.g.: 10000 Step</string>
+    <string name="challenge_goal_text_view">Goal %s Step</string>
+    <string name="challenge_category_text_view">Challenge Category:</string>
+    <string name="challenge_type_example">Public</string>
+    <string name="join_challenge_goal_text_view">%s Step</string>
+    <string name="join_challenge_duration_text_view">%s Day</string>
+    <string name="challenge_goal_invalid_value">Goal should be in range from 5000 to 900000</string>
+    <string name="challenge_name_invalid_value">Name shouldn\'t contain special characters</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="participant_label">Participants</string>
+    <string name="add_participant_label">Add</string>
+    <string name="create_challenge">Create Challenge</string>
+    <string name="create_new_challenge">Create New Challenge</string>
+    <string name="challenge_start_date">Start Date</string>
+    <string name="challenge_join_start_date">Start Date</string>
+    <string name="number_of_participants">Number of Participants</string>
+    <string name="challenge_group">Groups</string>
+    <string name="agree_share_data">I agree to share my data which includes the <b>first name, family name</b> and the number of steps for the purpose of the Challenge</string>
+    <string name="challenge_end_date">End Date</string>
+    <string name="decline_challenge">Decline challenge</string>
+    <string name="active_challenges">Active Challenges</string>
+    <string name="previous_challenges">Previous Challenges</string>
+    <string-array name="challenges_tab">
+        <item>@string/active_challenges</item>
+        <item>@string/previous_challenges</item>
+    </string-array>
+    <string name="private_challenges_title">Challenge your friends</string>
+    <string name="create_private_challenges_title">Private Challenges</string>
+    <string name="private_challenges_description">Create your private challenges</string>
+    <string name="challenges">Challenges</string>
+    <string name="joined">Joined</string>
+    <string name="joined_successfully">You Have Joined The Challenge Succssfully</string>
+    <string name="challenge_start_date_example">From 10-04-2023</string>
+    <string name="challenge_end_date_example"> to 10-05-2023</string>
+    <string name="challenge_start_date_format">From </string>
+    <string name="challenge_end_date_format">to </string>
+    <string name="challenge_date_string">%s</string>
+    <string name="no_challenge_title">You don\'t have any challenges yet.</string>
+    <string name="no_challenges_description">Create new challenge and challenge your friends and family.</string>
+    <string name="max_challenge_name_length">50</string>
+    <string name="max_challenge_goal_length">6</string>
+    <string name="public_challenge">Public</string>
+    <string name="private_challenge">Private</string>
+    <string name="group_challenge">Groups</string>
+
+    <!--    challenges-->
+    <string name="contacts_list_title">Add participants</string>
+    <string name="search_view_hint">Search by name</string>
+    <string name="empty_contacts_title">You don\'t have any contacts</string>
+    <string name="read_contacts_permission_title">Allow Sehhaty to access your contacts to add participant\'s </string>
+    <string name="third_rank">3</string>
+    <string name="second_rank">2</string>
+    <string name="first_rank">1</string>
+    <string name="user_target_challenge_label">Challenge Goal: </string>
+    <string name="user_target_challenge_value">%s Step </string>
+    <string name="challenge_remaining_days_to_end_label">Remaining days to end: </string>
+    <string name="challenge_remaining_days_to_end_value">%s days </string>
+    <string name="challenge_remaining_days_to_start_label">Remaining days to start: </string>
+    <string name="challenge_remaining_days_to_start_value">%s days </string>
+    <string name="challenge_end">End of challenge</string>
+    <string name="challenge_leaderboard_label">Who wins</string>
+    <string name="reached_max_contacts">You have reached the maximum group capacity of 256 participants. </string>
+    <string name="modify_challenge_label">You want to modify or delete the challenge?</string>
+    <string name="edit_challenge">Modify Challenge</string>
+    <string name="delete_Challenge">Cancel Challenge</string>
+    <string name="create_challenge_confirmation_msg">Are you sure you want to create this challenge?</string>
+    <string name="update_challenge_confirmation_msg">Are you sure you want to update the changes?</string>
+    <string name="cancel_owner_challenge_confirmation_msg">Are you sure you want to Delete the challenge?</string>
+    <string name="leave_participant_challenge_confirmation_msg">This action will result in your withdrawal from %s Challenge.</string>
+    <string name="leave_participant_challenge_title">Withdraw from Challenge?</string>
+    <string name="stay_in_Challenge_label">Stay in the Challenge</string>
+    <string name="reactivate_challenge"><u>Reactivate Challenge</u></string>
+
+
+
+
+
+    <string name="skip_step">Skip this step</string>
+    <string name="first_available_doctor">First available doctor</string>
+
+    <!-- PDF view -->
+    <string name="sickleave_pdf_cannot_handle_intent">Sorry, none of your installed applications supports sharing services</string>
+
+    <string name="from">from</string>
+    <string name="to">to</string>
+
+    <string name="reading_date_time">Date &amp; Time</string>
+
+
+
+    <!-- Hayat -->
+    <string name="pregnancy_survey">Pregnancy Survey</string>
+    <string name="the_week">Week</string>
+    <string name="survey_pregnancy_classification_result_title">Pregnancy classification result</string>
+    <string name="survey_pregnancy_classification_result_body">To know if your pregnancy is classified as a risk or not, please fill in the survey. </string>
+    <string name="survey_pregnancy_classification_result_risk_not_classified_title">Not classified</string>
+    <string name="survey_pregnancy_classification_result_risk_high_title">High risk</string>
+    <string name="survey_pregnancy_classification_result_risk_high_note">Book an appointment</string>
+    <string name="survey_pregnancy_classification_result_risk_low_note">Please note the importance of consulting a doctor, regardless of your pregnancy classification.</string>
+    <string name="survey_pregnancy_classification_result_risk_not_classified_note">Please fill out the survey seriously and make sure the entered data is correct.</string>
+    <string name="survey_pregnancy_classification_result_risk_low_title">Low risk </string>
+    <string name="survey_pregnancy_classification_result_risk_high_body">Your pregnancy is at high risk, please book an appointment with your doctor to avoid these risks.</string>
+    <string name="survey_pregnancy_classification_result_risk_low_body">Your pregnancy is low risk, monitor your pregnancy regularly at regular intervals. </string>
+    <string name="survey_questions_answers_count_">%1$d/%2$d</string>
+    <string name="survey_completed_status">Completed</string>
+    <string name="survey_save_msg">This action will save the your current information, you can edit them later on.</string>
+    <string name="survey_cancel_question">Cancel?</string>
+    <string name="survey_cancel_question_body">This action will close the survey and not save your progress</string>
+    <string name="first_trimester">First trimester</string>
+    <string name="second_trimester">Second trimester</string>
+    <string name="third_trimester">Third trimester</string>
+
+    <!--  Start Pregnancy  -->
+    <string name="pregnancy_risk_survey">Pregnancy Risk Survey</string>
+    <string name="pregnancy_survey_low_status">Low risk</string>
+    <string name="pregnancy_kicking_counter">Kicks</string>
+    <string name="pregnancy_percentage_">\%% %1$d Completed</string>
+    <string name="pregnancy_no_reading">No Reading</string>
+    <string name="pregnancy_add_reading">Add Reading</string>
+    <plurals name="pregnancy_kicks_count_">
+        <item quantity="one">%1$d Kick</item>
+        <item quantity="other">%1$d Kicks</item>
+    </plurals>
+    <string name="pregnancy_contractions_counter">Contractions</string>
+    <plurals name="pregnancy_contractions_count_">
+        <item quantity="one">%1$d Contraction</item>
+        <item quantity="other">%1$d Contractions</item>
+    </plurals>
+    <string name="pregnancy_birth_plan">Birth Plan</string>
+    <string name="pregnancy_create_plan">Create Plan</string>
+    <string name="pregnancy_complete_plan">Complete Plan</string>
+    <string name="pregnancy_display_plan">Display Plan</string>
+    <string name="pregnancy_sheet_title">Follow your pregnancy</string>
+    <string name="pregnancy_expected_birth_date_">The expected date of childbirth %1$s</string>
+    <string name="pregnancy_expected_birth_date">Expected Due Date:</string>
+    <string name="pregnancy_child_volume_">Your baby this week is the size of %1$s</string>
+    <string name="pregnancy_week">Week</string>
+    <string name="pregnancy_birth_remaining_weeks_">%1$d Weeks Left</string>
+    <string name="pregnancy_past_period_">%1$d weeks and %2$d days</string>
+    <string name="pregnancy_tip_of_the_week_">Tip of the week %1$s:</string>
+    <string name="pregnancy_read_more">Read More</string>
+    <string name="pregnancy_current_week">Current\nWeek</string>
+    <string name="pregnancy_phase_one">Phase One</string>
+    <string name="pregnancy_phase_two">Phase Two</string>
+    <string name="pregnancy_phase_three">Phase Three</string>
+    <string name="pregnancy_week_fruit_name1">a poppy seed</string>
+    <string name="pregnancy_week_fruit_name2">a poppy seed</string>
+    <string name="pregnancy_week_fruit_name3">a poppy seed</string>
+    <string name="pregnancy_week_fruit_name4">a poppy seed</string>
+    <string name="pregnancy_week_fruit_name5">an apple seed</string>
+    <string name="pregnancy_week_fruit_name6">a pea seed</string>
+    <string name="pregnancy_week_fruit_name7">a blueberry</string>
+    <string name="pregnancy_week_fruit_name8">a raspberry</string>
+    <string name="pregnancy_week_fruit_name9">an olive</string>
+    <string name="pregnancy_week_fruit_name10">a strawberry</string>
+    <string name="pregnancy_week_fruit_name11">a fig fruit</string>
+    <string name="pregnancy_week_fruit_name12">an apricot</string>
+    <string name="pregnancy_week_fruit_name13">a kiwi</string>
+    <string name="pregnancy_week_fruit_name14">a peach</string>
+    <string name="pregnancy_week_fruit_name15">a pear</string>
+    <string name="pregnancy_week_fruit_name16">an avocado</string>
+    <string name="pregnancy_week_fruit_name17">an orange</string>
+    <string name="pregnancy_week_fruit_name18">a pomegranate</string>
+    <string name="pregnancy_week_fruit_name19">a grapefruit</string>
+    <string name="pregnancy_week_fruit_name20">a mango</string>
+    <string name="pregnancy_week_fruit_name21">a melon</string>
+    <string name="pregnancy_week_fruit_name22">an eggplant</string>
+    <string name="pregnancy_week_fruit_name23">an eggplant</string>
+    <string name="pregnancy_week_fruit_name24">an eggplant</string>
+    <string name="pregnancy_week_fruit_name25">a papaya</string>
+    <string name="pregnancy_week_fruit_name26">a papaya</string>
+    <string name="pregnancy_week_fruit_name27">a papaya</string>
+    <string name="pregnancy_week_fruit_name28">a papaya</string>
+    <string name="pregnancy_week_fruit_name29">a pumpkin</string>
+    <string name="pregnancy_week_fruit_name30">a pumpkin</string>
+    <string name="pregnancy_week_fruit_name31">a pumpkin</string>
+    <string name="pregnancy_week_fruit_name32">a pumpkin</string>
+    <string name="pregnancy_week_fruit_name33">a honey melon</string>
+    <string name="pregnancy_week_fruit_name34">a honey melon</string>
+    <string name="pregnancy_week_fruit_name35">a honey melon</string>
+    <string name="pregnancy_week_fruit_name36">a honey melon</string>
+    <string name="pregnancy_week_fruit_name37">a watermelon</string>
+    <string name="pregnancy_week_fruit_name38">a watermelon</string>
+    <string name="pregnancy_week_fruit_name39">a watermelon</string>
+    <string name="pregnancy_week_fruit_name40">a watermelon</string>
+    <string name="pregnancy_empty_title">You don\'t have any pregnancy entered yet</string>
+    <string name="pregnancy_empty_description">Enter your current pregnancy data to view your pregnancy timeline, articles related to pregnancy, and plan your birth.</string>
+    <string name="pregnancy_create_btn">Enter pregnancy data</string>
+    <string name="select_date_period">Define period</string>
+    <string name="medication_instructions_before_meal">before meals</string>
+    <string name="medication_instructions_after_meal">after meals</string>
+    <string name="medication_instructions_free_stomach">on empty stomach</string>
+    <string name="medication_instructions_avoid_milk">avoid dairy products</string>
+    <string name="medication_instructions_avoid_tea_coffee">avoid coffee or tea</string>
+    <string name="medication_instructions_juice">take with juice</string>
+    <string name="medication_instructions_else">others</string>
+    <string name="pregnancy_complete_survey">Start Survey Now</string>
+    <string name="pregnancy_share">Share Pregnancy</string>
+    <string name="pregnancy_share_mine">Share My Pregnancy</string>
+    <string name="pregnancy_share_message">You can share your pregnancy details with your husband\n%1$s</string>
+    <string name="pregnancy_share_ok">OK</string>
+    <string name="pregnancy_share_add_member">Add Dependent</string>
+    <string name="pregnancy_stop_sharing">Stop Sharing?</string>
+    <string name="pregnancy_stop_sharing_message">This action will stop sharing your pregnancy with your husband</string>
+    <string name="pregnancy_profile">Pregnancy Profile</string>
+    <string name="pregnancy_stop_sharing_btn">Stop Sharing</string>
+    <string name="pregnancy_keep_sharing_btn">Keep Sharing</string>
+    <string name="pregnancy_stop_following">Stop Following</string>
+    <string name="pregnancy_stop_follow">Stop Follow Pregnancy?</string>
+    <string name="pregnancy_stop_follow_message">This action will stop follow the pregnancy details</string>
+    <string name="pregnancy_stop_follow_btn">Stop Following</string>
+    <string name="pregnancy_keep_follow_btn">Keep Following</string>
+    <string name="pregnancy_view_profile">View Profile</string>
+    <string name="pregnancy_my_checklist">My Checklist</string>
+    <string name="pregnancy_follow">Follow Pregnancy</string>
+    <!--  End Pregnancy  -->
+
+    <string name="return_back">Back</string>
+
+    <!-- Start of wallet   -->
+    <string name="health_cards_national_id">Identity Number/Iqama number id</string>
+    <!--  End of wallet   -->
+
+    <string name="txtDoctorWaitingTitle">Waiting for the doctor to join…</string>
+    <string name="step_count">Step %d of %d</string>
+    <string name="share">Share</string>
+    <string name="dynamic_banner_title">Highlighted</string>
+    <string name="activate_label">Activate</string>
+    <string name="bluetooth_permission_description">To share your health profile with your doctor, you need to allow Sehhaty to use your Bluetooth</string>
+    <string name="bluetooth_permission_title">Sehhaty would like to use your Bluetooth</string>
+    <string name="view_details">View Details</string>
+    <string name="rejection_reason">Rejection reason:</string>
+    <string name="price_label">Price</string>
+    <string name="quantity_label">Quantity</string>
+    <string name="there_s_no_approval_for_this_card">No Insurance approvals founded</string>
+    <string name="skip_label">Skip</string>
+    <string name="title_general">Sehhaty General</string>
+    <string name="syncing_with_3_dots">Syncing …</string>
+
+    <string name="core_upload_image">Add Attachments</string>
+    <string name="core_files_extensions">Suppoted format PNG,JPG,GIF,JPEG,TIF, PDF</string>
+    <string name="core_storage_permissions_message">Sehhaty will asks to access your device’s photos, audio, and video files</string>
+
+    <string name="core_upload_image_title">Attach image:</string>
+    <string name="core_upload_image_camera">Capture</string>
+    <string name="core_upload_image_gallery">Gallery</string>
+    <string name="core_image_added">File added</string>
+    <string name="core_sehhaty_store_label">Store</string>
+
+</resources>
