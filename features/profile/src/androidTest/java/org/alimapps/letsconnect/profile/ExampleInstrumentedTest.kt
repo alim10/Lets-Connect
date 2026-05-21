@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:features/profile/src/androidTest/java/org/alimapps/letsconnect/profile/ExampleInstrumentedTest.kt
 package org.alimapps.letsconnect.profile
+========
+package org.alimapps.letsconnect.core.network
+>>>>>>>> origin/development:Core/Network/src/androidTest/java/org/alimapps/letsconnect/core/network/ExampleInstrumentedTest.kt
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +23,10 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+<<<<<<<< HEAD:features/profile/src/androidTest/java/org/alimapps/letsconnect/profile/ExampleInstrumentedTest.kt
         assertEquals("org.alimapps.letsconnect.Core.test", appContext.packageName)
+========
+        assertEquals("org.alimapps.letsconnect.core.network.test", appContext.packageName)
+>>>>>>>> origin/development:Core/Network/src/androidTest/java/org/alimapps/letsconnect/core/network/ExampleInstrumentedTest.kt
     }
 }
