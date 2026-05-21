@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:features/profile/src/test/java/org/alimapps/letsconnect/profile/ExampleUnitTest.kt
 package org.alimapps.letsconnect.profile
+========
+package org.alimapps.letsconnect.core.network
+>>>>>>>> origin/development:Core/Network/src/test/java/org/alimapps/letsconnect/core/network/ExampleUnitTest.kt
 
 import org.junit.Test
 
