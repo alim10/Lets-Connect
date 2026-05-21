@@ -1,5 +1,6 @@
 package org.alimapps.letsconnect.core.remoteconfig.repository
 
+import org.alimapps.letsconnect.core.network.db.DeveloperOptionsDatabase
 import org.alimapps.letsconnect.core.network.repository.IRemoteConfigRepository
 import org.alimapps.letsconnect.core.remoteconfig.IRemoteConfigSource
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.DailyActivity.DAILY_ACTIVITY_ACHIEVEMENTS
@@ -10,7 +11,6 @@ import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.PartnersPage.PARTNERS_PAGE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_ADD_COMPLAINT
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_COMPLAINTS
-import org.alimapps.letsconnect.core.remoteconfig.db.DeveloperOptionsDatabase
 
 
 import javax.inject.Inject
@@ -36,6 +36,9 @@ constructor(
 
 
     override fun getFeatureDefaultsListKey() = getConfigurationValue(org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.FEATURE_DEFAULTS_LIST)
+
+    override fun reconfigureFeaturesForUserSegmentation(listOfFeatures: List<String>) = remoteConfigSource.reconfigureFeaturesForUserSegmentation(listOfFeatures)
+
     override fun getDailyActivityKey() = getConfigurationValue(DASHBOARD_DAILY_ACTIVITY)
     override fun getStepsAchievementsKey() = getConfigurationValue(DAILY_ACTIVITY_ACHIEVEMENTS)
     override fun getDailyActivityCampaignKey() = getConfigurationValue(DAILY_ACTIVITY_CAMPAIGNS)

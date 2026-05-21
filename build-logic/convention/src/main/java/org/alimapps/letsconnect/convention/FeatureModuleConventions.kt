@@ -19,7 +19,7 @@ class FeatureModuleConventions : Plugin<Project> {
             configureAndroid(this)
             configureAndroidDependencies()
             configureUnitTest(this)
-            configureCompose(this)
+            configureCompose()
         }
         configureHilt()
         configureNavigation()

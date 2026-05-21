@@ -34,7 +34,7 @@ class AppModuleConventions : Plugin<Project> {
             }
             configureAndroid(this)
             configureAndroidDependencies()
-            configureCompose(this)
+            configureCompose()
             configureUnitTest(this)
         }
         configureRoom()

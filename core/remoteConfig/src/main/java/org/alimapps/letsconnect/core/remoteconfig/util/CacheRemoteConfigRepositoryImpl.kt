@@ -4,6 +4,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.alimapps.letsconnect.core.common.di.coroutines.IoDispatcher
+import org.alimapps.letsconnect.core.common.utils.toList
 import org.alimapps.letsconnect.core.network.db.DeveloperOptionsDatabase
 import org.alimapps.letsconnect.core.network.model.CacheFeatureFlagModel
 import org.alimapps.letsconnect.core.network.repository.IRemoteConfigRepository
@@ -17,6 +18,7 @@ import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.PartnersPage.PARTNERS_PAGE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_ADD_COMPLAINT
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_COMPLAINTS
+import org.alimapps.letsconnect.core.remoteconfig.model.FeatureConfigurations
 
 import javax.inject.Inject
 
@@ -32,11 +34,11 @@ constructor(
     override fun initRemoteConfigDefaultFlags() = remoteConfigSource.initRemoteConfigDefaultFlags()
 
     override fun initRemoteConfig() = remoteConfigSource.initRemoteConfig()
-//
-//    override fun reconfigureFeaturesForUserSegmentation(listOfFeatures: List<String>) {
-//        remoteConfigSource.reconfigureFeaturesForUserSegmentation(listOfFeatures)
-//        for (key in listOfFeatures) getConfigurationValue(key)
-//    }
+
+    override fun reconfigureFeaturesForUserSegmentation(listOfFeatures: List<String>) {
+        remoteConfigSource.reconfigureFeaturesForUserSegmentation(listOfFeatures)
+        for (key in listOfFeatures) getConfigurationValue(key)
+    }
 
     private fun getConfigurationValue(key: String, functionName: String? = null, defValue: Boolean = true) = runCatching {
         GlobalScope.launch(io) {

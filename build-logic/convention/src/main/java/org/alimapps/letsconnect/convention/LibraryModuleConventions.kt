@@ -1,11 +1,8 @@
 package org.alimapps.letsconnect.convention
 
 import com.android.build.api.dsl.LibraryExtension
-import org.alimapps.letsconnect.convention.internal.configureAndroid
-import org.alimapps.letsconnect.convention.internal.configureCompose
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureLibrary
-import org.alimapps.letsconnect.convention.internal.configureNavigation
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
 import org.gradle.api.Plugin
 import org.gradle.api.Project

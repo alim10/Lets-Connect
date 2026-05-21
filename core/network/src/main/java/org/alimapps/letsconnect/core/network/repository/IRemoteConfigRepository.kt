@@ -7,6 +7,7 @@ interface IRemoteConfigRepository {
     fun initRemoteConfigDefaultFlags(): Flow<Boolean>
     fun initRemoteConfig(): Flow<Boolean>
     fun getFeatureDefaultsListKey(): Boolean
+    fun reconfigureFeaturesForUserSegmentation(listOfFeatures: List<String>)
     
     fun getDailyActivityKey(): Boolean
     fun getStepsAchievementsKey(): Boolean
