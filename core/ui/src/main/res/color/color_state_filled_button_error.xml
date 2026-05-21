@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Use @color/dyn_* aliases (not ?attr/...) so RemoteColorResources.getValue
+     remaps to the active cluster. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:color="@color/dyn_error" />
+    <item
+        android:state_enabled="false"
+        android:color="@color/dyn_grey"
+        />
+</selector>

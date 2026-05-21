@@ -13,11 +13,15 @@ import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.DailyActivity.DAILY_ACTIVITY_CAMPAIGNS
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Dashboard.DASHBOARD_DAILY_ACTIVITY
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.FEATURE_DEFAULTS_LIST
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Navigation.NAV_CALL
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Navigation.NAV_CHAT
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Navigation.NAV_PROFILE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Network.REFRESH_TOKEN_EXPIRATION_FEATURE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Network.REFRESH_TOKEN_FEATURE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.PartnersPage.PARTNERS_PAGE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_ADD_COMPLAINT
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_COMPLAINTS
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SystemUI.STATUS_BAR_VISIBLE
 import org.alimapps.letsconnect.core.remoteconfig.model.FeatureConfigurations
 
 import javax.inject.Inject
@@ -98,5 +102,10 @@ constructor(
 
     override fun getRefreshTokenExpirationFeatureKey() = getConfigurationValue(REFRESH_TOKEN_EXPIRATION_FEATURE, functionName = "getRefreshTokenExpirationFeatureKey")
     override fun getRefreshTokenFeatureKey() = getConfigurationString(REFRESH_TOKEN_FEATURE, functionName = "getRefreshTokenFeatureKey") ?: ""
+
+    override fun isChatTabEnabled() = getConfigurationValue(NAV_CHAT, functionName = "isChatTabEnabled")
+    override fun isCallTabEnabled() = getConfigurationValue(NAV_CALL, functionName = "isCallTabEnabled")
+    override fun isProfileTabEnabled() = getConfigurationValue(NAV_PROFILE, functionName = "isProfileTabEnabled")
+    override fun isStatusBarVisible() = getConfigurationValue(STATUS_BAR_VISIBLE, functionName = "isStatusBarVisible")
 
 }

@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <path
+      android:pathData="M7.75,0L24.25,0A7.75,7.75 0,0 1,32 7.75L32,24.25A7.75,7.75 0,0 1,24.25 32L7.75,32A7.75,7.75 0,0 1,0 24.25L0,7.75A7.75,7.75 0,0 1,7.75 0z"
+      android:fillColor="@color/dyn_icon_background"/>
+  <path
+      android:pathData="M15.5,24C20.195,24 24,20.195 24,15.5C24,10.806 20.195,7 15.5,7C10.806,7 7,10.806 7,15.5C7,20.195 10.806,24 15.5,24Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/dyn_primary_color"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M15.78,20.132C15.627,20.184 15.364,20.184 15.211,20.132C13.885,19.682 10.91,17.787 10.91,14.573C10.91,13.154 12.049,12.007 13.46,12.007C14.293,12.007 15.032,12.406 15.5,13.035C15.959,12.415 16.707,12.007 17.54,12.007C18.951,12.007 20.09,13.154 20.09,14.573C20.09,17.787 17.115,19.682 15.78,20.132Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="@color/dyn_primary_color_opacity"
+      android:strokeColor="@color/dyn_primary_color"
+      android:strokeLineCap="round"/>
+</vector>

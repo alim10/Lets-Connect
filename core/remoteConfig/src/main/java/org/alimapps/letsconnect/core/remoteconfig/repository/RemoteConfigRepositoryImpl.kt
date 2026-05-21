@@ -6,11 +6,15 @@ import org.alimapps.letsconnect.core.remoteconfig.IRemoteConfigSource
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.DailyActivity.DAILY_ACTIVITY_ACHIEVEMENTS
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.DailyActivity.DAILY_ACTIVITY_CAMPAIGNS
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Dashboard.DASHBOARD_DAILY_ACTIVITY
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Navigation.NAV_CALL
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Navigation.NAV_CHAT
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Navigation.NAV_PROFILE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Network.REFRESH_TOKEN_EXPIRATION_FEATURE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.Network.REFRESH_TOKEN_FEATURE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.PartnersPage.PARTNERS_PAGE
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_ADD_COMPLAINT
 import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SideMenu.SIDE_MENU_937_COMPLAINTS
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigFeaturesConstants.SystemUI.STATUS_BAR_VISIBLE
 
 
 import javax.inject.Inject
@@ -49,5 +53,10 @@ constructor(
 
     override fun getRefreshTokenExpirationFeatureKey() = getConfigurationValue(REFRESH_TOKEN_EXPIRATION_FEATURE)
     override fun getRefreshTokenFeatureKey() = getConfigurationString(REFRESH_TOKEN_FEATURE)
+
+    override fun isChatTabEnabled() = getConfigurationValue(NAV_CHAT)
+    override fun isCallTabEnabled() = getConfigurationValue(NAV_CALL)
+    override fun isProfileTabEnabled() = getConfigurationValue(NAV_PROFILE)
+    override fun isStatusBarVisible() = getConfigurationValue(STATUS_BAR_VISIBLE)
 
 }

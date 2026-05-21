@@ -42,8 +42,12 @@ dependencies {
     implementation(libs.accompanist.permissions)
     api(libs.bundles.group.gms.map.location)
 
+    implementation(libs.sql.cipher)
+    implementation(libs.androidx.sqlite)
+    implementation(libs.bundles.group.security)
 
-    implementation(group = "net.zetetic", name = "sqlcipher-android", version = "4.16.0")
-    implementation(group = "androidx.sqlite", name = "sqlite", version = "2.6.2")
+
+//    implementation(group = "net.zetetic", name = "sqlcipher-android", version = "4.16.0")
+//    implementation(group = "androidx.sqlite", name = "sqlite", version = "2.6.2")
 
 }

@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.letsConnect.appHost)
+    alias(libs.plugins.google.secrets)
     alias(libs.plugins.letsConnect.appFlavors)
     alias(libs.plugins.letsConnect.appFlavorsEndPoint)
     alias(libs.plugins.letsConnect.appRefreshDependencies)
@@ -41,11 +42,12 @@ android {
 }
 
 dependencies {
-    implementation(projects.core.database)
+    implementation(projects.core.analytics)
     implementation(projects.core.session)
     implementation(projects.core.common)
     implementation(projects.core.network)
-    implementation(projects.core.analytics)
+    implementation(projects.features.profile)
+    implementation(projects.features.chats)
 
     implementation(libs.maps.compose)
     implementation(libs.lottie.compose)

@@ -22,4 +22,12 @@ interface IRemoteConfigRepository {
     // Network related flags
     fun getRefreshTokenExpirationFeatureKey(): Boolean
     fun getRefreshTokenFeatureKey(): String
+
+    // Navigation related flags
+    fun isChatTabEnabled(): Boolean
+    fun isCallTabEnabled(): Boolean
+    fun isProfileTabEnabled(): Boolean
+
+    // System UI related flags
+    fun isStatusBarVisible(): Boolean
 }

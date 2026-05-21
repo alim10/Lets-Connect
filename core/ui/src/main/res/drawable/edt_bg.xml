@@ -5,6 +5,6 @@
     <corners android:radius="20dp" />
     <stroke
         android:width="2dp"
-        android:color="?attr/secondaryTitle" />
+        android:color="@color/dyn_secondary_title" />
 
 </shape>

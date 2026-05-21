@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/dyn_grey">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/dim_1_dp"
+                android:color="@color/dyn_secondary_buttons_background" />
+            <corners
+                android:bottomLeftRadius="@dimen/dim_12_dp"
+                android:bottomRightRadius="@dimen/dim_12_dp"
+                android:topLeftRadius="@dimen/dim_12_dp"
+                android:topRightRadius="@dimen/dim_12_dp" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/dim_1_dp"
+        android:left="@dimen/dim_1_dp"
+        android:right="@dimen/dim_1_dp"
+        android:top="@dimen/dim_1_dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dyn_primary_color" />
+            <corners
+                android:bottomLeftRadius="@dimen/dim_12_dp"
+                android:bottomRightRadius="@dimen/dim_12_dp"
+                android:topLeftRadius="@dimen/dim_12_dp"
+                android:topRightRadius="@dimen/dim_12_dp" />
+        </shape>
+    </item>
+</ripple>
