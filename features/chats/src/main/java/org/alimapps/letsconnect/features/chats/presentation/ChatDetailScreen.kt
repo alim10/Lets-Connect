@@ -30,16 +30,7 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
-import org.alimapps.letsconnect.core.common.theme.MyAppTheme
 import org.alimapps.letsconnect.core.ui.components.ChatAvatar
-
-data class ChatMessage(
-    val id: String,
-    val text: String,
-    val time: String,
-    val isFromMe: Boolean,
-    val imageUrl: String? = null
-)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

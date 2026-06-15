@@ -5,6 +5,9 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import org.alimapps.letsconnect.BuildConfig
 import org.alimapps.letsconnect.core.common.encyrption.provideEncryptedRoomDatabase
+import org.alimapps.letsconnect.core.database.dao.ChatDao
+import org.alimapps.letsconnect.core.database.entity.ChatEntity
+import org.alimapps.letsconnect.core.database.entity.MessageEntity
 import org.alimapps.letsconnect.notification.local.dao.LatestNotificationDao
 import org.alimapps.letsconnect.notification.local.dao.NotificationsDao
 import org.alimapps.letsconnect.notification.local.dao.PrivateNotificationsDao
@@ -19,7 +22,8 @@ import org.alimapps.letsconnect.notification.local.model.NotificationMainExtraCo
         CachedNotifications::class,
         CachedPrivateNotification::class,
         CachedLatestNotifications::class,
-
+        ChatEntity::class,
+        MessageEntity::class
     ],
     exportSchema = false,
     version = BuildConfig.VERSION_CODE
@@ -35,6 +39,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun notificationsDao(): NotificationsDao
     abstract fun privateNotificationsDao(): PrivateNotificationsDao
     abstract fun latestNotificationDao(): LatestNotificationDao
+    abstract fun chatDao(): ChatDao
     //TODO rest of dao classes here
 
     companion object {

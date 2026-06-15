@@ -8,27 +8,27 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import org.alimapps.letsconnect.features.chats.domain.model.Chat
+import org.alimapps.letsconnect.features.chats.domain.usecase.GetChatsUseCase
+import org.alimapps.letsconnect.features.chats.domain.usecase.InsertSampleChatsUseCase
 import javax.inject.Inject
 
-data class ChatsItem(
-    val id: String,
-    val name: String,
-    val lastMessage: String,
-    val time: String,
-    val unreadCount: Int = 0,
-    val imageUrl: String? = null
-)
-
 @HiltViewModel
-class ChatsViewModel @Inject constructor() : ViewModel() {
+class ChatsViewModel @Inject constructor(
+    private val getChatsUseCase: GetChatsUseCase,
+    private val insertSampleChatsUseCase: InsertSampleChatsUseCase
+) : ViewModel() {
 
-    private val _allChats = MutableStateFlow<List<ChatsItem>>(emptyList())
-    
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
 
-    val chats: StateFlow<List<ChatsItem>> = combine(_allChats, _searchQuery) { chats, query ->
+    val chats: StateFlow<List<ChatsItem>> = combine(
+        getChatsUseCase().map { chats -> chats.map { it.toPresentation() } },
+        _searchQuery
+    ) { chats, query ->
         if (query.isBlank()) {
             chats
         } else {
@@ -44,19 +44,23 @@ class ChatsViewModel @Inject constructor() : ViewModel() {
     )
 
     init {
-        loadChats()
-    }
-
-    private fun loadChats() {
-        _allChats.value = listOf(
-            ChatsItem("1", "John Doe", "Hey, how are you?", "10:30 AM", 2, "https://i.pravatar.cc/150?u=1"),
-            ChatsItem("2", "Jane Smith", "Meeting at 2 PM", "Yesterday", 0, null),
-            ChatsItem("3", "Family Group", "Mom: Happy Birthday!", "Monday", 5, "https://i.pravatar.cc/150?u=3"),
-            ChatsItem("4", "Work Buddies", "Bob sent a photo", "12/05/2024", 0, "https://i.pravatar.cc/150?u=4")
-        )
+        // Initial load of sample data if DB is empty
+        viewModelScope.launch {
+            insertSampleChatsUseCase(
+                listOf(
+                    Chat("1", "John Doe", "Hey, how are you?", "10:30 AM", 2, "https://i.pravatar.cc/150?u=1"),
+                    Chat("2", "Jane Smith", "Meeting at 2 PM", "Yesterday", 0, null),
+                    Chat("3", "Family Group", "Mom: Happy Birthday!", "Monday", 5, "https://i.pravatar.cc/150?u=3"),
+                    Chat("4", "Work Buddies", "Bob sent a photo", "12/05/2024", 0, "https://i.pravatar.cc/150?u=4")
+                )
+            )
+        }
     }
 
     fun onSearchQueryChanged(query: String) {
         _searchQuery.value = query
     }
 }
+
+// Mapper to UI model if different, otherwise use domain model
+fun Chat.toPresentation() = ChatsItem(id, name, lastMessage, time, unreadCount, imageUrl)

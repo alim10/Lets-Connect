@@ -2,63 +2,59 @@ package org.alimapps.letsconnect.features.chats.presentation
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import org.alimapps.letsconnect.features.chats.domain.model.Message
+import org.alimapps.letsconnect.features.chats.domain.usecase.GetMessagesUseCase
+import org.alimapps.letsconnect.features.chats.domain.usecase.SendMessageUseCase
 import javax.inject.Inject
-
 
 @HiltViewModel
 class ChatDetailViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle,
+    private val getMessagesUseCase: GetMessagesUseCase,
+    private val sendMessageUseCase: SendMessageUseCase
 ) : ViewModel() {
 
-    // Assuming chatId and chatName are passed via navigation arguments
     private val chatId: String = checkNotNull(savedStateHandle["chatId"])
-    private val initialChatName: String = savedStateHandle.get<String>("chatName") ?: "Chat"
-    private val initialImageUrl: String? = savedStateHandle["imageUrl"]
+    private val chatName: String = savedStateHandle.get<String>("chatName") ?: "Chat"
+    private val imageUrl: String? = savedStateHandle["imageUrl"]
 
-    private val _uiState = MutableStateFlow(ChatDetailUiState(
-        chatName = initialChatName,
-        imageUrl = initialImageUrl
-    ))
-    val uiState: StateFlow<ChatDetailUiState> = _uiState.asStateFlow()
-
-    init {
-        loadMessages()
-    }
-
-    private fun loadMessages() {
-        // In a real app, you'd fetch this from a repository based on chatId
-        val initialMessages = listOf(
-            ChatMessage("1", "Hey there!", "10:00 AM", false),
-            ChatMessage("2", "Hi! How are you?", "10:01 AM", true),
-            ChatMessage("3", "I'm good, thanks! Want to grab coffee?", "10:02 AM", false),
-            ChatMessage("4", "Sure, what time?", "10:05 AM", true)
+    private val _messageText = MutableStateFlow("")
+    
+    val uiState: StateFlow<ChatDetailUiState> = combine(
+        getMessagesUseCase(chatId).map { messages -> messages.map { it.toPresentation() } },
+        _messageText
+    ) { messages, text ->
+        ChatDetailUiState(
+            chatName = chatName,
+            imageUrl = imageUrl,
+            messages = messages,
+            messageText = text
         )
-        _uiState.update { it.copy(messages = initialMessages) }
-    }
+    }.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5000),
+        initialValue = ChatDetailUiState(chatName = chatName, imageUrl = imageUrl)
+    )
 
     fun onMessageTextChanged(newText: String) {
-        _uiState.update { it.copy(messageText = newText) }
+        _messageText.value = newText
     }
 
     fun sendMessage() {
-        val currentText = _uiState.value.messageText
+        val currentText = _messageText.value
         if (currentText.isNotBlank()) {
-            val newMessage = ChatMessage(
-                id = System.currentTimeMillis().toString(),
-                text = currentText,
-                time = "Now",
-                isFromMe = true
-            )
-            _uiState.update { 
-                it.copy(
-                    messages = it.messages + newMessage,
-                    messageText = ""
-                )
+            viewModelScope.launch {
+                sendMessageUseCase(chatId, currentText, true)
+                _messageText.value = ""
             }
         }
     }
@@ -71,3 +67,4 @@ data class ChatDetailUiState(
     val messageText: String = ""
 )
 
+fun Message.toPresentation() = ChatMessage(id, text, time, isFromMe, imageUrl)

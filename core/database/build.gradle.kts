@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.bundles.group.navigation)
     implementation(libs.bundles.group.network)
     implementation(libs.bundles.group.room)
+    ksp(libs.androidx.room.compiler)
     implementation(libs.bundles.group.security)
     implementation(libs.accompanist.permissions)
     api(libs.bundles.group.gms.map.location)

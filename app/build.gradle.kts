@@ -42,6 +42,7 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.database)
     implementation(projects.core.analytics)
     implementation(projects.core.session)
     implementation(projects.core.common)
