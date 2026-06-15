@@ -3,6 +3,7 @@ package org.alimapps.letsconnect.convention
 import com.android.build.api.dsl.LibraryExtension
 import org.alimapps.letsconnect.convention.internal.configureAndroid
 import org.alimapps.letsconnect.convention.internal.configureAndroidDependencies
+import org.alimapps.letsconnect.convention.internal.configureRoom
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
 import org.gradle.api.Plugin
@@ -18,6 +19,7 @@ class DataModuleConventions : Plugin<Project> {
             configureAndroidDependencies()
             configureUnitTest(this)
         }
+        configureRoom()
         configureHilt()
     }
 }

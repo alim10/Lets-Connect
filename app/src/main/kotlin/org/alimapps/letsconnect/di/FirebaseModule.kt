@@ -1,16 +1,17 @@
 package org.alimapps.letsconnect.di
 
 import android.content.Context
-import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import org.alimapps.letsconnect.core.remoteconfig.RemoteConfigSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
@@ -19,8 +20,22 @@ object FirebaseModule {
 
     @Provides
     @Singleton
-    fun provideFirebaseRemoteConfig(app: FirebaseApp): FirebaseRemoteConfig {
-        return FirebaseRemoteConfig.getInstance(app)
+    fun provideFirebaseRemoteConfig(): FirebaseRemoteConfig {
+        return FirebaseRemoteConfig.getInstance()
+    }
+
+    @Provides
+    @Singleton
+    @Named(RemoteConfigSource.DEFAULT_FLAGS_ARRAY)
+    fun provideFirebaseRemoteConfigDefaultArray(): FirebaseRemoteConfig {
+        return FirebaseRemoteConfig.getInstance()
+    }
+
+    @Provides
+    @Singleton
+    @Named(RemoteConfigSource.DEFAULT_FLAGS)
+    fun provideFirebaseRemoteConfigDefault(): FirebaseRemoteConfig {
+        return FirebaseRemoteConfig.getInstance()
     }
 
     @Provides

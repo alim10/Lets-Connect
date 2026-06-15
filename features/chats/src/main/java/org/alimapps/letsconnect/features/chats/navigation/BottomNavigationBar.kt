@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import org.alimapps.letsconnect.core.remoteconfig.repository.IRemoteConfigRepository
+import org.alimapps.letsconnect.core.network.repository.IRemoteConfigRepository
 
 @Composable
 fun BottomNavigationBar(navController: NavController, remoteConfig: IRemoteConfigRepository) {

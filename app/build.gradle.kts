@@ -46,6 +46,7 @@ dependencies {
     implementation(projects.core.session)
     implementation(projects.core.common)
     implementation(projects.core.network)
+    implementation(projects.core.remoteConfig)
     implementation(projects.features.profile)
     implementation(projects.features.chats)
 

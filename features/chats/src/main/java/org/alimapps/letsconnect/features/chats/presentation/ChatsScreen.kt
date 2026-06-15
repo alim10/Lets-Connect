@@ -1,11 +1,18 @@
 package org.alimapps.letsconnect.features.chats.presentation
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -13,22 +20,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import org.alimapps.letsconnect.core.ui.components.ChatAvatar
 
-data class ChatItem(
-    val name: String,
-    val lastMessage: String,
-    val time: String,
-    val unreadCount: Int = 0
-)
 
 @Composable
-fun ChatScreen() {
-    val chats = listOf(
-        ChatItem("John Doe", "Hey, how are you?", "10:30 AM", 2),
-        ChatItem("Jane Smith", "Meeting at 2 PM", "Yesterday", 0),
-        ChatItem("Family Group", "Mom: Happy Birthday!", "Monday", 5),
-        ChatItem("Work Buddies", "Bob sent a photo", "12/05/2024", 0)
-    )
+fun ChatsScreen(
+    onChatClick: (ChatsItem) -> Unit,
+    viewModel: ChatsViewModel = hiltViewModel()
+) {
+    val chats by viewModel.chats.collectAsState()
+    val searchQuery by viewModel.searchQuery.collectAsState()
 
     Column(modifier = Modifier.fillMaxSize()) {
         Text(
@@ -37,29 +39,68 @@ fun ChatScreen() {
             modifier = Modifier.padding(16.dp),
             fontWeight = FontWeight.Bold
         )
+
+        // Search Bar
+        OutlinedTextField(
+            value = searchQuery,
+            onValueChange = viewModel::onSearchQueryChanged,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            placeholder = { Text("Search chats...") },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "Search"
+                )
+            },
+            trailingIcon = {
+                if (searchQuery.isNotEmpty()) {
+                    IconButton(onClick = { viewModel.onSearchQueryChanged("") }) {
+                        Icon(
+                            imageVector = Icons.Default.Close,
+                            contentDescription = "Clear Search"
+                        )
+                    }
+                }
+            },
+            shape = RoundedCornerShape(24.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
+                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
+                focusedBorderColor = Color.Transparent,
+                unfocusedBorderColor = Color.Transparent
+            ),
+            singleLine = true
+        )
+
         LazyColumn {
             items(chats) { chat ->
-                ChatListItem(chat)
-                HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp), thickness = 0.5.dp, color = Color.LightGray)
+                ChatsListItem(chat, onClick = { onChatClick(chat) })
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                    thickness = 0.5.dp,
+                    color = Color.LightGray
+                )
             }
         }
     }
 }
 
 @Composable
-fun ChatListItem(chat: ChatItem) {
+fun ChatsListItem(chat: ChatsItem, onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .clickable(onClick = onClick)
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Surface(
-            modifier = Modifier
-                .size(50.dp)
-                .clip(CircleShape),
-            color = Color.Gray
-        ) {}
+        ChatAvatar(
+            name = chat.name,
+            imageUrl = chat.imageUrl,
+            size = 50.dp
+        )
         
         Spacer(modifier = Modifier.width(16.dp))
         

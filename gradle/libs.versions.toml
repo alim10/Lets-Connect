@@ -81,6 +81,7 @@ ndkVersion = "29.0.14206865"
 cMakeVersion = "3.22.1"
 appcompatVersion = "1.7.1"
 firebaseConfigKtxVersion = "23.1.0"
+foundationLayoutVersion = "1.11.2"
 
 
 [libraries]
@@ -229,6 +230,7 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "v
 junit = { module = "junit:junit", version.ref = "version_junit" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "version_turbine" }
 timber-lib = { module = "com.jakewharton.timber:timber", version.ref = "version_timber" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "foundationLayoutVersion" }
 
 [plugins]
 android-lint = { id = "com.android.lint", version.ref = "version_android_gradle" }
