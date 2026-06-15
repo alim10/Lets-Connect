@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" />
+            <solid android:color="@color/dyn_boarder_color" />
+            <size android:height="24dp" />
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" />
+            <gradient
+                android:angle="0"
+                android:gradientRadius="4dp"
+                android:startColor="@color/dyn_primary_color"
+                android:endColor="@color/dyn_primary_color"/>
+            <size android:height="24dp" />
+        </shape>
+    </item>
+
+</selector>

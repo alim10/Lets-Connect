@@ -6,6 +6,7 @@ import org.gradle.api.Project
 import org.alimapps.letsconnect.convention.internal.configureAndroid
 import org.alimapps.letsconnect.convention.internal.configureAndroidDependencies
 import org.alimapps.letsconnect.convention.internal.configureCompose
+import org.alimapps.letsconnect.convention.internal.configureRoom
 import org.alimapps.letsconnect.convention.internal.configureHilt
 import org.alimapps.letsconnect.convention.internal.configureNavigation
 import org.alimapps.letsconnect.convention.internal.configureUnitTest
@@ -19,8 +20,9 @@ class FeatureModuleConventions : Plugin<Project> {
             configureAndroid(this)
             configureAndroidDependencies()
             configureUnitTest(this)
-            configureCompose(this)
+            configureCompose()
         }
+        configureRoom()
         configureHilt()
         configureNavigation()
     }

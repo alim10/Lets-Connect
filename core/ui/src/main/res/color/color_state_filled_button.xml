@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Bare MaterialButton inherits this CSL via Widget.Sehhaty.Button.Filled.
+  References use @color/dyn_* instead of ?attr/... so the lookup goes through
+  RemoteColorResources.getValue() (which honors the active cluster). Theme-attr
+  resolution inside a CSL binds to the original (unwrapped) Theme, so that
+  path will not reflect the remote palette.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:color="@color/dyn_primary_color_dark" />
+    <item
+        android:state_enabled="false"
+        android:color="@color/dyn_grey" />
+</selector>

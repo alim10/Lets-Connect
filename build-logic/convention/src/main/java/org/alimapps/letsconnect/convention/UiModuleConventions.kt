@@ -18,7 +18,7 @@ class UiModuleConventions : Plugin<Project> {
         extensions.configure<LibraryExtension> {
             configureAndroid(this)
             configureAndroidDependencies()
-            configureCompose(this)
+            configureCompose()
             configureUnitTest(this)
         }
 

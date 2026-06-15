@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18.11dp"
+    android:height="18.11dp"
+    android:viewportWidth="18.11"
+    android:viewportHeight="18.11">
+  <path
+      android:pathData="M9.056,-0.004C14.057,-0.004 18.11,4.05 18.11,9.05C18.11,14.05 14.057,18.104 9.056,18.104C4.056,18.104 0.003,14.05 0.003,9.05C0.008,4.052 4.059,0.002 9.056,-0.004ZM9.056,16.293C13.057,16.293 16.299,13.05 16.299,9.05C16.299,5.05 13.057,1.807 9.056,1.807C5.056,1.807 1.813,5.05 1.813,9.05C1.818,13.048 5.058,16.288 9.056,16.293Z"
+      android:fillColor="@color/dyn_primary_color"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M9.851,11.379C9.851,10.851 9.44,10.422 8.933,10.422C8.427,10.422 8.016,10.851 8.016,11.379C8.016,11.908 8.427,12.337 8.933,12.337C9.44,12.337 9.851,11.908 9.851,11.379Z"
+      android:fillColor="@color/dyn_primary_color"/>
+  <path
+      android:pathData="M9.851,5.634C9.851,5.105 9.44,4.677 8.933,4.677C8.427,4.677 8.016,5.105 8.016,5.634L8.016,8.507C8.016,9.036 8.427,9.464 8.933,9.464C9.44,9.464 9.851,9.036 9.851,8.507L9.851,5.634Z"
+      android:fillColor="@color/dyn_primary_color"/>
+</vector>

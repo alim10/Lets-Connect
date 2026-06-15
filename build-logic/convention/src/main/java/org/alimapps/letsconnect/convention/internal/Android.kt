@@ -32,6 +32,7 @@ internal fun Project.configureAndroid(commonExtension: CommonExtension) {
  */
 internal fun Project.configureAndroidDependencies() {
     dependencies {
+        add("implementation", platform(getLibrary("androidx-compose-bom")))
         add("implementation", getLibBundle("group.android.ui"))
     }
 }

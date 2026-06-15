@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Use @color/dyn_* aliases (not ?attr/...) so RemoteColorResources.getValue
+     remaps to the active cluster. colorSecondary → primaryColor in our theme;
+     Material's buttonFilledDisabledBackgroundColor → dyn_grey (closest semantic). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="true"
+        android:color="@color/dyn_primary_color"/>
+
+    <item
+        android:state_checked="false"
+        android:color="@color/dyn_grey"
+        />
+</selector>

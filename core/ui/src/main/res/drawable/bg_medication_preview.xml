@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shape android:shape="rectangle">
+        <corners
+            android:topLeftRadius="@dimen/dim_12_dp"
+            android:topRightRadius="@dimen/dim_12_dp"
+            android:bottomLeftRadius="@dimen/dim_12_dp"
+            android:bottomRightRadius="@dimen/dim_12_dp"/>
+
+        <stroke
+            android:width="2dp"
+            android:dashGap="5dp"
+            android:dashWidth="5dp"
+            android:color="@color/dyn_boarder_color" />
+        <solid
+            android:color="@color/dyn_white"
+            />
+    </shape>
+
+</rotate>

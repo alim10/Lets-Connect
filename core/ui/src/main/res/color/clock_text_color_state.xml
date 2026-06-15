@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Use @color/dyn_* aliases (not ?attr/...) so RemoteColorResources.getValue
+     remaps to the active cluster. CSL state-list theme-attr resolution binds
+     to the original Theme and bypasses our wrapper. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:color="@color/dyn_white"/>
+
+    <item
+        android:color="@color/dyn_primary_color_dark" />
+</selector>

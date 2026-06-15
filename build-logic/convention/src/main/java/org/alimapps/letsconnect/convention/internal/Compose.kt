@@ -1,15 +1,12 @@
 package org.alimapps.letsconnect.convention.internal
 
-import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
 /**
  * Configure Compose settings, plugin, and dependencies.
  */
-internal fun Project.configureCompose(
-    commonExtension: CommonExtension
-) {
+internal fun Project.configureCompose() {
     with(pluginManager) {
         apply("org.jetbrains.kotlin.plugin.compose")
     }

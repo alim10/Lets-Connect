@@ -1,6 +1,5 @@
 package org.alimapps.letsconnect.core.network.retrofit.interceptors
 
-import android.util.Log
 import com.lean.sehhaty.network.userToken.RefreshTokenRequest
 import com.lean.sehhaty.network.userToken.RefreshTokenResponse
 import okhttp3.Interceptor
@@ -9,8 +8,6 @@ import okhttp3.Protocol
 import okhttp3.Request
 import okhttp3.Response
 import okhttp3.ResponseBody.Companion.toResponseBody
-import org.alimapps.letsconnect.core.analytics.event.EventPublisher
-import org.alimapps.letsconnect.core.common.extension.isNotNull
 import org.alimapps.letsconnect.core.session.SharedPrefsRepository
 import org.alimapps.letsconnect.core.network.clients.RetrofitUnauthorizedClient
 import org.alimapps.letsconnect.core.network.repository.IRemoteConfigRepository
@@ -22,7 +19,6 @@ import retrofit2.http.Header
 import retrofit2.http.POST
 import timber.log.Timber
 import java.util.Calendar
-import java.util.Date
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicLong
 import javax.inject.Inject
@@ -32,7 +28,6 @@ import javax.inject.Singleton
 class AccessTokenAuthenticator
 @Inject
 constructor(
-    private val eventPublisher: EventPublisher,
     private val remoteConfig: IRemoteConfigRepository,
     unauthorizedClient: RetrofitUnauthorizedClient,
     private val appPrefs: SharedPrefsRepository,
@@ -55,7 +50,7 @@ constructor(
             .addHeader("Authorization", "Bearer $accessToken")
             .build()
 
-        val isExpired = isTokenExpired(appPrefs.tokenExpiredDate)
+        val isExpired = isTokenExpired()
 
         oldAccessToken = appPrefs.accessToken
 
@@ -159,19 +154,8 @@ constructor(
 
     private fun getCurrentSeconds() = Calendar.getInstance().toInstant().epochSecond
 
-    private fun isTokenExpired(tokenExpiredDate: Long?): Boolean {
+    private fun isTokenExpired(): Boolean {
         return false
-//        if (tokenExpiredDate.isNotNull()) {
-//            val calendar = Calendar.getInstance().apply {
-//                time = Date(tokenExpiredDate ?: Date().time)
-//                add(Calendar.SECOND, -((remoteConfig.getRefreshTokenFeatureKey()).toIntOrNull() ?: 60))
-//            }
-//            val adjustedExpirationDate = calendar.time
-//            return Date() >= adjustedExpirationDate
-//        } else {
-//            applyLogout()
-//            return true
-//        }
     }
 }
 

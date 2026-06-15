@@ -1,4 +1,5 @@
 package org.alimapps.letsconnect.core.ui.bottomsheet
+import android.text.Editable
 import android.view.LayoutInflater
 import org.alimapps.letsconnect.core.ui.base.BaseBottomSheetV2
 import org.alimapps.letsconnect.core.ui.databinding.DialogLayoutBinding
@@ -25,13 +26,13 @@ class ErrorBottomSheet : BaseBottomSheetV2<DialogLayoutBinding>() {
         if (errorTitle.isNullOrEmpty()) {
             dialogTitleTextview.gone()
         } else {
-            dialogTitleTextview.text = errorTitle
+            dialogTitleTextview.text = errorTitle as Editable?
             dialogTitleTextview.visible()
         }
         if (errorMessage.isNullOrEmpty()) {
             dialogMessageTextview.gone()
         } else {
-            dialogMessageTextview.text = errorMessage
+            dialogMessageTextview.text = errorMessage as Editable?
             dialogMessageTextview.visible()
         }
     }

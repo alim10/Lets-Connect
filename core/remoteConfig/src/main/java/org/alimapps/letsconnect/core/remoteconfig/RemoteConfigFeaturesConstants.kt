@@ -496,4 +496,14 @@ object RemoteConfigFeaturesConstants {
         const val REFRESH_TOKEN_EXPIRATION_FEATURE = "refresh_token_expiration_feature"
         const val REFRESH_TOKEN_FEATURE = "refresh_token_feature"
     }
+
+    object Navigation {
+        const val NAV_CHAT = "nav_chat"
+        const val NAV_CALL = "nav_call"
+        const val NAV_PROFILE = "nav_profile"
+    }
+
+    object SystemUI {
+        const val STATUS_BAR_VISIBLE = "status_bar_visible"
+    }
 }
