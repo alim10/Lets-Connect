@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -9,6 +10,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -19,9 +21,12 @@ dependencyResolutionManagement {
         maven("https://jitpack.io")
     }
 }
-
-rootProject.name = "AppReviews"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+rootProject.name = "Lets-Connect"
 include(":app")
-include(":core")
-include(":auth")
-include(":profile")
+include(":Core:Common")
+include(":Core:Network")
+
+//include(":Features:Core")
+//include(":Features:auth")
+//include(":Features:Home")

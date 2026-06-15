@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Let\'s Connect</string>
+    <string name="default_notification_channel_id">General_channel</string>
 </resources>
